@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Integrations\Integrations_-_Setting_Up_Communications.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.11.0_2";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>Integrations - Setting Up Communications</title>
+  
+  
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Integrations - Setting Up Communications">
+        <span>Integrations - Setting Up Communications</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h3>Inbound and Outbound Communications</h3>
+  <p class="BodyText">Before setting up inbound and outbound communication on a connection, webhooks/bots need to be configured on the application you are integrating with. For inbound communication, the application will provide either the Hash-based Message Authentication Code (HMAC) or the Security token needed in ChangeGear. For outbound communication, the application will provide the URL needed.</p>
+  <ol class="Bulleted" style="margin-left: 40px;">
+    <li class="ListBullet3"><span class="Bold">Slack documentation</span> available at <a class="Hyperlink" href="https://api.slack.com/">https://api.slack.com/</a></li>
+    <li class="ListBullet3"><span class="Bold">Microsoft Teams</span> documentation available at <a class="Hyperlink" href="https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors">https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors</a></li>
+  </ol>
+  <p class="note"><span class="tipnote">Notes:</span> During this part of the integration you need to enter a Callback URL for both Slack and Teams.&#160; The URL refers to the system on which the integration is being set up, and looks something like the following example:<br />
+    <img src="../../../assets/images/image19.png" style="margin-left: 40px;" /><br />
+    &#160; &#160; &#160; &#160; &#160; &#160;- appname will always be “msteams” for integration with MS Teams, and “slack” for integration with Slack.<br />
+    &#160; &#160; &#160; &#160; &#160; &#160;- entitytype is the capital letter I (as in Indiana), followed by the ChangeGear module being associated (e.g., Incident)<br />
+    &#160; &#160; &#160; &#160; &#160; &#160;- connection is the connection you previously named
+  </p>
+  <h4><a id="_Hlk72309148"></a><a id="_Complete_the_Inbound"></a><a id="Setting_up_Inbound_Communication_"></a><a id="Setting_up_Inbound_Communication__1"></a>Setting up Inbound Communication</h4>
+  <p>1.&#160; Go to the Inbound tab in the Communication area and provide the corresponding inbound security token/ (HMAC for Microsoft Teams, or Signing Secret for Slack).</p>
+  <p class="note"><span class="tipnote">Note:</span> Once you save the token, it becomes masked (*****) and is no longer visible.</p>
+  <p class="indent"><img alt="Chart&#xA;Description automatically generated" height="108.1" src="../../../assets/images/Integrations - Setting Up Communications_files/image1.png" width="332.4" /></p>
+  <p>2.&#160; Make sure to Enable the connection.</p>
+  <p class="indent"><a id="_Mapping_1"></a><img alt="Graphical user interface, text, application, email&#xA;Description automatically generated" height="136.7" src="../../../assets/images/Integrations - Setting Up Communications_files/image2.png" width="248.1" /></p>
+  <p>.<a id="HMAClinkStep4"></a><a id="_Mapping"></a><a id="_Configuring_ChangeGear_Desktop"></a><a id="Setting_Up_Outbound_"></a><a id="Setting_Up_Outbound__1"></a><a id="Setting_Up_Outbound_Communication_Go_to_the_Outbound_tab_in_the_Communication_area_and_provide_the_corresponding_outbound_URL.Save_()_the_connection.Configure_ChangeGear_Desktop_Client_for_Outbound_Communications(Required_for_both_Microsoft_Teams_&amp;_Slack)"></a></p>
+  <h4 />
+  <h4>Setting Up Outbound Communication</h4>
+  <p>1.&#160; Go to the Outbound tab in the Communication area and provide the corresponding outbound URL.</p>
+  <ul class="indent">
+    <li><img alt="A picture containing graphical user interface&#xA;Description automatically generated" height="99.8" src="../../../assets/images/Integrations - Setting Up Communications_files/image3.png" style="cursor: nwse-resize;" width="303.4" /></li>
+  </ul>
+  <p class="ListParagraph">2.&#160; Save (<img alt="Picture 199" height="13.2" src="../../../assets/images/Integrations - Setting Up Communications_files/image4.png" width="13.2" />) the connection.<span class="rls-1-Numbered"><span class="rls-1-Numbered"></span></span></p>
+  <p class="ListParagraph" />
+  <h5><a id="Configure_ChangeGear_Desktop_Client_for_Outbound_Communications(Required_for_both_Microsoft_Teams_&amp;_Slack)"></a><a id="Configure_ChangeGear_Desktop_Client_for_Outbound_Communications(Required_for_both_Microsoft_Teams_&amp;_Slack)_1"></a>Configure ChangeGear Desktop Client for Outbound Communications<br />
+    ‎(Required for both Microsoft Teams &amp; Slack)</h5>
+  <p>Setting up the outbound communication in the Desktop Client allows ChangeGear to alert the external application channel when a ticket has been created or updated.</p>
+  <p>The configurations required in the Desktop Client are made in the Workflow. .</p>
+  <p>1.&#160; Log into ChangeGear Desktop Client.</p>
+  <p>2.&#160; In Administration, under the node that corresponds to the module you configured (e.g., Incident Management), click the Workflow option to display existing workflows (including the incoming integration you just created in the previous sections).</p>
+  <p class="indent"><img alt="Graphical user interface, application, Word&#xA;Description automatically generated" height="499" src="../../../assets/images/Integrations - Setting Up Communications_files/image5.png" width="749" /></p>
+  <p>3.&#160; Double-click on the workflow that corresponds to the outbound communication you want to setup.</p>
+  <p>4.&#160; Select the action (submit, etc.) on which you want to setup the trigger for an outbound. Under the Actions tab, click on the Automation tab.</p>
+  <p>5.&#160; Click the Add icon (<img alt="Picture 204" height="19.2" src="../../../assets/images/Integrations - Setting Up Communications_files/image6.png" width="15.8" />) to display the Create an Action prompt.</p>
+  <p>6.&#160; In the Action Type drop-down, select Run Integration, and click OK to display the Run Integration Details window.</p>
+  <p>7.&#160; In the Run Integration Details window, add a description, and make the following selections:<span class="rls-1-Numbered"></span></p>
+  <ul class="BulletListIndented">
+    <li>Integration – select the external app being used (i.e., Microsoft Teams or Slack).</li>
+    <li>Project – select the <a class="Hyperlink" href="#nameConnection">connection name</a>.</li>
+    <li class="ListBullet3">Field Mapping – select the <a class="Hyperlink" href="#_Mapping_1">Mapping set</a> you want to use.</li>
+  </ul>
+  <p>8.&#160; Click OK to complete the settings and close the Run Integration Details window. The new action appears in the list. Go to File&gt;Save As to save the settings and return to the workflow setup. The new workflow appears in the list.</p>
+  <p class="note margin-right-1-44in"><span class="Bold">IMPORTANT! </span>Be sure appropriate Role Privileges are set before going to the next step.</p>
+  <p>9.&#160; In the Common Tasks list, select Enable and Set as Default to make the workflow available.</p>
+  <p class="Numbering6 ListParagraph" />
+  <p><img alt="Graphical user interface, application&#xA;Description automatically generated" height="800" src="../../../assets/images/Integrations - Setting Up Communications_files/image7.png" width="650" /></p>
+  <p>10. Save (<img alt="Picture 141" height="14.2" src="../../../assets/images/Integrations - Setting Up Communications_files/image8.png" width="14.2" />) the workflow</p>
+  <p>Once you have completed the steps shown above, you need to <a href="Integrations_-_Setting_Up_Communications.htm" title="Click here to learn more.">create</a><a href="Integrations_-_Mapping.htm" title="Click here for more information.">&#160;Mapping,</a>&#160;then set up <a href="Integrations_-_Authentication.htm" title="Click here for more information.">Authentication</a>.</p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\APIs\Login.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Login</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Login">
+        <span>Login</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Login</span></h2>
+  <p>The Login API allows you to log in to ChangeGear by providing your user name and password. If the login is successful, ChangeGear returns a unique session identifier. For security purposes, ChangeGear requires you to pass this identifier with each subsequent
+ request.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 10%;" />
+      <col style="width: 20%;" />
+      <col style="width: 50%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Action</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Method</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">URL</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Log_In">Log In</a></p>
+        </td>
+        <td>
+          <p>POST</p>
+        </td>
+        <td>
+          <p>api/authenticate/user</p>
+        </td>
+        <td>
+          <p>Authenticates a user and creates a new ChangeGear session.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Log_Out">Log Out</a></p>
+        </td>
+        <td>
+          <p>POST</p>
+        </td>
+        <td>
+          <p>api/user/logout</p>
+        </td>
+        <td>
+          <p>Ends the specified ChangeGear session.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h3><a id="Log_In"></a>Log In</h3>
+  <p>Logging in validates your user credentials and creates a new session. After successfully logging in, you will receive a unique encrypted session identifier that must be included in the header of all other API requests. This ID acts as a temporary authentication
+ token that allows you to send requests without having to send your credentials every time.</p>
+  <p class="note"><span class="tipnote">IMPORTANT: </span>Your session ID uniquely identifies your active ChangeGear session. If your session ID is shared or stolen, other users will be able to log in as your ChangeGear user. We highly recommend using SSL to secure your
+ communications with the REST API.</p>
+  <h4>Request Information</h4>
+  <p>A Log In request sends the username and password of the user you wish to log in as to the ChangeGear server for authentication.</p>
+  <h5>URL</h5>
+  <p class="Code">api/authenticate/user</p>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <h5>Body Parameters</h5>
+  <p>The Log In endpoint requires the username and password of a ChangeGear user.</p>
+  <p class="note"><span class="tipnote">Tip:</span> To log in as a domain user, add an extra backslash between your user name and the domain name.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>username</p>
+        </td>
+        <td>
+          <p>Your ChangeGear user name.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">mydomain\\myuser</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>password</p>
+        </td>
+        <td>
+          <p>Your ChangeGear password.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">password</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/authenticate/user</p>
+  <p class="Code">Body: {</p>
+  <p class="Code" style="margin-left: 53px;">"username": "domain\\username",</p>
+  <p class="Code" style="margin-left: 53px;">"password": "password"</p>
+  <p class="Code" style="margin-left: 13px;">}</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>If the login was successful, the response contains the generated session ID, the user's unique ID, and a collection of the user's privileges.</p>
+  <h5>Body Fields</h5>
+  <p>Successful authentication returns an encrypted session ID token along with the user's privileges.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Key</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionId</p>
+        </td>
+        <td>
+          <p>An encrypted session ID used with other REST API requests.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>The REST API requires this value in the header of all other requests.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>userId</p>
+        </td>
+        <td>
+          <p>The unique ID of the authenticated user.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">159</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>UserPrivileges</p>
+        </td>
+        <td>
+          <p>List of ChangeGear privileges for the user.</p>
+        </td>
+        <td>
+          <p>JSON array.</p>
+        </td>
+        <td>
+          <p class="Code">"UserPrivileges": {</p>
+          <p class="Code">&#160;&#160;&#160;&#160;"Workspace": {...},</p>
+          <p class="Code">&#160;&#160;&#160;&#160;"Incident": {...},</p>
+          <p class="Code">&#160;&#160;&#160;&#160;"ServiceCatalog": {...},</p>
+          <p class="Code">&#160;&#160;&#160;&#160;"Teams": {...},</p>
+          <p class="Code">&#160;&#160;&#160;&#160;...</p>
+          <p class="Code">}</p>
+        </td>
+        <td>
+          <p>UserPrivileges are separated by module. Each module defines the actions that the user can and can not perform within the module. <span data-condition="Others:Non_Release">Each module lists the following attributes:</span></p>
+          <ul>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">actionsDenied</span>: Actions that the user can not perform.</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">actionsAllowed</span>: Actions that the user can perform.</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">entityType</span>: The reference name of the entity used in the module.</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p style="font-weight: bold;">factoryAllowedActions</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">fieldBasedSecurity</span>:<span style="font-weight: bold;"><![CDATA[ ]]> </span>Whether the user's privileges for that module are configured on a per-field basis.</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">possibleActions</span>: All actions that can be performed in the module.</p>
+            </li>
+            <li data-condition="Others:Non_Release" style="margin-left: -20px;">
+              <p><span style="font-weight: bold;">VisibletoUser</span>: Whether the user can access the module.</p>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">{</p>
+    <p class="Code" style="margin-left: 53px;">"sessionId": "EhbNKWgPZNJnHRPJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM",</p>
+    <p class="Code" style="margin-left: 53px;">"userId": "10",</p>
+    <p class="Code" style="margin-left: 53px;">"UserPrivileges": {</p>
+    <p class="Code" style="margin-left: 93px;">"Workspace": {</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"fieldBasedSecurity": "false",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsDenied": "AdministerModule,Edit,View",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsAllowed": "ViewOwn,Edit Own,DrillDown",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"factoryAllowedActions": "ViewOwn,Edit Own,DrillDown,VisibletoUser",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsAllowed_Value": 196608,</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"possibleActions": "AdministerModule,View,ViewOwn,Edit,Edit Own,DrillDown",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"VisibletoUser": "true",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"entityType": "",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"name": "Workspace"</p>
+    <p class="Code" style="margin-left: 93px;">},</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceCatalog": {</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"fieldBasedSecurity": "false",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsDenied": "Add,AdministerModule,Edit,Edit Own,ManageCategories,View,ViewOwn,ViewTeam,Email,Print,Copy,Retire,Send,Republish,Publish,Revise,Delete,Request Review",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsAllowed": "",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"factoryAllowedActions": "None,VisibletoUser",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"actionsAllowed_Value": 0,</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"possibleActions": "Add,AdministerModule,Edit,Edit Own,ManageCategories,View,ViewOwn,ViewTeam,Email,Print,Copy,Retire,Send,Republish,Publish,Revise,Delete,Request Review",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"VisibletoUser": "true",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"entityType": "SDInterfaces.Entities.IServiceItem",</p>
+    <p class="Code" style="margin-left: 93px;">&#160;&#160;&#160;&#160;"name": "ServiceCatalog"</p>
+    <p class="Code" style="margin-left: 93px;">},</p>
+    <p class="Code" style="margin-left: 93px;">...</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code">}</p>
+  </div>
+  <p />
+  <h3><a id="Log_Out"></a>Log Out</h3>
+  <p>Logging out ends the ChangeGear session for the specified session ID.</p>
+  <h4>Request Information</h4>
+  <p>Logging out simply requires you to provide the ID of the session you wish to end.</p>
+  <h5>URL</h5>
+  <p class="Code">api/user/logout</p>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <h5>Header Parameters</h5>
+  <p>The logout API requires the ID of the session to close.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h5>Request Sample</h5>
+  <p class="Code">URL: &#160;&#160;https://changegear-server/cgrestapi/api/authenticate/user</p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns an empty response whether the logout was successful or unsuccessful. If the logout was successful, the session will no longer work for future requests.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

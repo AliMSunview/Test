@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Global_Settings\Exchange_Access_using_OAuth_2.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.2.0_3";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Exchange Access using OAuth 2.0</title>
+  
+  
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Exchange Access using OAuth 2.0">
+        <span>Exchange Access using OAuth 2.0</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Exchange Access using OAuth 2.0</span></h2>
+  <p>ChangeGear can be configured to access Exchange Online mailboxes using OAuth 2.0. This can be used for Outbound Notifications from ChangeGear and Email Connector.&#160;</p>
+  <p><span style="color: #000000;"><span>To do this:</span></span></p>
+  <ol class="Decimal">
+    <li>
+      <p>An app needs to be set up inside Azure via the Azure Portal with the appropriate permissions and access.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 30pt;">For details on the steps to configure OAuth, refer to the separate document provided with the 8.3 release:&#160;<span style="font-style: italic;">ChangeGear 8.3 Using OAuth 2.0 to Access Exchange Online from within ChangeGear.</span></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 1;" value="2">
+      <p>Once the app is configured in Azure, copy the Application ID, Tenant ID, and Client Secret from the app and set it up inside ChangeGear as shown below.<span style="font-weight: bold;"><span style="color: #ea8423;"><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false,&quot;335559685&quot;:120}"><![CDATA[ ]]> </span></span> </span></p>
+    </li>
+    <li aria-setsize="-1" data-aria-level="1" data-aria-posinset="1" data-font="Arial" data-leveltext="%1." data-listid="16" role="listitem">
+      <p paraeid="{cfb17e1c-4935-42a3-85ce-4e2d2d8aabf6}{58}" paraid="2052518562"><span data-contrast="none"><span><span style="font-weight: bold;"></span>In the ChangeGear Desktop Client&#160;Admin Global Settings page, locate</span>&#160;</span><span style="font-weight: bold;"><span data-contrast="none">EWS OAuth Settings</span></span><![CDATA[ ]]> <![CDATA[ ]]><span data-contrast="none"><span>&#160;and complete the following fields.</span></span><span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;335559685&quot;:780,&quot;335559737&quot;:180}"><![CDATA[ ]]> </span></p>
+    </li>
+  </ol>
+  <p paraeid="{cfb17e1c-4935-42a3-85ce-4e2d2d8aabf6}{77}" paraid="1957111344" style="margin-left: 30px;"><span data-contrast="none"></span>&#160; &#160;&#160;<img height="309" src="../../../../assets/images/EWS Auth.png" width="543" /></p>
+  <ol start="4">
+    <li>
+      <p><span data-contrast="none" style="font-size: 10pt;">Enter the&#160;</span><span style="font-weight: bold;"><span data-contrast="none" style="font-size: 10pt;">Application (Client) ID</span></span><span data-contrast="none" style="font-size: 10pt;">,&#160;</span><![CDATA[ ]]> <![CDATA[ ]]><span data-contrast="none" style="font-size: 10pt;"><span style="font-weight: bold;">Directory (Tenant ID)</span>,</span><span data-contrast="none" style="font-size: 10pt;">&#160;and&#160;</span><span style="font-weight: bold;"><span data-contrast="none" style="font-size: 10pt;">Client Secret</span></span><![CDATA[ ]]> <![CDATA[ ]]><span data-ccp-props="{&quot;134233117&quot;:true,&quot;134233118&quot;:true,&quot;335559685&quot;:780,&quot;335559737&quot;:180}" style="font-size: 10pt;">&#160;that you received when setting up the&#160;Application.</span></p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save </span>at the bottom of the page.&#160;</p>
+    </li>
+  </ol>
+  <p style="margin-left: 30pt;counter-set: item1 2;"><span style="font-weight: bold;">Note</span>: OAuth must also be selected in <span style="font-weight: bold;">Notification</span><span style="font-weight: bold;">&#160;Settings</span>. See&#160;<a href="Configuring_Notification_Settings.htm">Configuring Notification Settings</a>.</p>
+  <p />
+  <p />
+  <p paraeid="{cfb17e1c-4935-42a3-85ce-4e2d2d8aabf6}{116}" paraid="1352951584"><span data-contrast="none"><span></span></span><span data-ccp-props="{&quot;134233117&quot;:false,&quot;134233118&quot;:false}"><![CDATA[ ]]> </span></p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

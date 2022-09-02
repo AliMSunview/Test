@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\Using_the_REST_API.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Using the REST API</title>
+  
+  <meta name="rh-index-keywords" content="REST API" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Using the REST API">
+        <span>Using the REST API</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2 data-condition="Others:Online"><span data-field="title" data-format="default">Using the REST API</span></h2>
+  <p>The ChangeGear REST API provides access to ChangeGear services through a RESTful interface. It allows you to interact with ChangeGear entities using simple HTTP requests. The REST API opens up the possibility to programmatically access and modify ChangeGear using scripts, custom commands, and third-party services.</p>
+  <p class="note"><span class="tipnote">Important:</span> We strongly recommend using SSL to secure communications to and from your ChangeGear server.</p>
+  <p>This section explains how to use the REST API, including:</p>
+  <ul>
+    <li>
+      <p>How to format a request</p>
+    </li>
+    <li>
+      <p>How to parse the response</p>
+    </li>
+    <li>
+      <p>How to perform authentication</p>
+    </li>
+    <li>
+      <p>How to interact with entities (tickets, announcements, Knowledge Base articles, etc.)</p>
+    </li>
+  </ul>
+  <h3 data-condition="Others:Non_Release">RESTful Services</h3>
+  <p data-condition="Others:Non_Release">REST (or Representation State Transfer) is an architectural approach to communicating data between a client machine and a server. Services that implement REST are known as RESTful services. While REST does not define a standard, RESTful services often share the following characteristics:</p>
+  <ul data-condition="Others:Non_Release">
+    <li>
+      <p>REST services are <span style="font-weight: bold;">stateless</span>. Each transaction between the client and server is treated as a completely separate transaction. The client provides all of the information that the server needs to service each request.</p>
+    </li>
+    <li>
+      <p>REST services are <span style="font-weight: bold;">uniform</span>. Each request consists of the same components: the location of a resource, the action to take on the method, and any additional information necessary to complete the request.</p>
+    </li>
+    <li>
+      <p>REST services are <span style="font-weight: bold;">scalable</span>. RESTful services can grow to support a large number of components<span style="color: rgb(34, 34, 34);font-family: Arial, sans-serif;font-size: 16px;line-height: 19.2px;orphans: auto;widows: 1;-webkit-text-stroke-width: 0px;display: inline !important;float: none;background-color: #ffffff;">–</span>and methods for interacting with those components<span style="color: rgb(34, 34, 34);font-family: Arial, sans-serif;font-size: 16px;line-height: 19.2px;orphans: auto;widows: 1;-webkit-text-stroke-width: 0px;display: inline !important;float: none;background-color: #ffffff;">–</span>without negatively impacting performance or usability.</p>
+    </li>
+  </ul>
+  <p data-condition="Others:Non_Release">A typical REST interaction consists of a request and a response. Requests originate from client machines wishing to retrieve data from a server. When the server processes the request, it provides a response that the client then further processes before presenting to the user.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

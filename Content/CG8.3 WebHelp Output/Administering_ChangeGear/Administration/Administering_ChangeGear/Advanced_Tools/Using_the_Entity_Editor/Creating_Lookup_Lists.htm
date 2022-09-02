@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Advanced_Tools\Using_the_Entity_Editor\Creating_Lookup_Lists.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Creating Lookup Lists</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating Lookup Lists">
+        <span>Creating Lookup Lists</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Creating Lookup Lists</span></h2>
+  <p>Lookup lists are ChangeGear entities with data that is controlled by the ChangeGear administrator instead of by end users. Lookup lists are generally displayed as drop-down controls on forms. When you create a lookup list, you create a new entity and
+ then create a form that will be used to populate the lookup list in the Desktop Client. After you have created the lookup list and saved your changes, you can add it to a form on the Web.</p>
+  <p>There are five steps to creating and using a lookup list:</p>
+  <ol>
+    <li>
+      <p><a href="#To_create_a_lookup_list:">Create the lookup list</a> in the <span style="font-weight: bold;">Entity Editor</span></p>
+    </li>
+    <li>
+      <p><a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm">Add the lookup list as an association</a> to the ticket entity (i.e., Incident Request, Problem Report, or RFC)</p>
+    </li>
+    <li>
+      <p><a href="#The_Forms_node_defines_the_form">Modify the lookup list form</a> in the <span style="font-weight: bold;">Entity Editor</span></p>
+    </li>
+    <li>
+      <p><a href="Customizing_the_Model/How_Do_I_Add_a_Field_to_an_Entity.htm">Add the lookup list to a form as a field</a> in the <span style="font-weight: bold;">Form Designer</span></p>
+    </li>
+    <li>
+      <p>Add data to the lookup list in <span style="font-weight: bold;">Administration &gt;</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;font-style: italic;">Module</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">&gt; Lookup Lists</span></p>
+    </li>
+  </ol>
+  <p class="note"><span class="tipnote">Note:</span> Lookup list items can only be added through the respective <span style="font-weight: bold;">Administration &gt;</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;font-style: italic;">Module</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">&gt; Lookup Lists</span>    node.</p>
+  <p>The following example guides you through creating a lookup list and viewing the lookup list outside of the Entity Editor. The result of this example is a new lookup list added to the Change module called "Service Request Type".</p>
+  <p class="inst"><a id="To_create_a_lookup_list:"></a>To create a lookup list:</p>
+  <ol>
+    <li>
+      <p><a href="Customizing_the_Model/How_Do_I_Access_the_Model_Editor_.htm">Access</a> the Entity Editor for the correct module. In this example, select <span style="font-weight: bold;">Change Management &gt; Lookup Lists</span>.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Add Entity</span>. The <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP61777921" href="#"><span data-open-text="true" data-skip-index="true">New Entity dialog</span><span data-close-text="true">New Entity dialog</span></a> will display.<br />
+        <img alt="" border="0" height="190" src="../../../../../assets/images/Administration/Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/add_entity.png" style="border: none;" width="266" /></p>
+      <div data-targetname="POPUP61777921">
+        <p><img src="../../../../../assets/images/Administration/Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/new_entity.png" alt="" style="border: none;" border="0" /></p>
+      </div>
+    </li>
+    <li>
+      <p>Enter the name of the lookup list. The name is how the lookup list is stored in the database. In this example, enter "ServiceRequestType."</p>
+      <p class="note"><span class="tipnote">Note:</span> The name cannot include any special characters, including spaces and underscores.</p>
+    </li>
+    <li>
+      <p>Enter the caption of the lookup list. The caption is a more human-readable way to refer to the lookup list. In this case, enter "Service Request Type."</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>. The new lookup list is added to the tree.<br />
+        <img alt="" border="0" height="172" src="../../../../../assets/images/Administration/Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/new_ll.png" style="border: none;" width="269" /></p>
+    </li>
+    <li>
+      <p>The <span style="font-weight: bold;">Model</span> node defines the fields and associations that are available to each entry in the lookup list. Fields contain individual data points, while associations allow you to create links between lookup lists
+ and other data sources or other lookup lists. For more information on adding and configuring fields and associations, see <a href="Customizing_the_Model/How_Do_I_Add_a_Field_to_an_Entity.htm" style="font-style: italic;">How Do I Add a Field to an Entity?</a>        and <a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm" style="font-style: italic;">How Do I Add an Association?</a>.</p>
+    </li>
+    <li>
+      <p>Save your changes to the entity model by clicking <span style="font-weight: bold;">File &gt; Save All Changes</span>. It may take several minutes to save the changes as ChangeGear is updating the database with new tables and relationships. A default
+ form will be automatically generated when the model has been successfully saved.</p>
+    </li>
+    <li>
+      <p><a id="The_Forms_node_defines_the_form"></a>The<span style="font-weight: bold;"> Forms</span> node defines the form used to enter items into the lookup list. The <span style="font-style: italic;">Default (Staff)</span> form can be accessed by navigating
+ to the module's respective <span style="font-weight: bold;">Administration tab &gt; </span><span style="font-weight: bold;font-style: italic;">Module</span><span style="font-weight: bold;"> &gt; Lookup Lists</span> node and adding or editing a lookup list item.</p>
+      <ol>
+        <li>
+          <p>Click <span style="font-weight: bold;">Edit Form</span> or the <span style="font-weight: bold;">Customize...</span> button. The Form Designer displays.</p>
+        </li>
+        <li>
+          <p>Click <span style="font-weight: bold;">Design Mode</span>.</p>
+        </li>
+        <li>
+          <p>Add and arrange fields as necessary. Custom fields are preceded by "UDF_". For example, if you created a custom field named "Description", the field will be listed as "UDF_Description". For more information on configuring
+ forms, see <a href="Customizing_Forms/How_Do_I_Add_a_Field_to_a_Form_.htm" style="font-style: italic;">How Do I Add a Field to a Form?</a>.</p>
+        </li>
+        <li>
+          <p>Save your form.</p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>Save any changes to the model by clicking <span style="font-weight: bold;">File &gt; Save All Changes</span>.</p>
+    </li>
+    <li>
+      <p>Restart the Internet Information Services (IIS) process or recycle the CGWeb application pool to refresh the ChangeGear Web client.</p>
+    </li>
+  </ol>
+  <p>Before you can use the lookup list in a Web form, you need to add the lookup list to the entity's model as an association. For more information, see <a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm" style="font-style: italic;">How Do I Add an Association?</a>.</p>
+  <p />
+  <p class="inst">To view the new lookup list:</p>
+  <ol>
+    <li>
+      <p>Close the Entity Editor.</p>
+    </li>
+    <li>
+      <p>In the main Desktop Client window, use the <span style="font-weight: bold;">Administration</span> tree to navigate to the module in which you created the lookup list.</p>
+    </li>
+    <li>
+      <p>Expand <span style="font-weight: bold;">Lookup Lists</span>.</p>
+    </li>
+  </ol>
+  <p>The new lookup list should now be displayed with the other lookup lists. For information regarding adding entries to a lookup list, see the <a href="../../Configuring_Lookup_Lists/Overview_of_Lookup_Lists.htm" style="font-style: italic;">Lookup Lists</a>    chapter.</p>
+  <p />
+  <h3>Using Lookup Lists with Associations</h3>
+  <p>Lookup lists display a list of values that users can choose from. However, these values are manually defined in the lookup list itself and have to be changed in the Desktop Client. Using associations, you can link a lookup list to another entity in
+ order to create dynamic and flexible lookup lists. This creates a relationship where one entity becomes a lookup list item for another entity. You can then bind the association to a field on a form to allow users to select and even modify values in
+ the lookup list from the ChangeGear Web client.</p>
+  <p>For more information on using associations, see the <a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm" style="font-style: italic;">How Do I Add an Association?</a> topic under <a href="Customizing_the_Model/Customizing_the_Model.htm" style="font-style: italic;">Customizing the Model</a><![CDATA[ ]]> 
+    <span style="font-style: italic;">.</span>
+  </p>
+  <p />
+  </div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

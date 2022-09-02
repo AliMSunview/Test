@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Willow\Suggestion_Center\Suggestion_Center_Overview.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.12.5.0_1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+  
+  <title>Suggestion Center Overview</title>
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Suggestion Center Overview">
+        <span>Suggestion Center Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Suggestion Center Overview</span></h2>
+  <p style="margin-left: 0px;font-size: 10.5pt;">The Suggestion Center uses machine learning to identify and suggest potentially useful resources (Knowledge Base articles and other Incident tickets, for example) that are similar to the current ticket, based on text and image similarity analysis.</p>
+  <p style="margin-left: 0px;font-size: 10.5pt;">ChangeGear provides these suggestions automatically to Staff Users while they are viewing the ticket, so they can easily review and use them to update or resolve the current ticket with the click of a button. ChangeGear machine learning modules continually
+ learn&#160;and updates themselves&#160;as new resources are added to the system.</p>
+  <p style="margin-left: 0px;font-size: 10.5pt;"><span style="font-weight: bold;">Note</span>: Willow must be licensed and installed for Suggestion Center to be available.</p>
+  <p style="margin-left: 0px;font-size: 10.5pt;">When Staff Users open a new or existing ticket, the Suggestion Center icon appears on the right-hand side of the ticket form. If the current ticket contains text or attached images that match existing tickets or Knowledge Base articles within a set
+ percentage of confidence, the icon lights up, indicating ChangeGear found a match.</p>
+  <p style="margin-left: 0px;font-size: 10.5pt;"><img src="../../../../assets/images/SC icon on ticket boxed.jpg" /></p>
+  <p style="margin-left: 0px;font-size: 10.5pt;">Staff users can then click the icon to view the matches. If staff users find a match useful, they can choose to copy the match into the open ticket's resolution field and update or resolve the open ticket.</p>
+  <ul style="list-style: disc;">
+    <li style="margin-left: -20px;font-size: 10.5pt;">Suggestion Center is available for all ticket modules (except CMDB).</li>
+    <li style="margin-left: -20px;font-size: 10.5pt;">Set up and configure Suggestion Center inside ChangeGear Web Administration</li>
+    <li style="margin-left: -20px;font-size: 10.5pt;">You can configure each Suggestion Center to have a set of Suggestion Sources</li>
+    <li style="margin-left: -20px;font-size: 10.5pt;">A Suggestion Source includes a Willow model (restricted to text and image models) and configuration (that holds the <span style="font-family: 'Segoe UI', sans-serif;">user-specified&#160;</span>threshold, number of rows to show, field value to
+ show etc.)</li>
+    <li style="margin-left: -20px;font-size: 10.5pt;"><span style="font-family: 'Segoe UI', sans-serif;"> If you delete a Willow model associated with a Suggestion</span><span>&#160;source, ChangeGear deletes the link between the model and the source as well.</span></li>
+  </ul>
+  <h3>Setting up Suggestion Center</h3>
+  <p style="margin-left: 0px;">To configure Suggestion Center for Staff Users, do the following:</p>
+  <ol style="list-style: decimal;">
+    <li style="margin-left: -20px;">
+      <p style="margin-left: 0px;">From the Web Administration page,&#160;click <span style="font-style: italic;">Willow &gt; Suggestion Center</span>. ChangeGear displays the Suggestion Center screen.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 16px;"><img src="../../../../assets/images/main screen new logo.png" /></p>
+  <ol start="2" style="list-style: decimal;">
+    <li style="margin-left: -20px;">
+      <p style="margin-left: 0px;">From this screen you can enable or disable Suggestion Center per module. To do&#160;so, hover over to highlight the row of the module, then click the pencil icon <img height="21" src="../../../../assets/images/pencil icon.jpg" width="18" />&#160;to the right.
+ In the upper right you can toggle the slider to enable or disable&#160;Suggestion Center for the module.</p>
+    </li>
+  </ol>
+  <p style="margin-left: 0px;"><img height="86" src="../../../../assets/images/Enabled boxed.jpg" style="margin-left: 20px;" width="472" /></p>
+  <h3>Setting up Suggestion Center Sources</h3>
+  <p>Each Suggestion Center source can have settings and actions associated with it.</p>
+  <p style="margin-left: 0px;">To set up Suggestion Center sources with their&#160;settings, see <a href="Setting_Up_Suggestion_Sources.htm">Setting Up Suggestion Sources</a>.</p>
+  <p style="margin-left: 0px;" />
+  <h3>Setting up Actions for each Suggestion Center Source</h3>
+  <p>Actions are menu items that are available to the staff user in the Suggestion Center. Actions are usually executed in the context of the current ticket.</p>
+  <p style="margin-left: 0px;">To set up a Suggestion Center source with Actions, see <a href="test2.htm">Setting up Actions</a>.</p>
+  <p style="margin-left: 0px;" />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

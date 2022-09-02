@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Additional_Administration_Tasks\SLA_Management\Using_the_SLA_Manager\Advanced_Editor.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "24.14.2.1.0_4";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  
+  <title>Advanced Editor</title>
+  
+  <meta name="condition-tags" content="" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Advanced Editor">
+        <span>Advanced Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Advanced Editor</span></h2>
+  <p>The Advanced Editor lets you define more complex conditions when matching tickets. You can create custom criteria not possible with the Basic Editor using a SQL-like format. It is recommended that you use the Basic Editor to build your initial criteria,
+ then switch to the Advanced Editor to fine-tune your query.</p>
+  <p class="note"><span class="tipnote">Note:</span> Switching from the Advanced Editor back to the Basic Editor will clear all conditions. ChangeGear displays a confirmation dialog when you attempt to switch back to the Basic Editor.</p>
+  <p>The Advanced Editor provides a validate button which performs basic syntax checking on the query. If the query is valid, the editor displays "Validated without errors." If the query is not valid, the editor displays an error message with the
+ nature and location of the problem.</p>
+  <p>The following table explains some of the more common operations used in the Advanced Editor:</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 12.124%;" />
+      <col style="width: 47.787%;" />
+      <col style="width: 40.089%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Symbol</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">[ ]</p>
+        </td>
+        <td>
+          <p>Defines a field name.</p>
+        </td>
+        <td>
+          <p><span style="font-weight: bold;">[</span>PriorityName<span style="font-weight: bold;">]</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">' '</p>
+        </td>
+        <td>
+          <p>Defines a value to compare against.</p>
+        </td>
+        <td>
+          <p>[PriorityName] = <span style="font-weight: bold;">'</span>1 - Critical<span style="font-weight: bold;">'</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">AND<br /> OR
+          </p>
+        </td>
+        <td>
+          <p>Compares two or more conditions.</p>
+        </td>
+        <td>
+          <p>[PriorityName] = '1 - Critical' <span style="font-weight: bold;">AND</span> [Approved] = 'true'</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">( )</p>
+        </td>
+        <td>
+          <p>Defines a set of conditions to compare before comparing it against other conditions.</p>
+        </td>
+        <td>
+          <p><span style="font-weight: bold;">(</span>[PriorityName] = '1 - Critical' AND [Approved] = true<span style="font-weight: bold;">)</span> OR [CategoryName = '1 - Major'</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

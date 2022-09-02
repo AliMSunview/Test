@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\Creating_a_Request.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Creating a Request</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating a Request">
+        <span>Creating a Request</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Creating a Request</span></h2>
+  <p>A <span style="font-style: italic;">request</span> is a call for a specific resource. The client machine provides the server with information about the desired resource and the action to perform on that resource. When the server receives the request,
+ it performs an action based on the properties of the request and returns a <span style="font-style: italic;">response</span> to the client.</p>
+  <p>A REST API request consists of four components:</p>
+  <p />
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 22.271%;" />
+      <col style="width: 44.396%;" />
+      <col style="width: 33.333%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Component</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Uniform Resource Locator (URL)</p>
+        </td>
+        <td>
+          <p>The location of a specific resource.</p>
+        </td>
+        <td>
+          <p class="Code">https://changegear-server/CGRestAPI/api/IncidentRequest</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Method</p>
+        </td>
+        <td>
+          <p>The action to perform on the resource.</p>
+          <p class="note"><span class="tipnote">Note:</span> The ChangeGear REST API only supports the GET, POST, PUT, and DELETE methods.</p>
+        </td>
+        <td>
+          <p class="Code">POST</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Headers</p>
+        </td>
+        <td>
+          <p>Additional metadata required by the server before it can process the request.</p>
+        </td>
+        <td>
+          <p class="Code">sessionid: 46l8Xd/xkIVx1QQNvj2SoQ==</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Content</p>
+        </td>
+        <td>
+          <p>The JavaScript Object Notation (JSON)-encoded body of the request, if required.</p>
+        </td>
+        <td>
+          <p class="Code">{<br /> &#160;&#160;&#160;&#160;&#160;"username": "administrator",<br /> &#160;&#160;&#160;&#160;&#160;"password": "abcd1234"<br /> }
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h3><a id="Resources"></a>Resources</h3>
+  <p>Resources define the items or entities in ChangeGear that are affected by the request. Resources are exposed through the REST API using Uniform Resource Identifiers (URL), which specify the logical location of resources on the server. The client needs
+ to know the URL in order to access the correct resource.</p>
+  <p class="note" data-condition="Others:Non_Release"><span class="tipnote">Tip: </span>There is often confusion between Universal Resource Identifiers (URLs) and Universal Resource Locators (URLs). URLs define the location of a resource, but they don't necessarily need to specify the <span style="font-style: italic;">protocol</span>&#160;used
+ to access the resource. A URL is a type of URL that specifies the protocol <span style="font-style: italic;">in addition to</span> the location. Technically the REST API uses URLs, since you need to specify either the HTTP or HTTPS protocol when accessing
+ a resource.</p>
+  <p>For example, the following URL lets you retrieve information about an incident request from a ChangeGear server. It consists of:</p>
+  <ul>
+    <li>
+      <p>The base URL that defines where the REST API is located</p>
+    </li>
+    <li>
+      <p>An entity specifier (required when using the GET or DELETE methods)</p>
+    </li>
+    <li>
+      <p>The type of entity (or resource) being accessed</p>
+    </li>
+    <li>
+      <p>The unique identifier of the entity (or resource) being accessed. In this case, we are accessing the incident request with an ID of 4.</p>
+    </li>
+  </ul>
+  <p><img alt="" border="0" src="../../../assets/images/Administration/Using_the_REST_API/URI Breakdown.png" style="border: none;" /></p>
+  <p class="note"><span class="tipnote">Note:</span> A URL may have additional components depending on the resource being accessed. These components are explained in more detail for each API endpoint.</p>
+  <h4>Parameters</h4>
+  <p>Some REST API calls require you to specify <span style="font-style: italic;">parameters</span> as part of the URL. Parameters are additional values appended to the URL that further identify the resource being requested. In the URL shown above,
+    <span style="font-style: italic;">IncidentTicket</span>&#160;and <span style="font-style: italic;">4</span>&#160;are parameters that specify the type and the unique identifier of the entity being retrieved. Other parameters allow you to retrieve more detailed information about a resource, pass
+ data values, and even filter the contents of the server's response.</p>
+  <h4><a id="Percent-Encoding"></a>Percent-Encoding</h4>
+  <p>In some cases, you may need to pass a value in the URL that contains special characters, such as spaces or symbols. To ensure the REST API can process the URL, use percent-encoding (also known as URL encoding) to replace special characters with their
+ properly-encoded equivalent. Percent-encoding is especially important when passing user-defined strings in the URL, such as a search string.</p>
+  <p>Percent-encoding is defined in detail by the Internet Engineering Task Force (IETF) in <a href="https://tools.ietf.org/html/rfc3986#section-2.1">RFC 3986 Section 2.1</a>.</p>
+  <p />
+  <h3><a id="Methods"></a>Methods</h3>
+  <p>Methods define the action to perform on the resource. The REST API supports four methods:</p>
+  <ul>
+    <li>
+      <p><span style="font-weight: bold;">GET</span> - Retrieves information about a specific resource.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">POST</span> - Creates a new resource.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">PUT </span>- Updates an existing resource.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">DELETE</span> - Deletes a resource.</p>
+    </li>
+  </ul>
+  <p>For example, in order to retrieve information about all incidents in the system, we would construct a request with the following properties:</p>
+  <ul>
+    <li>
+      <p><span style="font-weight: bold;">URL</span>: https://changegear-server/CGRestAPI/api/entity/IncidentRequest</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Method: </span>GET</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Content Type:</span> JSON</p>
+      <p class="note"><span class="tipnote">Note:</span> The REST API communicates using JavaScript Object Notation (JSON), a simple and standardized format for transmitting data. When submitting a request, be sure to specify JSON as the content type.</p>
+    </li>
+  </ul>
+  <p />
+  <h3><a id="Headers"></a>Headers</h3>
+  <p>Headers contain any metadata required by the ChangeGear server before it will process a request. For most requests, the REST API only requires you to pass a valid ChangeGear session ID in the header. The header also defines the <span style="font-style: italic;">content type</span>    of the request, which is JSON.</p>
+  <h4>Basic Authentication</h4>
+  <p>The <span style="font-style: italic;">Entity</span><span data-condition="Others:non_release" style="font-style: italic;">, Integration,</span> and<span style="font-style: italic;"> Search</span> APIs support authenticating via HTTP Basic Access Authentication.
+ Basic authentication allows you to bundle your user credentials as part of the request without first having to get a session ID using a <a href="APIs/Login.htm#Log_In">Login</a> request.</p>
+  <p class="inst">To use basic authentication:</p>
+  <ol style="list-style: decimal;">
+    <li>
+      <p>Create your <a href="APIs/Entity.htm"><span style="font-style: italic;">Entity</span></a><span data-condition="Others:non_release" style="font-style: italic;">, <a href="APIs/Integration.htm">Integration</a></span><span data-condition="Others:non_release">,</span>        or <span style="font-style: italic;"><a href="APIs/Search.htm">Search</a></span>&#160;request as described in the respective topic.</p>
+    </li>
+    <li>
+      <p>Add a new header to your request and enter <span style="font-weight: bold;">Authorization</span> as the key.</p>
+    </li>
+    <li>
+      <p>Create a Base64 encoding of your username and password separated by a colon (e.g. cg<span style="font-style: italic;">user:cgpassword</span>). In Windows, you can use PowerShell or Certutil.exe to quickly generate a Base64 string.</p>
+      <ul style="list-style: disc;">
+        <li>
+          <p>Using PowerShell: Open a PowerShell prompt and enter the following command, replacing <span style="font-style: italic;">username</span> and <span style="font-style: italic;">password</span> with the credentials of the ChangeGear user:</p>
+          <p class="Code">[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("<span style="font-style: italic;">username</span>:<span style="font-style: italic;">password</span>"))</p>
+        </li>
+        <li>
+          <p>Using Certutil.exe: Create a new text file and enter "username:password" as the only contents, replacing <span style="font-style: italic;">username</span><span> and </span><span style="font-style: italic;">password</span> with the
+ credentials of the ChangeGear user. Open Command Prompt and enter the following command, replacing <span style="font-style: italic;">inFile</span><span> with the path to the file you just created and </span><span style="font-style: italic;">outFile</span><span> with the path to a new file containing the Base64-encoded string:</span></p>
+          <p class="Code">certutil -encode <span style="font-style: italic;">inFile</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-style: italic;">outFile</span></p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Enter <span style="font-style: italic;">Basic &lt;Base64-encoded Credentials&gt;</span> in the <span style="font-weight: bold;">Value</span> field of the Authorization header created in step 2.</p>
+    </li>
+  </ol>
+  <p>Using Basic Authentication, your ChangeGear session only lasts for the duration of a single request. Your session will end once ChangeGear has sent a response. If you plan on making multiple requests as the same user, we recommend using the <a href="APIs/Login.htm#Log_In">Login</a>    API to generate a reusable session ID.</p>
+  <p />
+  <h3><a id="Content__Body_"></a>Body</h3>
+  <p>The body of the request contains the data that will be supplied to ChangeGear when the request is processed. Once the request has been validated by the REST API, the body contains the information about the object being accessed or modified. For all
+ REST API requests, the request body takes the form of a JSON object.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

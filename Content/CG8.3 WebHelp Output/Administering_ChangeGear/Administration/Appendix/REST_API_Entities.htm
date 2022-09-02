@@ -1,0 +1,1250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Appendix\REST_API_Entities.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+
+
+<meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+
+<title data-condition="Others:Administration">REST API Entities</title>
+
+<meta name="rh-index-keywords" content="REST API:REST API Entities" data-condition="Others:Administration" /></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="REST API Entities">
+        <span>REST API Entities</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+
+
+<h2><span data-format="default" data-field="title">REST API Entities</span></h2>
+<p>This section lists the entities (and their properties) that can be accessed 
+ through the REST API. Entities are listed according to module, name, REST 
+ API name, description, and access permissions. To learn more about interacting 
+ with these entities, see the<span style="font-style: italic;"> <a href="../Using_the_REST_API/APIs/Entity.htm">Entity</a></span> 
+ topic in the <a href="../Using_the_REST_API/Using_the_REST_API.htm" style="font-style: italic;">Using 
+ the Rest API</a> section.</p>
+<p class="note"><span class="tipnote">Note:</span> You may not have access 
+ to certain entities depending on your ChangeGear license.</p>
+<p class="note" data-condition="Others:Internal"><span class="tipnote">Note: 
+ </span>For Flex entities, replace the number after "Flex" with 
+ the desired Flex module number (for example, "Flex1Ticket" references 
+ a ticket in the Flex 1 module).</p>
+<p />
+<table class="CGTable" cellspacing="1" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;"><p style="font-weight: bold;color: #ffffff;">Common 
+		 Entities</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Attachments</p></td>
+		<td><p>AttachmentRecords</p></td>
+		<td><p>Files attached to the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Close Type</p></td>
+		<td><p>CloseType</p></td>
+		<td><p>The reason for closing the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>History Records</p></td>
+		<td><p>HistoryRecords</p></td>
+		<td><p style="background-color: Transparent;">The record of changes 
+		 made to the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impact</p></td>
+		<td><p>Impact</p></td>
+		<td><p>The impact level of the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impacted Resources</p></td>
+		<td><p>ImpactedResourceRef</p></td>
+		<td><p>Resources impacted by the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impacted Users/Groups</p></td>
+		<td><p>ImpactedUserGroupRef</p></td>
+		<td><p>Users or groups impacted by the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Origin Type</p></td>
+		<td><p>OriginType</p></td>
+		<td><p>The source of the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Priority</p></td>
+		<td><p>PriorityEntity</p></td>
+		<td><p>The urgency level of the item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Process Type</p></td>
+		<td><p>ProcessType</p></td>
+		<td><p>The Process Type used for the change request. For more information, 
+		 see <span style="font-style: italic;"><a href="../Administering_ChangeGear/Configuring_Lookup_Lists/Change_Management_Lookup_Lists/Process_Types.htm">Process 
+		 Types</a></span> under <span style="font-style: italic;"><a href="../Administering_ChangeGear/Configuring_Lookup_Lists/Overview_of_Lookup_Lists.htm">Configuring 
+		 Lookup Lists</a></span> &gt; <span style="font-style: italic;"><a href="../Administering_ChangeGear/Configuring_Lookup_Lists/Change_Management_Lookup_Lists/Overview_of_Change_Management_Lookup_Lists.htm">Change 
+		 Management</a></span>.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Tasks</p></td>
+		<td><p>Tasks</p></td>
+		<td><p>Tasks associated with an item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Task Type</p></td>
+		<td><p>Task Type</p></td>
+		<td><p>The type of a task.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Urgency</p></td>
+		<td><p>Urgency</p></td>
+		<td><p>The urgency level of an item.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Administration</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Contact</p></td>
+		<td><p>Contact</p></td>
+		<td><p>An external user.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Department</p></td>
+		<td><p>Department</p></td>
+		<td><p>Departments within your organization.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Sub Department</p></td>
+		<td><p>SubDepartment</p></td>
+		<td><p>Departments belonging to a parent Department.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Location</p></td>
+		<td><p>Location</p></td>
+		<td><p>Your organization's locations.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Sub Location</p></td>
+		<td><p>SubDepartment</p></td>
+		<td><p>Locations belonging to a parent Location.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Team</p></td>
+		<td><p>Team</p></td>
+		<td><p>A ChangeGear team.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Team Member</p></td>
+		<td><p>PersonToTeam</p></td>
+		<td><p>An association between a user and a team.</p>
+		<p class="note"><span class="tipnote">Tip:</span> You can also 
+		 use <span style="font-style: italic;" data-condition="Others:Internal">Person.MemberOfTeams</span> 
+		 to find teams that a user is a member of.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>User</p></td>
+		<td><p>Person</p></td>
+		<td><p>A ChangeGear user.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Announcements 
+		 (Freestanding)</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Announcement</p></td>
+		<td><p>Announcement</p></td>
+		<td><p>An announcement that is not associated with a Change ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p />
+<table class="CGTable" cellspacing="1" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;"><p>Change Management</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423"><p style="color: #ffffff;font-weight: bold;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Announcements</p></td>
+		<td><p>RFCAnnouncements</p></td>
+		<td><p>Announcements associated with the change request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Change Ticket</p></td>
+		<td><p>ChangeManagementTicket</p></td>
+		<td><p>A change request ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Change Mode</p></td>
+		<td><p>ChangeMode</p></td>
+		<td><p>The Change Mode that the change request was created in.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Change Reason</p></td>
+		<td><p>ChangeReason</p></td>
+		<td><p>The reason for initiating the change request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Change Type</p></td>
+		<td><p>ChangeType</p></td>
+		<td><p>The type of work required for the change request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">Change Sub Type</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">ChangeType.SubType</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">TODO</p>
+		<div style="display: none;" data-condition="Others:Non_Release">
+			<p>Todo</p>
+		</div></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Risk</p></td>
+		<td><p>Risk</p></td>
+		<td><p>The risk level of the change request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>CMDB</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>CMDB</p></td>
+		<td><p>ManagedResource</p></td>
+		<td><p>A CMDB resource.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Contract</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Contract</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Contract 
+		 Type</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">ContractType</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Policy 
+		 Type</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">PolicyType</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Policy 
+		 Document</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">PolicyDocument</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release" /></td>
+	</tr>
+	<tr>
+		<td><p>Procurement Source</p></td>
+		<td><p>ProcurementSource</p></td>
+		<td><p>How a resource was acquired.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Resource Class</p></td>
+		<td><p>ResourceClass</p></td>
+		<td><p>The classification of the resource.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Resource Status</p></td>
+		<td><p>ResourceStatus</p></td>
+		<td><p>The current state in the resource's life cycle.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Resource Type</p></td>
+		<td><p>ResourceType</p></td>
+		<td><p>The type of resource being managed.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Flex</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="text-align: center;font-weight: bold;color: #ffffff;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="text-align: center;font-weight: bold;color: #ffffff;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="text-align: center;font-weight: bold;color: #ffffff;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="text-align: center;font-weight: bold;color: #ffffff;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Close Type</p></td>
+		<td><p>FlexCloseType</p></td>
+		<td><p>The reason for closing the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Level</p></td>
+		<td><p>FlexLevel</p></td>
+		<td><p>The organizational level that the ticket is assigned to.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Priority</p></td>
+		<td><p>FlexPriority</p></td>
+		<td><p>The urgency level of the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Task Type</p></td>
+		<td><p>FlexTaskType</p></td>
+		<td><p>The type of task associated with the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Ticket</p></td>
+		<td><p>FlexTicket</p></td>
+		<td><p>A Flex ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Ticket 
+		 Category</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">FlexTicketCategory</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">[TODO]</p>
+		<div style="display: none;" data-condition="Others:Internal;Others:non_release">
+			<p>Find this out from Sheela(?)</p>
+		</div></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Ticket Impact</p></td>
+		<td><p>FlexTicketImpact</p></td>
+		<td><p>The impact level of the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Type</p></td>
+		<td><p>FlexType</p></td>
+		<td><p>The type of work required for the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Urgency</p></td>
+		<td><p>FlexUrgency</p></td>
+		<td><p>The urgency level of the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 53px;" />
+<table class="CGTable" cellspacing="1" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;"><p>Incident</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">Category</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">IncidentRequestCategory</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Non_Release">[TODO]</p>
+		<div style="display: none;" data-condition="Others:Non_Release">
+			<p>Find this out from Sheela(?)</p>
+		</div></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Non_Release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Non_Release" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Close Type</p></td>
+		<td><p>IncidentRequestCloseType</p></td>
+		<td><p>The reason for closing the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impact</p></td>
+		<td><p>IncidentRequestImpact</p></td>
+		<td><p>The impact level of the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Incident Ticket</p></td>
+		<td><p>IncidentRequest</p></td>
+		<td><p>An incident ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Level</p></td>
+		<td><p>IncidentRequestLevel</p></td>
+		<td><p>The organizational level that the incident is assigned to.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Origin</p></td>
+		<td><p>IncidentRequestOrigin</p></td>
+		<td><p>The source of the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Priority</p></td>
+		<td><p>IncidentRequestPriority</p></td>
+		<td><p>The urgency level of the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Task Type</p></td>
+		<td><p>IncidentRequestTaskType</p></td>
+		<td><p>The type of task associated with the ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Type</p></td>
+		<td><p>IncidentRequestType</p></td>
+		<td><p>The type of work required for the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Urgency</p></td>
+		<td><p>IncidentRequestUrgency</p></td>
+		<td><p>The urgency level of the incident.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Knowledge 
+		 Base</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Article</p></td>
+		<td><p>KBArticle</p></td>
+		<td><p>A Knowledge Base article.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Topic</p></td>
+		<td><p>KBTopic</p></td>
+		<td><p>The topic that the article is organized under.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Problem</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Category</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">ProblemReportCategory</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">[TODO]</p>
+		<div style="display: none;" data-condition="Others:Internal;Others:non_release">
+			<p>Find this out from Sheela(?)</p>
+		</div></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Close Type</p></td>
+		<td><p>ProblemReportCloseType</p></td>
+		<td><p>The reason for closing the problem report/</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impact</p></td>
+		<td><p>ProblemReportImpact</p></td>
+		<td><p>The impact of the problem report.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Level</p></td>
+		<td><p>ProblemReportLevel</p></td>
+		<td><p>The organizational level that the problem report is assigned 
+		 to.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Origin</p></td>
+		<td><p>ProblemReportImpact</p></td>
+		<td><p>The source of the problem report.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Priority</p></td>
+		<td><p>ProblemReportPriority</p></td>
+		<td><p>The urgency level of the problem report.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Problem Report</p></td>
+		<td><p>ProblemReport</p></td>
+		<td><p>A problem report ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Task 
+		 Type</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">ProblemReportTaskType</p></td>
+		<td data-condition="Others:Non_Release"><p data-condition="Others:Internal;Others:non_release">Lookup</p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+		<td data-condition="Others:Non_Release"><p style="text-align: center;" data-condition="Others:Internal;Others:non_release"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal;Others:non_release" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Type</p></td>
+		<td><p>ProblemReportType</p></td>
+		<td><p>The type of work required for the problem report.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Urgency</p></td>
+		<td><p>ProblemReportUrgency</p></td>
+		<td><p>The urgency level of the problem report.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Service Item</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td data-condition="Others:non_release;Others:Internal"><p>Category</p></td>
+		<td data-condition="Others:non_release;Others:Internal"><p>ServiceItemCategory</p></td>
+		<td data-condition="Others:non_release;Others:Internal"><p>[TODO]</p>
+		<div style="display: none;">
+			<p>Find this out from Sheela(?)</p>
+		</div></td>
+		<td data-condition="Others:non_release;Others:Internal"><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:non_release;Others:Internal" /></p></td>
+		<td data-condition="Others:non_release;Others:Internal"><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:non_release;Others:Internal" /></p></td>
+		<td data-condition="Others:non_release;Others:Internal"><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:non_release;Others:Internal" /></p></td>
+		<td data-condition="Others:non_release;Others:Internal"><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:non_release;Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Service Item</p></td>
+		<td><p>ServiceItem</p></td>
+		<td><p>An item in the Service Catalog.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>Service Request</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="font-weight: bold;color: #ffffff;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>Access Level</p></td>
+		<td><p>ServiceRequestAccessLevel</p></td>
+		<td><p>The user's level of access (for Access Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Access Location</p></td>
+		<td><p>ServiceRequestAccessLocation</p></td>
+		<td><p>The location for the requested service (for Access Request).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Close Type</p></td>
+		<td><p>ServiceRequestCloseType</p></td>
+		<td><p>The reason for closing the service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Domain</p></td>
+		<td><p>ServiceRequestDomain</p></td>
+		<td><p>Lists your organization's domain names.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Employee Move Type</p></td>
+		<td><p>ServiceRequestEmployeeMoveType</p></td>
+		<td><p>The type of employee (for Move Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Facility</p></td>
+		<td><p>ServiceRequestFacility</p></td>
+		<td><p>Lists facility-related items.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Hardware Type</p></td>
+		<td><p>ServiceRequestHardwareType</p></td>
+		<td><p>The type of hardware requested (for Hardware Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Impact</p></td>
+		<td><p>ServiceRequestImpact</p></td>
+		<td><p>The impact of the service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>OS</p></td>
+		<td><p>ServiceRequestOS</p></td>
+		<td><p>The operating system requested (for Hardware Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Priority</p></td>
+		<td><p>ServiceRequestPriority</p></td>
+		<td><p>The priority level for fulfilling the service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Program Type</p></td>
+		<td><p>ServiceRequestProgramType</p></td>
+		<td><p>The type of program that applies to a training (for Training 
+		 Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Service Request</p></td>
+		<td><p>ServiceRequest</p></td>
+		<td><p>A service request ticket.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Software</p></td>
+		<td><p>ServiceRequestSoftware</p></td>
+		<td><p>Identifies the software requested (for Software Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>System</p></td>
+		<td><p>ServiceRequestSystem</p></td>
+		<td><p>Identifies the application(s) requested (for Access Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Task Type</p></td>
+		<td><p>ServiceRequestTaskType</p></td>
+		<td><p>The type of a task associated with a service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Telephony</p></td>
+		<td><p>ServiceRequestTelephony</p></td>
+		<td><p>Lists telephony-related items.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Training Level</p></td>
+		<td><p>ServiceRequestTrainingLevel</p></td>
+		<td><p>The level of training (for Training Requests).</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Type</p></td>
+		<td><p>ServiceRequestType</p></td>
+		<td><p>The type of work required for the service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+	<tr>
+		<td><p>Urgency</p></td>
+		<td><p>ServiceRequestUrgency</p></td>
+		<td><p>The level of urgency for a service request.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p data-condition="Others:Internal" />
+<table class="CGTable" cellspacing="1" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%" cellpadding="1">
+	<colgroup><col style="width: 20%;" />
+	<col style="width: 20%;" />
+	<col style="width: 30%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	<col style="width: 5%;" />
+	</colgroup><tbody><tr class="t1st">
+		<td colspan="7" style="border-bottom-width: 1px;" data-condition="Others:Internal"><p>SunView ML</p></td>
+		
+	</tr>
+	<tr>
+		<td style="border-right-width: 1px;border-left-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Entity</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Type</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;">Description</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">GET</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">POST</p></td>
+		<td style="border-right-width: 1px;border-bottom-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">PUT</p></td>
+		<td style="border-bottom-width: 1px;border-right-width: 1px;" bgcolor="#EA8423" data-condition="Others:Internal"><p style="color: #ffffff;font-weight: bold;text-align: center;">DELETE</p></td>
+	</tr>
+	<tr>
+		<td><p>User Feedback</p></td>
+		<td><p>RecommendationFeedback</p></td>
+		<td><p>A user's rating on the helpfulness of a suggestion from 
+		 SunView ML.</p>
+		<p class="note"><span class="tipnote">Note:</span> This requires 
+		 the SunView ML service to be installed and running.</p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_check.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+		<td><p style="text-align: center;"><img src="../../../assets/images/Administration/icon_x.gif" alt="" style="border: none;" border="0" data-condition="Others:Internal" /></p></td>
+	</tr>
+</tbody></table>
+<p />
+
+<script type="text/javascript" language="JavaScript1.2"><![CDATA[
+
+//
+
+
+//]]></script>
+
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

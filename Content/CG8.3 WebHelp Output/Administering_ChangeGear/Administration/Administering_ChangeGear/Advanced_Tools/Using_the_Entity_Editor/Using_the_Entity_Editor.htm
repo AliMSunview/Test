@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Advanced_Tools\Using_the_Entity_Editor\Using_the_Entity_Editor.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Using the Entity Editor</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Using the Entity Editor">
+        <span>Using the Entity Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2 data-condition="Others:Online"><span data-field="title" data-format="default">Using the Entity Editor</span></h2>
+  <p>By using the Entity Editor, you can change ChangeGear's underlying data model and the forms used to modify individual data items. The editor is divided into modules that generally correspond to the module tabs in ChangeGear for easy navigation.
+ Once you open the module, the editable entities are displayed, including any new lookup lists you create. For example, if you open the Change Management module, the editable entities include the fields used to store data about RFCs, the forms used
+ by the Web client to modify those fields, and any custom lookup lists or grid tables used in conjunction with RFCs.</p>
+  <p class="note"><span class="tipnote">Important:</span> SunView Software highly recommends creating a backup of your ChangeGear database and installation folder on a test system before using the <span style="font-weight: bold;">Entity Editor</span>.</p>
+  <p>Within the Entity Editor, you can access the following utilities:</p>
+  <p><span style="font-weight: bold;">Form Designer</span> – The Form Designer is a drag-and-drop editor used to create and modify forms. Each form consists of controls, which are elements used to display data from or submit data to a field. You can have
+ multiple forms saved, but only one can be marked as active (see <a href="../../Workflows/Using_the_Workflow_Editor/Leveraging_Workflow_Automation/Dynamic_Request_Automation.htm" style="font-style: italic;">Dynamic Request Automation</a> for information
+ regarding using multiple forms). The Form Designer provides a default set of controls based on commonly-used fields, but you can also configure controls for added flexibility. See <a href="Customizing_Forms/Customizing_Forms.htm" style="font-style: italic;">Customizing Forms</a>    for more information.</p>
+  <p><span style="font-weight: bold;">Model Editor</span> – The Model Editor allows you to modify fields and create associations with other entities. Changes made at the module level take precedence over other changes. See <a href="Customizing_the_Model/Customizing_the_Model.htm" style="font-style: italic;">Customizing the Model</a> for more information.</p>
+  <p><span style="font-weight: bold;">Lookup List Editor</span> – The Lookup List Editor lets you define new lookup lists for a module. Each lookup list has its own form (used when adding items to the lookup list), fields, and associations. Note that you
+ can only create new lookup lists in the Entity Editor. If you wish to add items to a lookup list, see <a href="../../Configuring_Lookup_Lists/Adding_a_Lookup_List_Item.htm" style="font-style: italic;">Adding a Lookup List Item</a>.</p>
+  <p><span style="font-weight: bold;">Grid Table Editor</span> – The Grid Table Editor lets you create new grid views. Each grid table has its own form (used when adding items to the grid table), fields, and associations. For more information, see <a href="Creating_Grid_Tables.htm" style="font-style: italic;">Creating Grid Tables</a>.</p>
+  <p>Use the Entity Editor to:</p>
+  <ul>
+    <li>
+      <p>Add fields to forms</p>
+    </li>
+    <li>
+      <p>Create new attributes</p>
+    </li>
+    <li>
+      <p>Modify default properties of attributes</p>
+    </li>
+    <li>
+      <p>Change the captions of an attribute</p>
+    </li>
+    <li>
+      <p>Modify the appearance of a form</p>
+    </li>
+    <li>
+      <p>Activate forms</p>
+    </li>
+    <li>
+      <p>Create grid views</p>
+    </li>
+    <li>
+      <p>Revert attributes and forms to the factory default</p>
+    </li>
+  </ul>
+  <p>The Configuration Management module is covered separately as there are some additions made specific to the CMDB. For more information, see <a href="../../../Using_the_CMDB/Extending_the_CMDB/Overview_of_Extending_the_CMDB.htm" style="font-style: italic;">Extending the CMDB</a>.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Configuring_Lookup_Lists\Configuring_Operating_Calendars.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Configuring Operating Calendars</title>
+  
+  <meta name="rh-index-keywords" content="Business Hours,Operating Calendars" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Configuring Operating Calendars">
+        <span>Configuring Operating Calendars</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Configuring Operating Calendars</span></h2>
+  <p>Operating Calendars are used to configure time tracking options specific to an SLA. When creating or editing an SLA, you can use an Operating Calendar to define the business hours that the SLA will follow. While you can only have one Operating Calendar
+ per SLA, you can have separate Operating Calendars for separate SLAs. If you have teams with varying business hours, Operating Calendars make it easy to independently track each team's time.</p>
+  <p>Operating Calendars can also use holiday schedules to pause the SLA clock on certain days. Each Operating Calendar can be assigned one holiday schedule. For more information, see <a href="Configuring_Holiday_Schedules.htm">Configuring Holiday Schedules</a>.</p>
+  <p>When applied to an SLA, an Operating Calendar overrides the <a href="../Global_Settings/Business_Hour_Settings.htm">Global Business Hours</a> setting.</p>
+  <p class="inst">To create a new Operating Calendar:</p>
+  <ol>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">General</span>.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Operating Calendars</span>.</p>
+    </li>
+    <li>
+      <p>Under Common Tasks, click <span style="font-weight: bold;">New</span>. The Operating Calendar Details dialog appears.</p>
+      <p><img alt="" border="0" src="../../../../assets/images/Administration/Administering_ChangeGear/Configuring_Lookup_Lists/lookup_list_calendar.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Name</span> field, enter a name for the new calendar.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Description</span> field, enter a description of the new calendar.</p>
+    </li>
+    <li>
+      <p>If the calendar is used primarily in a different time zone, select the <span style="font-weight: bold;">Time Zone</span> from the drop-down list. ChangeGear takes time zones into effect when calculating the expiration date of an SLA.</p>
+      <p class="note"><span class="tipnote">Note: </span>The Time Zone field defaults to the server time zone.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">Week Days</span> that the calendar will follow by using the check boxes. The default is Monday through Friday.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">Daily Hours</span> that the calendar will follow by using the up and down arrows, or by entering the time in the text boxes. Select the <span style="font-weight: bold;">24 hours</span> check box if the
+ SLA clock should run for the entire day.</p>
+    </li>
+    <li>
+      <p>Optionally, select a Holiday Schedule from the <span style="font-weight: bold;">Holidays</span> drop-down list. For more information on Holiday Schedules, see <span style="font-style: italic;"><a href="Configuring_Holiday_Schedules.htm">Configuring Holiday Schedules</a></span><![CDATA[ ]]> 
+        <span style="font-style: italic;">.</span>
+      </p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span> to close the Operating Calendar Details dialog.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

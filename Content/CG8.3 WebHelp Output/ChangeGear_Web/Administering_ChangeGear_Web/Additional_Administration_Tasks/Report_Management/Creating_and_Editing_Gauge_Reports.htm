@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Additional_Administration_Tasks\Report_Management\Creating_and_Editing_Gauge_Reports.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.14.1.0_6";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  
+  <title>Creating and Editing Gauge Reports</title>
+  
+  <meta name="condition-tags" content="" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating and Editing Gauge Reports">
+        <span>Creating and Editing Gauge Reports</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Creating and Editing Gauge Reports</span></h2>
+  <p>In the Report Designer, you can create Gauges which perform a calculation for a subset of tickets/items in a ChangeGear module. The calculation is shown as a percentage (0% to 100%) of all tickets.</p>
+  <p class="inst">To create a gauge report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">New </span>icon<span style="font-weight: bold;"><![CDATA[ ]]> </span><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_add.png" style="border: none;" /><span style="font-weight: bold;"><![CDATA[ ]]> </span>in the
+ reports tool bar.</p>
+    </li>
+    <li>
+      <p>The Report Creation dialog displays. Select the<span style="font-weight: bold;"> Gauge </span>report.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">module type</span> for the table data used to create the report, (e.g., incident, problem, CMDB, assets, etc.). For example, select the Incident module to create a report regarding Incident tickets.</p>
+    </li>
+    <li>
+      <p><span>Select a </span><span style="font-weight: bold;">view</span><span> for the report, (e.g., All I</span><span>ncidents, Active Incidents, Closed Incidents</span><span>, etc.). When a Gauge is based upon a view, that report uses the same filter criteria as the view. </span></p>
+    </li>
+    <li>
+      <p><span>Click </span><span style="font-weight: bold;">Next. </span><span>The </span><span style="font-style: italic;">Gauge Creation</span><span> screen displays.</span></p>
+      <p><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/gauge_in_progress_incidents_screen.jpg" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Enter the <span style="font-weight: bold;">Name</span> of the report.</p>
+    </li>
+    <li>
+      <p>Optionally, you can enter a <span style="font-weight: bold;">Description </span>for the report.</p>
+    </li>
+    <li>
+      <p>Select<span style="font-weight: bold;"> Report Category</span> from the list. The Report Category determines which category within the module to save the report. The My Reports category saves the report in your own <span style="font-style: italic;">My Reports</span>        and is not visible to other users. You could use My Reports to work on a report before saving it into one of the module categories so others can access the report.</p>
+    </li>
+  </ol>
+  <p />
+  <h3><a id="Data_Tab"></a><span style="color: #808080;">Data Tab</span></h3>
+  <p><span>The Data tab allows you to define the data for the gauge chart.</span></p>
+  <p>The <span style="font-weight: bold;">Column </span>field identifies which module table column to compare in the gauge chart<span style="font-weight: bold;">.</span></p>
+  <p>The <span style="font-weight: bold;">Column Value </span>field enables you to specify the value used to report the percent on the gauge as compared with the overall ticket total percent.</p>
+  <p>The <span style="font-weight: bold;">Operation </span>field has the count and sum options. You can count the number of tickets which shows as a percentage on the gauge or you can sum up all the values for the column field such as <span style="font-style: italic;">Cost</span>.</p>
+  <p class="note"><span class="tipnote">Note:</span> T<span>he sum option does not work for non-numeric fields like </span><span style="font-weight: bold;">Assigned to</span><span> or </span><span style="font-weight: bold;">Due date</span><span style="font-style: italic;">.</span><span><![CDATA[ ]]> </span></p>
+  <p>For example, suppose you want to show the percentage of the total incident tickets In-Progress on a gauge chart. You would set the Column field to <span style="font-style: italic;">Status </span>and the Column Value to <span style="font-style: italic;">In-Progress</span>.&#160;The
+ generated gauge renders a <span style="font-style: italic;">percentage</span> of the number of tickets that are currently In-Progress as the gauge dial number in comparison with the total number of tickets, (i.e., 100 percent).</p>
+  <p style="text-align: center;"><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/gauge_reports_sample.png" style="border: none;" /></p>
+  <p />
+  <h3><a id="Advanced"></a>Advanced</h3>
+  <p>You can optionally apply basic data filtering to the data displayed on the Gauge. Please refer to the <a href="Creating_and_Editing_Table_REports.htm#Filtering_Columns_Table_Report" style="font-style: italic;">Filtering Columns Table Report</a> section
+ in Creating and Editing Table Reports<span style="font-style: italic;">.</span></p>
+  <p />
+  <h4><span style="font-weight: bold;">Filter</span></h4>
+  <p>This basic filtering allows you to further refine which tickets/items to include in the gauge other than the column equal value criteria in the Data Tab. You can optionally apply filtering to the count or sum fields. This&#160;filtering allows you to filter
+ which values are used to count/sum fields displayed on the gauge report. For example, you can count the tickets by <span style="font-weight: bold;">Priority</span><span style="font-style: italic;"><![CDATA[ ]]> </span>that<span style="font-style: italic;"><![CDATA[ ]]> </span>are
+    <span style="font-weight: bold;">Critical</span><span style="font-style: italic;"><![CDATA[ ]]> </span>or<span style="font-style: italic;"><![CDATA[ ]]> </span><span style="font-weight: bold;">High</span><span style="font-style: italic;">.</span></p>
+  <p />
+  <h3>Create Report</h3>
+  <p>The report is rendered after saving the report. To create the report, click <span style="font-weight: bold;">Create</span>.</p>
+  <p class="note"><span class="tipnote">Note:</span> You can create new reports from existing reports by using the <span style="font-weight: bold;">Save As</span> option.</p>
+  <p />
+  <h3>Editing a Gauge Report</h3>
+  <p>ChangeGear allows you to edit a Gauge report and modify the filter criteria and other criteria similar to creating a table report.</p>
+  <p class="inst">To edit a gauge report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">Gauge</span> report from the Reports Module grid.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Edit </span>icon<span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_edit.gif" style="border: none;" /><span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><![CDATA[ ]]> 
+        <span style="background-color: #ffffff;">from</span><span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><span style="background-color: #ffffff;">the Gauge tool bar. </span></p>
+    </li>
+    <li>
+      <p>You can edit the <span style="font-weight: bold;">Description</span> as necessary. <span style="font-weight: bold;"><![CDATA[ ]]> </span></p>
+    </li>
+    <li style="font-weight: normal;">
+      <p>The system allows you to change any report <a href="#Data_Tab" style="font-weight: bold;">Data Tab</a> or <span style="font-weight: bold;"><a href="#Advanced" style="font-weight: bold;">Advanced</a> functions</span> as shown above in the Create
+ a Gauge Report section.</p>
+    </li>
+    <li style="font-weight: normal;">
+      <p>Click <span style="font-weight: bold;">Save</span>.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can create new reports from existing reports by using the <span style="font-weight: bold;">Save As</span> option.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

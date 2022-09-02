@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_CMDB\Extending_the_CMDB\How_Do_I_Create_a_New_CI_Entity_.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">How Do I Create a New CI Entity?</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="How Do I Create a New CI Entity?">
+        <span>How Do I Create a New CI Entity?</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">How Do I Create a New CI Entity?</span></h2>
+  <p>When you create a new CI entity, a new resource type is created which is available in the <span style="font-weight: bold;">Resource Type</span> and <span style="font-weight: bold;">New</span> CI drop-downs after you have saved your changes. You can
+ add sub-resource types from the CMDB's Lookup Lists section in Administration (see <a href="How_Do_I_Create_Sub-Resource_Types_.htm" style="font-style: italic;">How Do I Create Sub-Resource Types?</a> for more information). The forms, attributes,
+ and relationships are all inherited from the Base CI, though you can modify the form for the new CI entity and add new attributes and relationships specific to the new CI entity.</p>
+  <p class="inst">To create a new CI entity:</p>
+  <ol>
+    <li>
+      <p>In the Administration module, select <span style="font-weight: bold;"><a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP90894649" href="#"><span data-open-text="true" data-skip-index="true">Advanced</span><span data-close-text="true">Advanced</span></a></span>.</p>
+      <div data-targetname="POPUP90894649">
+        <p><img src="../../../../assets/images/Administration/module_editors.png" alt="" style="border: none;" width="668" height="355" border="0" /></p>
+      </div>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Entity Editor</span> in the Customization page. The <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP90933942" href="#"><span data-open-text="true" data-skip-index="true">Entity Editor</span><span data-close-text="true">Entity Editor</span></a> will display.</p>
+      <div data-targetname="POPUP90933942">
+        <p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/entity_editor.png" alt="" style="border: none;" border="0" /></p>
+      </div>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">Configuration Management &gt; CIs</span>.</p>
+    </li>
+    <li>
+      <p>With <span style="font-weight: bold;">CIs</span> selected, click <span style="font-weight: bold;">Add Entity</span>. The New Entity dialog will display.</p>
+    </li>
+    <li>
+      <p>Enter the entity name. For example, if you were creating a new CI type of Storage, you would enter "Storage" in the <span style="font-weight: bold;">Name</span> field.</p>
+      <p class="note"><span class="tipnote">Note:</span> Entity names cannot have any special characters.</p>
+      <p class="note"><span class="tipnote">Tip:</span> Add fields before you save any changes to the Entity Model. This will automatically add the fields as fields on the configuration tab of the new CI Entity's default form. See <a href="How_Do_I_Add_Fields_to_CI_Entities_.htm" style="font-style: italic;">How Do I Add Fields to CI Entities</a> and <a href="How_Do_I_Create_Forms_to_Be_Used_With_Specific_Resource_Types_.htm" style="font-style: italic;">How Do I Create Forms to Be Used with Specific Resource Types?</a>        for more information.</p>
+    </li>
+    <li>
+      <p>Save the changes by going to <span style="font-weight: bold;">File &gt; Save All Changes</span>.</p>
+    </li>
+  </ol>
+  <p />
+  </div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

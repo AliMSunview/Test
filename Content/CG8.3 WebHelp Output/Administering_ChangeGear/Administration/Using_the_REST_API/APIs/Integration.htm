@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\APIs\Integration.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Integration</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Integration">
+        <span>Integration</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Integration</span></h2>
+  <p>The Integration API allows external applications to communicate with ChangeGear. It is designed to be a hook for third-party issue tracking software to update ChangeGear when a ticket is modified. For more information on integration, see <span style="font-style: italic;"><a href="../../Administering_ChangeGear/Overview_of_Administering_ChangeGear.htm">Administering ChangeGear</a> &gt; Advanced Customizations &gt; <a href="../../Administering_ChangeGear/Advanced_Customizations/Integrating_with_Third_Party_Issue_Tracking_Software/Overview_of_Integration.htm">Integrating with Third Party Issue Tracking Software</a></span>.</p>
+  <p>To use these endpoints, add the full URL of the endpoint as a WebHook (or Service Hook) to your external application. Note that there are no body parameters for these requests; because this is simply a WebHook, the external application handles populating
+ and formatting the contents of the request.</p>
+  <p class="note"><span class="tipnote">Tip:</span> The Integration API supports basic authentication. For more information, please see <span style="font-style: italic;"><a href="../Creating_a_Request.htm">Creating a Request</a> &gt; <a href="../Creating_a_Request.htm#Headers">Headers</a></span>.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 10%;" />
+      <col style="width: 10%;" />
+      <col style="width: 50%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Action</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Method</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">URL</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Update_Entities">Update Entities</a></p>
+        </td>
+        <td>
+          <p>POST</p>
+        </td>
+        <td>
+          <p>api/integration/{toolid}/{entitytype}</p>
+        </td>
+        <td>
+          <p>Creates or updates an item in ChangeGear.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Proxy_Jira_Requests">Proxy JIRA Requests</a></p>
+        </td>
+        <td>
+          <p>POST</p>
+        </td>
+        <td>
+          <p style="font-weight: normal;">api/integration/jiraproxy/{entitytype}</p>
+        </td>
+        <td>
+          <p>Required for Jira. Provides authentication for incoming requests.</p>
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Internal">
+          <p>Check Authentication</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>POST</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>http://tfsserver:8080/tfs/DefaultCollection/AgileTest/Projects?api-version=2.0</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>Checks if your user has access to the TFS Server (Provide username and password as JSON body)</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h3><a id="Update_Entities"></a>Update Entities</h3>
+  <p>The update hook sends an API call to ChangeGear whenever an item is created or modified in the external application.</p>
+  <p class="note"><span class="tipnote">Important:</span> For Jira, use the <span style="font-style: italic;"><a href="#Proxy_Jira_Requests">Proxy JIRA Requests</a></span> endpoint.</p>
+  <h4>Request Information</h4>
+  <h5>URL</h5>
+  <p class="Code">api/integration/<span style="font-weight: bold;">{toolid}</span>/<span style="font-weight: bold;">{entitytype}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>toolid</p>
+        </td>
+        <td>
+          <p>The name of the external application. This corresponds to the <span style="font-weight: bold;">Type</span> field in the Integration Details dialog. For more information, see <span style="font-style: italic;"><a href="../../Administering_ChangeGear/Advanced_Customizations/Integrating_with_Third_Party_Issue_Tracking_Software/Creating_a_New_Integration.htm">Managing Integration Sources</a></span>.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">TFS</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of ChangeGear entity to update.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <p />
+  <h3><a id="Proxy_Jira_Requests"></a>Proxy Jira Requests</h3>
+  <p>Jira does not support sending credentials via WebHooks. As a result, ChangeGear must proxy Jira calls through the <a href="Login.htm">Login</a> endpoint before it can process incoming requests. However, this requires some additional configuration.</p>
+  <p class="inst">To configure the Jira proxy:</p>
+  <ol style="list-style: decimal;">
+    <li>
+      <p>Encode the credentials of the ChangeGear account that you wish to use for the integration. To do this, you will need to take your username and password separated by a colon (e.g. <span style="font-style: italic;">cguser:cgpassword</span>) and encode
+ it using Base64. For more information, see the <span style="font-style: italic;"><a href="../Creating_a_Request.htm#Headers">Headers</a></span>&#160;section under <span style="font-style: italic;"><a href="../Creating_a_Request.htm">Creating a Request</a></span>.</p>
+    </li>
+    <li>
+      <p>Log into the server hosting the ChangeGear server.</p>
+    </li>
+    <li>
+      <p>Navigate to the ChangeGear server installation directory and run the <span style="font-weight: bold;">EncryptionPwd.exe</span> file (defaults to <span style="font-style: italic;">C:\Program Files (x86)\SunView Software\ChangeGear\Server\EncryptionPwd.exe</span>).</p>
+    </li>
+    <li>
+      <p>In the <span style="font-style: italic;">Password</span> field, enter your Base64 encoded credentials. Repeat this previous step for the <span style="font-style: italic;">Confirm Password</span> field, then click&#160;<span style="font-weight: bold;">Generate</span>.</p>
+    </li>
+    <li>
+      <p><span>Copy the contents of the </span><span style="font-weight: bold;">Encrypted Password</span><span> field. You will need this for later.</span></p>
+    </li>
+    <li>
+      <p>Log into the server hosting the ChangeGear REST API.</p>
+    </li>
+    <li>
+      <p>Open the REST API's <span style="font-style: italic;">web.config</span> file (defaults to <span style="font-style: italic;">C:\Program Files (x86)\SunView Software\ChangeGear\CGRestAPI\Web.config</span>).</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">&lt;appSettings&gt;</span> section, scroll to the line beginning with <span style="font-weight: bold;">&lt;!--add key="CGJiraCreds"</span>. Uncomment the line by removing the "<span style="font-weight: bold;">&lt;!--</span>" and "<span style="font-weight: bold;">--"</span> characters.</p>
+    </li>
+    <li>
+      <p>Replace the contents of the <span style="font-weight: bold;">value</span> property with the <span style="font-weight: bold;">Encrypted Password</span> that you copied earlier. Make sure that your pasted contents are surrounded in double quotes.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Save</span> the file, then perform an IIS reset or recycle the CGRestAPI application pool.</p>
+    </li>
+  </ol>
+  <p />
+  <h4><span>R</span>equest Information</h4>
+  <h5>URL</h5>
+  <p class="Code">api/integration/jiraproxy/<span style="font-weight: bold;">{entitytype}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of ChangeGear entity to update.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

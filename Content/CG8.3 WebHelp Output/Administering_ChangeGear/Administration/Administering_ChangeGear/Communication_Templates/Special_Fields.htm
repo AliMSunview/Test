@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Communication_Templates\Special_Fields.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration;Others:Internal" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration;Others:Internal" data-condition="Others:Administration;Others:Internal" />
+  
+  <title data-condition="Others:Administration;Others:Internal">Special Fields</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration;Others:Internal" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Special Fields">
+        <span>Special Fields</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration;Others:Internal">
+    <p />
+  </div>
+  <div data-condition="Others:Administration;Others:Internal">
+  <h2><span data-field="title" data-format="default">Special Fields</span></h2>
+  <p>The Communication Template Details Dialog supports several special fields which are not listed in the Fields drop-down. These fields are listed below along with their use.</p>
+  <p class="note"><span class="tipnote">Note:</span> These fields may depend on certain modules or features to be activated before they can be used.</p>
+  <p />
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="75%">
+    <colgroup>
+      <col style="width: 33.333%;" />
+      <col style="width: 33.333%;" />
+      <col style="width: 33.333%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>Module</td>
+        <td>Field</td>
+        <td>Description</td>
+      </tr>
+      <tr>
+        <td rowspan="7">Generic</td>
+        <td>$(WebURL)</td>
+        <td>Displays the ChangeGear Web client URL.
+          <p class="note"><span class="tipnote">Tip:</span> You can change this field by modifying the Web URL field in the <a href="../Global_Settings/Overview_of_Global_Settings.htm">Global Settings</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>$(ID)</td>
+        <td>Displays the unique ID number of the ticket.</td>
+      </tr>
+      <tr>
+        <td>$(MostRecentComment)</td>
+        <td>Displays the most recent comment added to the ticket.</td>
+      </tr>
+      <tr>
+        <td>$(Description[10])</td>
+        <td>DIsplays the ten most recent entries in the ticket's Description field.</td>
+      </tr>
+      <tr>
+        <td>$(Description[10]:ET)</td>
+        <td>Displays the ten (10) most recent entries in the ticket's description field with the entry dates formatted in Eastern time.</td>
+      </tr>
+      <tr>
+        <td>$(Description[0].Comment)</td>
+        <td>Returns the value of the comment field for the first entry in the Description field.</td>
+      </tr>
+      <tr style="height: 0px;">
+        <td>$(Module)</td>
+        <td>Displays the name of the module that the item belongs to.</td>
+      </tr>
+      <tr>
+        <td rowspan="4"><a href="Using_the_SmartResponder.htm">SmartResponder</a>
+          <p class="note"><span class="tipnote">Note:</span> The Intelligence Pack must be installed and enabled for these fields to work. For more information, see the <span style="font-style: italic;"><a href="../Global_Settings/Customizing_Web_Settings.htm">Customizing Web Settings</a></span>            topic under <span style="font-style: italic;"><a href="../Global_Settings/Overview_of_Global_Settings.htm">Global Settings</a></span>.</p>
+        </td>
+        <td>$(SmartResponder_SuggestedKBs)</td>
+        <td>Displays up to two (2) of the most relevant Knowledge Base articles as suggested by the machine learning service.</td>
+      </tr>
+      <tr>
+        <td>$(SmartResponder_ChatBotLink)</td>
+        <td>Opens a new session with Willow, ChangeGear's automated chat agent, for further troubleshooting a ticket.</td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Non_Release">$(SmartResponder_ConfirmationWindow)
+          <div style="display: none;">
+            <p>Sent e-mail to Sheela requesting more details. Her response:</p>
+            <p />
+            <p>"<span style="color: #1F497D;">That variable is being substituted for the following :</span></p>
+            <p class="MsoNormal" />
+            <p class="MsoNormal"><span style="font-size: 9.5pt;font-family: Consolas;color: #0000ff;">string</span><span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">.Format(</span><span style="font-size: 9.5pt;font-family: Consolas;color: #800000;">@"$(WebURL)/cgclient/SSP/Index.html#?source=smartResponderYesVote&amp;query={0}&amp;id={1}{2}"</span><![CDATA[ ]]> 
+              <span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">, smartResponderQuery, smartRespondTicketId, kbIDs);</span>
+            </p>
+            <p class="MsoNormal" />
+            <p class="MsoNormal"><span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">It seems like it refers to the chat bot Yes vote but I am not sure.</span></p>
+            <p class="MsoNormal" />
+            <p class="MsoNormal"><span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">Please let me know if you need any more info. I will find from George since Carlos is out today.</span></p>
+            <p class="MsoNormal" />
+            <p class="MsoNormal"><span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">Thanks,</span></p>
+            <p><span style="font-size: 9.5pt;font-family: Consolas;color: #000000;">Sheela</span>"</p>
+          </div>
+        </td>
+        <td data-condition="Others:Non_Release" />
+      </tr>
+      <tr>
+        <td>$(SmartResponder_EstimatedCompleteTime)</td>
+        <td>Displays the estimated amount of time until the ticket is closed.</td>
+      </tr>
+      <tr>
+        <td rowspan="2"><a href="../Global_Settings/E-mail_Connector_Settings/Configuring_the_E-mail_Connector.htm">E-mail Connector</a>
+          <p class="note"><span class="tipnote">Note:</span> The E-mail Connector must be installed and enabled for these fields to work. For more information, see the <span style="font-style: italic;"><a href="../Global_Settings/E-mail_Connector_Settings/Configuring_the_E-mail_Connector.htm">Configuring the E-mail Connector</a></span>            topic under <span style="font-style: italic;"><a href="../Global_Settings/Overview_of_Global_Settings.htm">Global Settings</a></span>.</p>
+        </td>
+        <td>$(CG_MID)</td>
+        <td>Returns an encrypted copy of the ticket ID. This is used internally by ChangeGear to identify the ticket that the e-mail is referring to.</td>
+      </tr>
+      <tr>
+        <td>$(CG_ACTIONS)</td>
+        <td>Displays a list of ticket actions in an e-mail as text. Users can perform an action by replying to the e-mail and placing an "X" in between the brackets next to an action.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration;Others:Internal">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

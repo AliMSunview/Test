@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Security\Users,_Roles,_and_Teams_Overview.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.4.0_2";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Users, Roles, and Teams Overview</title>
+  
+  
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Users, Roles, and Teams Overview">
+        <span>Users, Roles, and Teams Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Users, Roles, and Teams Overview</span></h2>
+  <p>In order to access ChangeGear, a user must exist in the system and be assigned to a role. The role determines the access privileges for that user as well as the group to which the user belongs. Users may also belong to teams and have different roles
+ per team. ChangeGear uses these groups or teams to define which users receive communications such as alerts and notifications.</p>
+  <h3>User Administration</h3>
+  <p>Users are selected and assigned throughout ChangeGear. You can define the details for users, and the roles into which they are placed, on the Users page in the Administration module.</p>
+  <p>The User page lets you define the critical details for each of your users including the licensing authorization and restrictions, names, title, department, and location. You can use the Common Tasks menu to create, edit, and delete new users as well
+ as define their logon security access and create a detailed user profile.</p>
+  <p><img src="../../../assets/images/main screen users.png" /></p>
+  <p style="font-weight: bold;">Integrating Single Sign-On</p>
+  <p>A key feature of ChangeGear is the integration of user authentication with Microsoft Windows Active Directory (AD), as well as third-party identification providers. Using integrated authentication, users do not need to re-enter their credentials when
+ accessing ChangeGear. This feature saves time, credentials are easier to manage because there are no separate user passwords to maintain, and if a user's authentication account is disabled their ChangeGear account becomes disabled as well.</p>
+  <p>When creating users in ChangeGear, some key details are automatically populated from the authentication provider. For example, the provider may provide the user’s first name, last name, and e-mail address.&#160;</p>
+  <p>To configure single sign-on using Active Directory, see <span style="font-style: italic;"><a href="Managing_Users_with_Web_Administration/Adding_a_User_with_Web_Administration.htm">Adding a User</a></span>.&#160;</p>
+  <h3>Roles Administration</h3>
+  <p>All users must be placed into roles in ChangeGear. A role defines the user's privileges, including which fields are viewable or editable, and acts as a grouping mechanism in determining who receives notifications and other types of communication.
+ Roles determine what items are visible to a given user - including modules, workflows, views, and fields - and how the user can interact with a given item.</p>
+  <p>ChangeGear provides a set of predefined roles. You can, however, use the Roles page to add roles and modify the descriptions, members, and module- and field-level privileges of these roles to meet your organization's requirements. Roles in ChangeGear
+ are also used in conjunction with Teams, should you choose to implement them.</p>
+  <p><img src="../../../assets/images/Roles main screen.png" /></p>
+  <h3>Teams Administration</h3>
+  <p>Users may be placed in two different types of teams in ChangeGear: <span style="font-weight: bold;">notification teams</span> and <span style="font-weight: bold;">security teams</span>. A <span style="font-weight: bold;">notification team</span> can
+ include groups of users with potentially disparate ChangeGear roles. A <span style="font-weight: bold;">security team</span> is a set of users with privileges that can be different from the user's role. Teams are used to divide the workload and
+ ticket or CI management duties across departments, locations, or other organizational division. Security teams can also be used to restrict access to sensitive information within items. You can create teams and modify their membership, privileges,
+ description, and group e-mail from the Teams page.</p>
+  <p>Users can belong to multiple notification and security teams. They can have different privileges and roles in each security team - i.e., George may have a <span style="font-weight: bold;">Reviewer</span> role by default, but he has the role of
+    <span style="font-weight: bold;">Incident Manager</span> in the <span style="font-weight: bold;">Database Security Team</span> and the role of <span style="font-weight: bold;">IT Staff</span> in the <span style="font-weight: bold;">Development</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Team</span>.
+ If a ticket or CI is specifically assigned to George, he will only be able to access it with the privileges of the Reviewer role. However, if a ticket or CI is assigned to the Database Security Team, George will be able to access it with the privileges
+ of the Incident Manager role. If a ticket or CI is assigned to the Development Team, George will be able to access it with the privileges of the IT Staff role.</p>
+  <p>All teams can have an assigned Team Owner that serves as a way to notify the team lead.</p>
+  <p><img src="../../../assets/images/teams main screen.png" /></p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Security\API_Tokens.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.4.0_3";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>API Tokens</title>
+  </head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="API Tokens">
+        <span>API Tokens</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2>API Tokens</h2>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">An API token is a string that is provided when making API calls and is sent as part of the HTTP request header. A 401 Unauthorized or invalid token response is returned for invalid API tokens.</span></span></span></p>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">The main purpose of the API token is for use with ChangeGear REST APIs which makes authentication and hence integration simpler without the need for user credentials. </span></span></span></p>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">The API token(s) are associated with a user account. The creation of token(s) is limited to users who have “Administer Security” privilege. Users with this privilege can create a token for their own user account or for a service account. The API token will use the role privileges and permissions associated with its user account when performing operations. </span></span></span></p>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">For security reasons, once a token is generated, it cannot be updated or viewed. It needs to be kept safe like any other secure information like passwords. An API token(s) does not expire. An API token can be revoked as needed. Once revoked, the token cannot be used anymore and any existing API calls using the token will fail.</span></span></span></p>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">To create an API token:</span></span></span></p>
+  <ol class="Decimal">
+    <li>Log in to the web application and navigate to the web administration page.</li>
+    <li>Navigate to Security-&gt;Users and double-click on your user account or on a service account for which you want to create an API token.</li>
+    <li>Click the API Tokens tab.</li>
+    <li>Click on the + button as seen below:</li>
+  </ol>
+  <p><span style="margin-left: 40px;"><img height="190" src="../../../assets/images/API Tokens 1.png" width="499" /></span></p>
+  <ol class="Decimal">
+    <li value="5">Enter the name of the token and click on create. Copy the token and keep it in a safe place.</li>
+  </ol>
+  <p><span style="margin-left: 40px;"><img height="356" src="../../../assets/images/API Tokens 2.png" width="519" /></span></p>
+  <ol class="Decimal">
+    <li value="6">Close the slide-out and return to the API token grid. The Last Accessed time of the token is updated any time an API call is made with the token.</li>
+  </ol>
+  <p><span style="margin-left: 40px;"><img height="219" src="../../../assets/images/API Tokens 3.png" width="511" /></span></p>
+  <ol class="Decimal">
+    <li value="7">An API token cannot be updated and can be revoked by hovering over the row and clicking on the Revoke action button.</li>
+  </ol>
+  <p><span style="margin-left: 40px;"><img height="234" src="../../../assets/images/API Tokens 4.png" width="485" /></span></p>
+  <ol class="Decimal">
+    <li value="8">The maximum number of API tokens that can be created is 25.</li>
+  </ol>
+  <h3 style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">Using an API Token</span></span></span></h3>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">The API token must be sent in as one of the request headers with key name as “apitoken” and the value as the token string. </span></span></span></p>
+  <p style="margin-bottom: 11px;"><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;">An example is shown below using postman:</span></span></span></p>
+  <p style="margin-bottom: 11px;"><img height="184" src="../../../assets/images/API Tokens 5.png" width="726" /></p>
+  <p><span style="font-size: 11pt;"><span style="line-height: 107%;"><span style="font-family: Calibri, sans-serif;"><![CDATA[ ]]> </span></span></span></p>
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

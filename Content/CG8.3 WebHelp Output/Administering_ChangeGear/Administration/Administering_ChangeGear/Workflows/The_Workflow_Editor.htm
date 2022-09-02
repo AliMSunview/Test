@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Workflows\The_Workflow_Editor.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+
+
+
+ <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+<title data-condition="Others:Administration">The Workflow Editor</title>
+
+<meta name="rh-index-keywords" content="Workflows" data-condition="Others:Administration" /></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="The Workflow Editor">
+        <span>The Workflow Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+
+<h2 data-condition="Others:Online"><span data-format="default" data-field="title">The Workflow Editor</span></h2>
+<p>Workflows impact everything about the life cycle of a ChangeGear entity 
+ from the actions that are available to the state is displayed in the timeline. 
+ Workflows dictate which actions are displayed, what actions are allowed, 
+ what states can be reached from another state, what is displayed in the 
+ timeline, and what default actions to take when another action is performed. 
+ Using the workflow editor, you can customize ChangeGear to more closely 
+ match your organization’s process and streamline tickets through the system.</p>
+<p class="note"><span class="tipnote">Note:</span> You may not have access 
+ to this ChangeGear feature depending on your permissions or ChangeGear 
+ edition.</p>
+<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Workflows/wfe_changeWF_factory.jpg" alt="" style="border: none;" width="680" height="396" border="0" /></p>
+<p style="font-weight: bold;margin-left: 41px;">Figure 1: Simplified Change 
+ Management Factory Workflow</p>
+<p>The following screenshot depicts Actions and the Workflow Status Bar 
+ from the Change Management factory workflow.</p>
+<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Workflows/wfe_overview_actionWF_bar.jpg" alt="" style="border: none;" width="680" height="126" border="0" /></p>
+<p>Workflows are created in ChangeGear by modifying existing workflows. 
+ This document gives a brief overview of the workflow editor’s interface 
+ and how to use the editor. It then gives specific scenarios and instructions 
+ to accomplish those scenarios while providing instructions on managing 
+ and administering workflows.</p>
+<p>Before you begin, take a moment to review the images and terms below 
+ to understand how these terms are used within ChangeGear.</p>
+<p style="margin-left: 1px;"><img src="../../../../assets/images/Administration/Administering_ChangeGear/Workflows/wfe_state_diagram.jpg" alt="" style="border: none;" width="221" height="159" border="0" /></p>
+<p style="font-weight: bold;margin-left: 41px;">Figure 2: State Diagram</p>
+<p><span style="font-weight: bold;">State:</span> A state is a stage in 
+ the behavior of an item or ticket in ChangeGear. States have four types—New, 
+ Process, Approval, and End. A new state has no incoming connections or 
+ states while an end state has no target connections or outgoing states. 
+ Process states have both incoming and outgoing/target connections and 
+ states. Approval states are a special type of state that must have outgoing 
+ states attached to Approve and Reject, and can have approval groups assigned 
+ to them. In the image above, “Unsubmitted” and “New” are both states. 
+ The state “Unsubmitted” is of the type New.</p>
+<p><span style="font-weight: bold;">Action:</span> An action triggers a 
+ transition to move an item or ticket from one state to another. Actions 
+ in ChangeGear can also trigger automated actions, such as notifications 
+ or announcements. New actions create new privileges that you must enable 
+ per role.</p>
+<p><span style="font-weight: bold;">Transition:</span> A transition is 
+ a progression from one state to another, triggered by an action. </p>
+<p><span style="font-weight: bold;">Factory Workflow:</span> A factory 
+ workflow is a workflow that is shipped with ChangeGear. Factory workflows 
+ may not be deleted or edited; however, they can be modified by saving 
+ the factory workflow as a different workflow.</p>
+<p style="margin-left: 1px;"><img src="../../../../assets/images/Administration/Administering_ChangeGear/Workflows/wfe_connections.jpg" alt="" style="border: none;" width="358" height="200" border="0" /></p>
+<p style="font-weight: bold;margin-left: 41px;">Figure 3: ChangeGear Connections</p>
+<p><span style="font-weight: bold;">Inbound Connection:</span> An inbound 
+ connection is an action that connects to the selected state. In the example 
+ image above, “Submit” is an inbound connection to the “New” state from 
+ the “Unsubmitted” state.</p>
+<p><span style="font-weight: bold;">Target Connection:</span> A target 
+ connection is an action available to progress from one state to another 
+ state. In the example image above, “Submit for Approval” is a target connection 
+ from the “New” state to the “Pending Approval” state.</p>
+<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Workflows/wfe_states.jpg" alt="" style="border: none;" width="376" height="111" border="0" /></p>
+<p style="font-weight: bold;margin-left: 41px;">Figure 4: ChangeGear States</p>
+<p><span style="font-weight: bold;">Inbound state:</span> An inbound state 
+ is a state that leads <span style="font-style: italic;">to</span> another 
+ state. In the example image above, “Unsubmitted” is the inbound state 
+ of “New.”</p>
+<p><span style="font-weight: bold;">Outbound state:</span> An outbound 
+ state is a state that leads <span style="font-style: italic;">from</span> 
+ another state. In the example image above, “Pending Approval” is the outbound 
+ state of “New.</p>
+<p><span style="font-weight: bold;">Workflow Status Bar:</span> The workflow 
+ status bar is a graphical representation of the progression through the 
+ workflow. Changes made to the workflow may not be apparent in the workflow 
+ status bar unless specifically configured to be so.</p>
+<p />
+
+
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

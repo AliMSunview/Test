@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Global_Settings\Customizing_Web_Settings.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Customizing Web Settings</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Customizing Web Settings">
+        <span>Customizing Web Settings</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Customizing Web Settings</span></h2>
+  <p>The <span style="font-weight: bold;">Application Settings</span> section is where you can specify the URLs of core ChangeGear services. By default, these fields will be automatically populated using the name of the ChangeGear server. If any of these
+ services have been installed on a different machine, then the URL will need to be changed to reflect this. If these URLs do not point to the correct server, certain features may not work.</p>
+  <p>After modifying any value in the <span>Application Settings section, click </span><span style="font-weight: bold;">Save</span><span> to persist your changes.</span></p>
+  <p><img alt="" border="0" src="../../../../assets/images/Administration/Administering_ChangeGear/Global_Settings/application_settings.png" /></p>
+  <p />
+  <h3>Web Settings</h3>
+  <p>The Web URL defines the location of the ChangeGear Web Application. This is the URL that end users and staff users use to access ChangeGear.</p>
+  <p class="note"><span class="tipnote">Note: </span>You can also double click on the Web URL to open the ChangeGear Web application.</p>
+  <p />
+  <h3>REST API Settings</h3>
+  <p>The ChangeGear REST API exposes certain functions of the ChangeGear server through a RESTful API. Certain ChangeGear Web features (such as the Change Log, Field Recommender, and Meeting Notes) rely on the REST API in order to function properly. For
+ more information on the REST API, see <a href="../../Using_the_REST_API/Using_the_REST_API.htm" style="font-style: italic;">Using the REST API</a>.</p>
+  <p />
+  <h3>Intelligence Pack Settings</h3>
+  <p>The Intelligence Pack is a ChangeGear component that provides features such as suggested solutions for tickets, intelligent assignment of tickets to users, and auto-filled form values based on similar tickets. The Intelligence Pack REST API URL defines
+ the URL that ChangeGear uses to communicate with the Intelligence Pack backend service.</p>
+  <p class="note"><span class="tipnote">Important: </span>Please see the separate Installation Guide document for more information on installing the Intelligence Pack.<br />
+    <br />
+    <span class="tipnote">Tip:</span> Features in the ChangeGear Web client that utilize the Intelligence Pack can be identified by the Intelligence Pack icon shown above.</p>
+  <p class="inst">To enable and configure the Intelligence Pack:</p>
+  <ol>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">Global Settings</span>.</p>
+    </li>
+    <li>
+      <p><span>Scroll down to the </span><span style="font-weight: bold;">Intelligence Pack</span><span> section.</span></p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Enable Intelligence Pack</span> check box.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">URL of Intelligence Pack REST API</span> text box, enter the URL and port number that the service is listening on. This defaults to port <span style="font-style: italic;">10210</span> of the machine that the
+ Intelligence Pack was installed on.</p>
+      <p class="note"><span class="tipnote">Tip:</span> If you cannot connect to the service, make sure that the firewall on the machine hosting the service has the correct port opened (defaults to 10210).</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span>, then close and reopen the ChangeGear Desktop Client.</p>
+    </li>
+    <li>
+      <p>Restart IIS, or recycle the CGRestAPI application pool.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

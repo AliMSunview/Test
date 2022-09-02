@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Modules\Change\Analysis_of_Impacted_Tickets-FINAL.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.13.1.1.0_3";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  <meta charset="UTF-8" />
+  <title>Analysis of Impacted Tickets</title>
+  
+  
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Analysis of Impacted Tickets">
+        <span>Analysis of Impacted Tickets</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <div class="position-relative">
+    <h3>Analyzing the Impact of Modifying Dates on Change Windows and Blackout Periods</h3>
+    <p>Modifying an enabled Change Window or Blackout Period associated with active Change Tickets may cause impacts to compliance policies. If the Start or End date of a specific Change Window /Blackout Period is changed, active Change Tickets may fall out of or into the Change Window /Blackout Period making them invalid for planned date enforcement.</p>
+    <ul class="BulletListIndented">
+      <li><strong>For Change Windows</strong>, the Analysis feature identifies any Change Tickets that are now excluded from a Change Window because of a change in dates (i.e., both the Start and End Dates of the Change Ticket are now outside the Window).</li>
+      <li><strong>For Blackout Periods</strong>, the Analysis feature identifies any Change Tickets that are now included in Blackout Period because of a change in dates (i.e., Start and/or End Date of the Change Ticket is now inside the Blackout Period).</li>
+    </ul>
+    <p class="note"><span class="tipnote">Note:&#160;</span>Although a Change Ticket may appear in the list of “Impacted tickets”, the impact may or may not require intervention.<br />
+      <br />
+      For example, Change Windows if either the Change Ticket Start or End Date is still within the modified Change Window, the Change Ticket is not impacted (i.e., both dates must fall outside the modified dates for a Change Ticket to be impacted). However, Change Tickets that have Start or End date that fall within the Blackout Period may require adjustment to the Blackout Period or to the Change Ticket to maintain compliance (e.g., make sure that no service level agreement or policy is invalidated).
+    </p>
+    <p>When you make a Change Window or Blackout Period, if any associated Change Tickets are affected the Impacted tickets due to date change(s) indicator and View button appear.</p>
+    <p class="indent"><img alt="Picture 1" height="304.6" src="../../../../assets/images/Analysis of Impacted Tickets-FINAL_files/image1.png" width="382.3" /></p>
+    <p />
+    <p class="Numbering2 ListParagraph">Click on the View button to view the affected Change Tickets.</p>
+    <div>
+      <p class="note margin-left-0margin-right-1-13in"><span class="tipnote">Note:&#160;</span>Change Tickets are excluded from the impacted Change Tickets if they were previously overridden for not adhering to existing Change Windows/Blackout Periods.</p>
+    </div>
+    <p class="Numbering2 ListParagraph">Click on a Change Ticket to view details.</p>
+    <p class="Numbering2 ListParagraph">When modifications are required, you can do either of the following:</p>
+    <ul class="BulletListIndented">
+      <li class="margin-left-0-50in">Modify the Change Window or Blackout Period that is causing the impact to the Change Ticket.</li>
+    </ul>
+    <p><img alt="Picture 12" src="../../../../assets/images/Analysis of Impacted Tickets-FINAL_files/image2.png" style="margin-left: 80px;" /></p>
+    <p style="margin-left: 90px;">-OR-</p>
+    <ul class="BulletListIndented">
+      <li class="margin-left-0-50in">Modify the Planned Start/Complete date(s) of a Change Ticket under the Change Ticket Analysis tab. Repeat steps 2 and 3 for each impacted Change Ticket.</li>
+    </ul>
+    <p><img src="../../../../assets/images/image15.png" style="margin-left: 80px;" /></p>
+    <p />
+    <p><span class="Bold">You can also do all of the following:</span></p>
+    <p><a href="Adding_Editing_Blackout_Periods.htm">Add and Edit Blackout Periods</a></p>
+    <p><a href="Adding_Editing_Change_Windows.htm">Add and Edit Change Windows</a></p>
+    <p><a href="Changes_and_BOPs_-_Setting_Up_Recurring.htm">Set Recurring Change Windows and Blackout Periods</a></p>
+  </div>
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

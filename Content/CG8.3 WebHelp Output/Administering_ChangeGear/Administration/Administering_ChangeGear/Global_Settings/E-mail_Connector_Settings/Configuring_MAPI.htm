@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Global_Settings\E-mail_Connector_Settings\Configuring_MAPI.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Configuring MAPI</title>
+  
+  <meta name="rh-index-keywords" content="E-mail:E-mail Connector:MAPI" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Configuring MAPI">
+        <span>Configuring MAPI</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Configuring MAPI</span></h2>
+  <p>The E-mail Connector supports the Messaging Application Programming Interface (MAPI). MAPI is a Microsoft-developed interface that allows Windows applications (such as Outlook, Word, and Excel) to create and send e-mails.</p>
+  <p>Before you can use MAPI with the E-mail Connector, you must first:</p>
+  <ol>
+    <li>
+      <p>Install Microsoft Outlook on the server hosting the E-mail Connector service</p>
+    </li>
+    <li>
+      <p>Configure Outlook to use the same account as the E-mail Connector <span style="font-style: italic;">service</span>.</p>
+    </li>
+  </ol>
+  <p class="inst">To configure the E-mail Connector for MAPI:</p>
+  <ol>
+    <li>
+      <p>Log in to the server running the E-mail Connector service.</p>
+    </li>
+    <li>
+      <p>Install Outlook on the server.&#160;The Outlook account must have the following characteristics:</p>
+      <ul>
+        <li>
+          <p>The account must be a ChangeGear user with enough privileges to perform necessary actions such as create, edit, approve tickets.</p>
+        </li>
+        <li>
+          <p>The account must have local login privileges on the machine that runs E-mail Connector.</p>
+        </li>
+        <li>
+          <p>The account must be able to use the MS Outlook client on the ChangeGear server.</p>
+        </li>
+        <li>
+          <p>The e-mail address for incoming E-mail Connector messages must be associated with this account.</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Open the ChangeGear Desktop Client.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">Global Settings</span>.</p>
+    </li>
+    <li>
+      <p>Scroll down to the <span style="font-weight: bold;">E-mail Connector Settings</span> section.<br />
+        <br />
+        <img alt="" border="0" src="../../../../../assets/images/Administration/Administering_ChangeGear/Global_Settings/E-mail_Connector_Settings/global_settings_configure_MAPI.jpg" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Select the check box to enable the E-mail Connector.</p>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">MAPI</span> from the <span style="font-weight: bold;">Connect using</span> drop-down.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span> to keep your configuration changes.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

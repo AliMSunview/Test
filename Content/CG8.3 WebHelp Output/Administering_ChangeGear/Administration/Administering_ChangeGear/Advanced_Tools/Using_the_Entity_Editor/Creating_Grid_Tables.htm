@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Advanced_Tools\Using_the_Entity_Editor\Creating_Grid_Tables.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Creating Grid Tables</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating Grid Tables">
+        <span>Creating Grid Tables</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Creating Grid Tables</span></h2>
+  <p>Grid tables allow you to create custom tables for storing lists of entities. Once you create a table, you can:</p>
+  <ul>
+    <li>
+      <p>Define the fields and data types for the grid table</p>
+    </li>
+    <li>
+      <p>Define the end user and staff forms for the grid table</p>
+    </li>
+    <li>
+      <p>Create a CustomGridControl control to display the contents of the grid table in a grid on your module's form</p>
+    </li>
+    <li>
+      <p>Add, edit and delete grid table entries</p>
+    </li>
+  </ul>
+  <p>For example, you could create a grid table in the Change module to track risks associated with each request. Each risk might consist of a name, a brief description of the risk, and a severity level.</p>
+  <p class="inst">To create a new grid table:</p>
+  <ol>
+    <li>
+      <p><a href="Customizing_the_Model/How_Do_I_Access_the_Model_Editor_.htm">Access</a> the Entity Editor for the correct module.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">Grid Tables </span>node and click <span style="font-weight: bold;">Add Entity</span>.</p>
+    </li>
+    <li>
+      <p>Enter a <span style="font-weight: bold;">Name</span> for the new grid table. This represents the internal name of the grid table. Optionally, enter a <span style="font-weight: bold;">Caption</span> to set the display name of the grid table.</p>
+    </li>
+    <li>
+      <p>Expand the <span style="font-weight: bold;">Model</span> node to add fields and associations to the grid table. For more information, see <a href="Customizing_the_Model/How_Do_I_Add_a_Field_to_an_Entity.htm" style="font-style: italic;">How Do I Add a Field to an Entity?</a>        and <a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm" style="font-style: italic;">How Do I Add an Association?</a> respectively.</p>
+    </li>
+    <li>
+      <p>Save the model by clicking <span style="font-weight: bold;">File &gt; Save All Changes</span>. This also generates a new default staff form for the grid table.</p>
+      <ol>
+        <li>
+          <p>Optionally, configure the entity's default form or add your own. If you modified the form, save the model again by clicking <span style="font-weight: bold;">File &gt; Save All Changes</span>.</p>
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p>In order to use your grid table in a module, you must first create an association, then add that association to a CustomGridControl inside of the form. For more information on creating an association, see <a href="Customizing_the_Model/How_Do_I_Add_an_Association_.htm" style="font-style: italic;">How Do I Add an Association?</a>.</p>
+  <p />
+  <p class="inst"><span>To add a grid table to a form:</span></p>
+  <ol>
+    <li>
+      <p>In the module's main entity model, create an association to the grid table by expanding the <span style="font-style: italic;font-weight: bold;">Module &gt; Module Entity</span><span style="font-weight: bold;"> &gt; Model &gt; Associations</span>        nodes. For example, if you created your grid table in the Incident module, click <span style="font-style: italic;">Incident Management &gt; Incident Request &gt; Model &gt; Associations</span>.</p>
+    </li>
+    <li>
+      <p>For the <span style="font-weight: bold;">FieldDataType</span> property, select the name of your grid table.</p>
+      <p class="note"><span class="tipnote">Tip:</span> The name will contain <span style="font-weight: bold;">I_UDT_</span> followed by the name that you specified in the grid table's <span style="font-style: italic;">Name</span><span> property</span>.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">FieldName</span> property, enter the name of the association as it will appear in the <span style="font-style: italic;">Fields</span> section of the Entity Editor. Optionally, you can configure the association
+ further by expanding the <span style="font-weight: bold;">FieldAttributes</span><span> node.</span></p>
+    </li>
+    <li>
+      <p>Save the model by clicking <span style="font-weight: bold;">File &gt; Save All Changes</span>.</p>
+      <p class="note"><span class="tipnote">Tip:</span> If you see the error "The column 'AssociationName1Name' already exists", expand the <span style="font-weight: bold;">MappedColumns</span> property of the association by clicking the <img alt="" border="0" src="../../../../../assets/images/Administration/icon_properties_advanced.png" style="border: none;" /> button and change the <span style="font-weight: bold;">MappedColumnName</span> property.</p>
+    </li>
+    <li>
+      <p>Open the <span style="font-weight: bold;">Form Designer</span> to the form you wish to add the grid table to.</p>
+    </li>
+    <li>
+      <p>From the Designer Toolbox, drag and drop a new <span style="font-weight: bold;">CustomGridControl</span> on to the form. Edit these properties as necessary:</p>
+      <ol>
+        <li>
+          <p>Set the <span style="font-weight: bold;">FieldName</span> property to the name of the association you created, beginning with "UDF_" (e.g. UDF_MyGridAssociation).</p>
+        </li>
+        <li>
+          <p>Set the <span style="font-weight: bold;">TableName</span> property to the name of the grid table you created, beginning with "I_UDT_" (e.g. I_UDT_MyGridTable).</p>
+        </li>
+        <li>
+          <p>Set the <span style="font-weight: bold;">ShowFilter</span> property to <span style="font-style: italic;">true</span> if you want to display a text box for filtering columns in the Web client.</p>
+        </li>
+        <li>
+          <p>Set the <span style="font-weight: bold;">ShowGroupBy</span> property to <span style="font-style: italic;">true</span> to allow users to group by one or more columns in the Web client.</p>
+        </li>
+        <li>
+          <p>Set the <span style="font-weight: bold;">View</span> property to the name of the view that you wish to use for the grid table. For now, enter <span style="font-weight: bold;">Default</span>. For more information on creating custom views, see
+            <a href="../../Views/Creating_and_Editing_Views.htm" style="font-style: italic;">Creating and Editing Views</a>.</p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Save</span> and activate the form.</p>
+    </li>
+  </ol>
+  <p>To ensure that your changes propagate, restart the ChangeGear service and perform an IIS reset.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

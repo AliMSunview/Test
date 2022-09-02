@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Business_Policy_Automation\Business_Rules\Creating_Business_Rules.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Creating Business Rules</title>
+  
+  <meta name="rh-index-keywords" content="Alerts" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating Business Rules">
+        <span>Creating Business Rules</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Creating Business Rules</span></h2>
+  <p>ChangeGear's Business Policy Automation feature lets administrators monitor data and trigger specific actions, or Business Rules. For example, using Business Rules, ChangeGear can be configured to send an e-mail notification before an ticket is
+ due or a contract expires. Once past due, the ticket can be automatically escalated to management.</p>
+  <p class="inst">To create a Business Policy Automation:</p>
+  <ol>
+    <li>
+      <p>In the Administration tree, select <span style="font-weight: bold;">Business Policy Automation</span> under the management node you wish to modify.</p>
+    </li>
+    <li>
+      <p>In the Common Tasks menu, click <span style="font-weight: bold;">New</span>. The Business Rule Details dialog box displays.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Name</span> field, type a name for the Business Rule.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Description</span> field, type a brief description of the Business Rule.</p>
+      <p class="Note"><span class="tipnote">Note:</span> Ensure that the <span style="font-weight: bold;">Enable this rule</span> check box is selected. If you don't want the rule to be active, clear the check box.</p>
+    </li>
+    <li>
+      <p>Specify how frequently you want ChangeGear to check for conditions matching your rule.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Number of rules</span> box, specify how many times you want the BPA Rule to execute per item. For example, if the <span style="font-style: italic;">Number of rules</span> value is set to one, the BPA Rule
+ action will only be run once.</p>
+    </li>
+    <li>
+      <p>Optionally, click <span style="font-weight: bold;">Execute</span> if you want to immediately run the rule.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Conditions</span> tab.</p>
+    </li>
+    <li>
+      <p>Use the lists to specify condition(s) that, when met, will trigger the Business Rule (for more information, see <a href="../Business_Rule_Conditions/Specifying_Business_Rule_Conditions.htm" style="font-style: italic;">Specifying Business Rule Conditions</a>).</p>
+      <p class="Note"><span class="tipnote">Note:</span> Available condition options depend on the Item Type selected.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Actions</span> tab to specify the actions that execute when the Business Rule is triggered (for more information, see <a href="../Business_Rule_Actions/Specifying_Business_Rule_Actions.htm" style="font-style: italic;">Specifying Business Rule Actions</a>).</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

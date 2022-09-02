@@ -1,0 +1,750 @@
+/*<meta sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\assets\css\CGWeb.css" />*/
+ul.BulletListIndented {}
+/*Created with Adobe RoboHelp 11.*/
+body {
+  font-family: Arial;
+  background-color: #ffffff;
+}
+h1 {
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 22pt;
+  x-next-class: ;
+  x-next-type: p;
+}
+h2 {
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 11.5pt;
+  margin-left: -12pt;
+  margin-right: -8pt;
+  margin-bottom: 14pt "x-next-class:";
+  background-color: #e88221;
+  letter-spacing: normal;
+  padding: 8.0pt;
+  color: #ffffff;
+  x-next-class: ;
+  x-next-type: p;
+  margin-top: -16pt;
+}
+h3 {
+  font-weight: bold;
+  font-family: "Segoe UI";
+  font-size: 12pt;
+  margin-bottom: 6pt;
+  color: #808080;
+  x-next-class: ;
+  x-next-type: p;
+}
+h4 {
+  font-weight: bold;
+  font-size: 12.0pt;
+  font-family: "Segoe UI";
+  font-style: italic;
+  x-next-class: ;
+  x-next-type: p;
+}
+h5 {
+  font-weight: bold;
+  font-size: 10.0pt;
+  font-family: "Segoe UI";
+  x-next-class: ;
+  x-next-type: p;
+  margin-top: 3pt;
+}
+h6 {
+  font-weight: bold;
+  font-size: 8.0pt;
+  font-family: "Times New Roman";
+  x-next-class: ;
+  x-next-type: p;
+}
+p {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 10.0pt;
+  margin-bottom: 6pt;
+  margin-top: 6pt;
+  margin-left: 0pt;
+}
+p.indent {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 10.0pt;
+  margin-bottom: 6pt;
+  margin-top: 6pt;
+  margin-left: .5in;
+}
+a {
+  color: #0066CC;
+  display: inline;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  text-decoration: underline;
+}
+a.expandspot {
+  cursor: hand;
+  display: inline;
+  color: #0066CC;
+  font-family: "Segoe UI";
+  text-decoration: none underline;
+}
+span.expandtext {
+  font-weight: normal;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  color: #000000;
+}
+a.dropspot {
+  cursor: hand;
+  display: inline;
+  font-family: "Segoe UI";
+  color: #0066CC;
+  text-decoration: none underline;
+}
+a.glossterm {
+  cursor: hand;
+  color: #0066CC;
+  text-decoration: none underline;
+}
+span.glosstext {
+  font-weight: normal;
+  font-family: "Segoe UI";
+  color: #000000;
+}
+ol,
+ul {
+  margin-bottom: 0px;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+}
+ul {
+  margin-bottom: 0px;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+}
+ul.indent {
+  margin-bottom: 0px;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  margin-left: .75in;
+}
+ol:first-child,
+ul:first-child {
+  margin-top: 10px;
+}
+ul ul {
+  list-style: circle;
+  margin-top: 0px;
+}
+.tipnote {
+  font-size: 10pt;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-family: "Segoe UI";
+}
+.inst {
+  font-weight: bold;
+  color: #e88221;
+  margin-right: 1pt;
+  margin-top: 8pt;
+  margin-bottom: 4pt;
+  margin-left: 10pt;
+  text-indent: 0px;
+}
+.note {
+  line-height: Normal;
+  margin: 10px 0px 4px 0px;
+  border-style: Solid;
+  background-color: transparent;
+  color: #000000;
+  border-color: #002233;
+  border-width: 2px;
+  padding: 4px;
+  font-family: "Segoe UI";
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  font-size: 10pt;
+  text-decoration: none;
+}
+span.rls-1-Numbered {
+  font-family: Arial;
+  font-size: 10pt;
+}
+p.Code {
+  font-family: "Courier New";
+  margin-left: 10pt;
+  font-size: 10pt;
+  margin-bottom: 0pt;
+}
+table.CGTable {
+  border-collapse: collapse;
+  x-border-spacing: 0px;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  x-1st-row: 1;
+}
+table.HeaderTable {
+  x-last-col: 1;
+  width: 100%;
+}
+ol.Bulleted {
+  list-style: disc;
+  padding-left: 26.0px;
+  margin-left: -6px;
+}
+ol.Bulleted>li>ol {
+  list-style: circle;
+  padding-left: 26.0px;
+  margin-left: -16px;
+}
+ol.Bulleted>li>ol>li>ol {
+  list-style: square;
+  padding-left: 26.0px;
+  margin-left: -16px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol {
+  list-style: square;
+  padding-left: 26.0px;
+  margin-left: -6px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item5;
+  padding-left: 36.7px;
+  margin-left: -16.7px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item5;
+  content: "("counter(item5, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -40.7px;
+  margin-right: 4px;
+  width: 36.7px;
+  overflow: hidden;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item6;
+  padding-left: 36.7px;
+  margin-left: -16.7px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item6;
+  content: "("counter(item6, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -40.7px;
+  margin-right: 4px;
+  width: 36.7px;
+  overflow: hidden;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item7;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item7;
+  content: counter(item7, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item8;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item8;
+  content: counter(item8, lower-alpha)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item9;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Bulleted>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item9;
+  content: counter(item9, lower-roman)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Numbered {
+  list-style: none;
+  counter-reset: item1;
+  padding-left: 30.0px;
+  margin-left: -20px;
+}
+ol.Numbered>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li:before {
+  counter-increment: item1;
+  content: counter(item1, decimal)".";
+  font-family: Arial;
+  font-size: 10pt;
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol {
+  list-style: none;
+  counter-reset: item2;
+  padding-left: 31.4px;
+  margin-left: -21.4px;
+}
+ol.Numbered>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li:before {
+  counter-increment: item2;
+  content: counter(item2, lower-alpha)")";
+  text-align: right;
+  position: absolute;
+  left: -35.4px;
+  margin-right: 4px;
+  width: 31.4px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item3;
+  padding-left: 31.4px;
+  margin-left: -11.4px;
+}
+ol.Numbered>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li:before {
+  counter-increment: item3;
+  content: counter(item3, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -35.4px;
+  margin-right: 4px;
+  width: 31.4px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item4;
+  padding-left: 36.7px;
+  margin-left: -16.7px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item4;
+  content: "("counter(item4, decimal)")";
+  text-align: right;
+  position: absolute;
+  left: -40.7px;
+  margin-right: 4px;
+  width: 36.7px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item5;
+  padding-left: 36.7px;
+  margin-left: -16.7px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item5;
+  content: "("counter(item5, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -40.7px;
+  margin-right: 4px;
+  width: 36.7px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item6;
+  padding-left: 36.7px;
+  margin-left: -16.7px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item6;
+  content: "("counter(item6, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -40.7px;
+  margin-right: 4px;
+  width: 36.7px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item7;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item7;
+  content: counter(item7, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item8;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item8;
+  content: counter(item8, lower-alpha)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item9;
+  padding-left: 30.0px;
+  margin-left: -10px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ol.Numbered>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item9;
+  content: counter(item9, lower-roman)".";
+  text-align: right;
+  position: absolute;
+  left: -34px;
+  margin-right: 4px;
+  width: 30.0px;
+  overflow: hidden;
+}
+ul.Disc {
+  list-style-type: disc;
+}
+ol.Decimal {
+  list-style-type: decimal;
+}
+ol.RoundSquare {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol {
+  list-style: square;
+}
+ol.RoundSquare>li>ol>li>ol {
+  list-style: circle;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol {
+  list-style: disc;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol {
+  list-style: square;
+}
+ol.RoundSquare>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: circle;
+}
+span {
+  font-family: Calibri, sans-serif;
+}
+ol.LowerAlpha {
+  list-style-type: lower-alpha;
+}
+ol.AlphaNumeric {
+  list-style: decimal;
+}
+ol.AlphaNumeric>li>ol {
+  list-style: lower-alpha;
+}
+ol.AlphaNumeric>li>ol>li>ol {
+  list-style: lower-roman;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol {
+  counter-reset: item4;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item4;
+  content: "("counter(item4, decimal)")";
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item5;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item5;
+  content: "("counter(item5, lower-alpha)")";
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item6;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item6;
+  content: "("counter(item6, lower-roman)")";
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+}
+ol.AlphaNumeric>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering {
+  counter-reset: item1;
+  list-style: none;
+  padding-left: 40px;
+  margin-left: 0px;
+}
+ol.NestedNumbering>li {
+  position: relative;
+}
+ol.NestedNumbering>li:before {
+  counter-increment: item1;
+  content: counter(item1, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -44px;
+  margin-right: 4px;
+  width: 40px;
+  overflow: hidden;
+}
+ol.NestedNumbering>li>ol {
+  list-style: none;
+  counter-reset: item2;
+  padding-left: 60.1px;
+  margin-left: -20.1px;
+}
+ol.NestedNumbering>li>ol>li:before {
+  counter-increment: item2;
+  content: counter(item1, decimal)"."counter(item2, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -64.1px;
+  margin-right: 4px;
+  width: 60.1px;
+  overflow: hidden;
+}
+ol.NestedNumbering>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering>li>ol>li>ol {
+  list-style: none;
+  counter-reset: item3;
+  padding-left: 90.1px;
+  margin-left: -50.1px;
+}
+ol.NestedNumbering>li>ol>li>ol>li:before {
+  counter-increment: item3;
+  content: counter(item1, decimal)"."counter(item2, decimal)"."counter(item3, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -94.1px;
+  margin-right: 4px;
+  width: 90.1px;
+  overflow: hidden;
+}
+ol.NestedNumbering>li>ol>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol {
+  counter-reset: item4;
+  list-style: none;
+  padding-left: 120.2px;
+  margin-left: -80.2px;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item4;
+  content: counter(item1, decimal)"."counter(item2, decimal)"."counter(item3, decimal)"."counter(item4, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -124.2px;
+  margin-right: 4px;
+  width: 120.2px;
+  overflow: hidden;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol {
+  counter-reset: item5;
+  list-style: none;
+  padding-left: 150.2px;
+  margin-left: -110.2px;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item5;
+  content: counter(item1, decimal)"."counter(item2, decimal)"."counter(item3, decimal)"."counter(item4, decimal)"."counter(item5, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -154.2px;
+  margin-right: 4px;
+  width: 150.2px;
+  overflow: hidden;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol>li>ol {
+  counter-reset: item6;
+  list-style: none;
+  padding-left: 180.3px;
+  margin-left: -140.3px;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol>li>ol>li {
+  position: relative;
+}
+ol.NestedNumbering>li>ol>li>ol>li>ol>li>ol>li>ol>li:before {
+  counter-increment: item6;
+  content: counter(item1, decimal)"."counter(item2, decimal)"."counter(item3, decimal)"."counter(item4, decimal)"."counter(item5, decimal)"."counter(item6, decimal)".";
+  text-align: right;
+  position: absolute;
+  left: -184.3px;
+  margin-right: 4px;
+  width: 180.3px;
+  overflow: hidden;
+}
+ul.Circle {
+  list-style-type: circle;
+}
+span.Bold {
+  font-weight: bold;
+}
+ul.Square {
+  list-style-type: square;
+}
+table.CGTable td {
+  border: solid 1px #000000;
+  padding: 1px 10px 1px 10px;
+}
+table.CGTable th {
+  border: solid 1px #000000;
+  padding: 1px 10px 1px 10px;
+}
+table.CGTable tr:first-child td {
+  background-color: #ea8423;
+  font-family: "Segoe UI";
+  font-size: 10pt;
+  color: #ffffff;
+  font-weight: bold;
+}
+table.HeaderTable p {
+  font-family: "Segoe UI";
+  font-size: 9pt;
+}
+table.HeaderTable td:last-child {
+  background-color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 9pt;
+  text-align: Right;
+}

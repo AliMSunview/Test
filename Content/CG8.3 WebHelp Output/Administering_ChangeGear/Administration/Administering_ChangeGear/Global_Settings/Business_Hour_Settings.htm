@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Global_Settings\Business_Hour_Settings.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Business Hour Settings</title>
+  
+  <meta name="rh-index-keywords" content="Business Hours,Holidays:Global Holidays" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Business Hour Settings">
+        <span>Business Hour Settings</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Business Hour Settings</span></h2>
+  <p>Business Hours let you specify your organization's operating hours in order to provide more accurate reporting on time calculations, such as the amount of time spent working on tickets. Setting business hours ensures that when time is reported,
+ only the hours that a technician was available to work on an item will count towards the response time. For example, if your technicians only process requests from 9:00 AM – 5:00 PM, a ticket that is submitted at 4:45 PM and resolved at 9:15 AM the
+ next day will show a 30 minute response time.</p>
+  <p>Business hours are particularly useful when combined with <a href="SLA_Settings.htm">Service Level Agreements</a> (SLAs), as they provide more accurate tracking of ticket resolution times.</p>
+  <p class="note"><span class="tipnote">Note:</span> This section explains how to configure business hours that apply to <span style="font-style: italic;">all</span> tickets in ChangeGear. For more information on configuring <span style="font-style: italic;">SLA-specific</span>    business hours, see <a href="../Configuring_Lookup_Lists/Configuring_Operating_Calendars.htm" style="font-style: italic;">Configuring Operating Calendars</a>.</p>
+  <p class="inst">To define global business hours:</p>
+  <ol>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">Global Settings</span>.</p>
+    </li>
+    <li>
+      <p>Scroll down to the <span style="font-weight: bold;">Business Hours</span> section.<br />
+        <br />
+        <img alt="" border="0" src="../../../../assets/images/Administration/Administering_ChangeGear/Global_Settings/global_settings_business_hours.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Select the business days that the calendar will follow by using the check boxes. The default is Monday through Friday.</p>
+    </li>
+    <li>
+      <p>Set the daily <span style="font-weight: bold;">Start</span> and <span style="font-weight: bold;">End</span> times by using the up and down arrows, or by entering the time in the text boxes.</p>
+      <p class="note"><span class="tipnote">Note:</span> Although you can set the time using 1-minute increments, ChangeGear will round the time up to the nearest quarter hour (or 15-minute increment).</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span> to keep your configuration changes.</p>
+    </li>
+  </ol>
+  <p />
+  <h3>Defining Global Holidays</h3>
+  <p>You can also factor holidays into your business hours. A holiday is a 24-hour period where no time tracking is performed. SLAs will include holidays when calculating ticket resolution times.</p>
+  <p class="inst">To add a global holiday:</p>
+  <ol>
+    <li>
+      <p>Click the drop-down under <span style="font-weight: bold;">Select Holidays </span>to open the holiday calendar.</p>
+    </li>
+    <li>
+      <p>Select a date and click <span style="font-weight: bold;">Add</span>.</p>
+      <p class="note"><span class="tipnote">Important:</span> Holidays are not recurring. ChangeGear will only treat the day specified as a holiday.</p>
+    </li>
+    <li>
+      <p>To remove a holiday, select a date in the list of dates and click <span style="font-weight: bold;">Remove</span><span>.</span></p>
+      <p class="note"><span class="tipnote">Note:</span> You may enter up to sixty-four (64) holidays per year up to two years in advance.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span> to keep your configuration changes.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

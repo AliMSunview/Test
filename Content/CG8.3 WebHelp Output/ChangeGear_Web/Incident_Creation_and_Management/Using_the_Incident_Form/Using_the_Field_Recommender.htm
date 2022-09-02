@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Incident_Creation_and_Management\Using_the_Incident_Form\Using_the_Field_Recommender.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.0_6";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Web_Help" />
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" data-condition="Others:Web_Help" />
+  <meta name="condition-tags" content="Others:Web_Help" data-condition="Others:Web_Help" />
+  
+  <title data-condition="Others:Web_Help">Using the Field Recommender</title>
+  
+  <meta name="rh-index-keywords" content="Field Recommender" data-condition="Others:Web_Help" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Using the Field Recommender">
+        <span>Using the Field Recommender</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Web_Help">
+    <p />
+  </div>
+  <div data-condition="Others:Web_Help">
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Using the Field Recommender</span></h2>
+  <p>As you fill out a new ticket form, ChangeGear can intelligently determine the type of ticket that you are creating. The Field Recommender is an automatic process that suggests values for your ticket using the values entered in similar tickets. If there are a lot of tickets similar to yours–for instance, if this is a frequently occurring problem–then the Field Recommender can accurately anticipate what the ticket type is, what the severity is, and who the assignee will be.</p>
+  <p>The Field Recommender uses a self-learning process to automatically improve its ability to provide relevant suggestions over time. As more tickets are created, the Field Recommender uses the data from those tickets to better understand how tickets are categorized, prioritized, and assigned. This in turn increases its confidence that the values it suggests are the most appropriate values for that ticket. You can override the values suggested by the Field Recommender at any time.</p>
+  <p>The Field Recommender feature is available for Incident Requests that are initiated by end-users. &#160;<span style="font-size: 11.0pt;"><span style="line-height: 107%;"><span style="font-family: &quot;Calibri&quot;, sans-serif;"><span style="color: black;">When tickets are submitted by end-users, field recommendations determined by the Willow Text Similarity and Classification models are automatically applied to the smart recommend enabled fields on the ticket that does not have user input. This &#160;provides for actionable requests to be created which facilitates&#160; faster resolution of the tickets by the staff users.</span></span></span></span></p>
+  <p class="note"><span class="tipnote">Note:</span> This feature may not be available depending on your ChangeGear installation.</p>
+  <p class="inst">To use the Field Recommender:</p>
+  <ol>
+    <li>
+      <p>Open a new ticket.</p>
+    </li>
+    <li>
+      <p>Enter a value in the <span style="font-style: italic;">Summary</span> field. As you type, the Field Recommender provides a drop-down list of summaries from similar tickets.</p>
+      <p><img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/intelligent_recommender.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Select a ticket from the drop-down to auto-populate the current ticket's fields with the same fields from the recommended ticket.</p>
+    </li>
+    <li>
+      <p>And new in ChangeGear 8, when you select an <span style="font-weight: bold;">Incident Type</span>, ChangeGear also recommends values for the <span style="font-weight: bold;">Assigned To</span>, <span style="font-weight: bold;">Impact</span>, <span style="font-weight: bold;">Urgency</span>, and <span style="font-weight: bold;">Priority </span>fields.</p>
+    </li>
+  </ol>
+  <p />
+  <h3><a id="Confidence_Levels"></a>Confidence Levels</h3>
+  <p>The Field Recommender indicates the relevance of each recommendation using a confidence level. The confidence level indicates how certain the Field Recommender is that this is the appropriate value for this field based on similar tickets. Confidence is measured on a scale from 0-100% and is represented by an indicator at the top-right corner of the field. The Field Recommender uses a color scale to indicate confidence levels:</p>
+  <ul>
+    <li>
+      <p>Green<span> <img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/icon_intelligentrecommender_high.png" style="border: none;" /></span> indicates a high confidence.</p>
+    </li>
+    <li>
+      <p>Yellow<span> <img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/icon_intelligentrecommender_medium.png" style="border: none;" /></span> indicates a moderate confidence.</p>
+    </li>
+    <li data-condition="Others:Non_Release">
+      <p>Red <img alt="" border="0" data-condition="Others:Non_Release" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/icon_intelligentrecommender_low.png" style="border: none;" /> indicates a low confidence.</p>
+    </li>
+    <li>
+      <p>Gray<span> <img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/icon_intelligentrecommender_none.png" style="border: none;" /></span> indicates a low confidence, or that no match was found.</p>
+    </li>
+  </ul>
+  <p>For example, the following image indicates a high confidence that the ticket is a critical-priority item.</p>
+  <p><img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/intelligent_recommender_priority.png" style="border: none;" /></p>
+  <p />
+  <p>The Field Recommender not only generates a confidence level for the suggested solution, but it generates a confidence level for other values in the same field. It then compares each confidence level to determine the best fit. Values that have a significantly higher confidence level than other values are more likely to be recommended, even if the confidence level isn't necessarily high on its own.</p>
+  <p>To see the possible suggestions provided by the Field Recommender, click on the indicator.</p>
+  <p><img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/intelligent_recommender_alternatives.png" style="border: none;" /></p>
+  <p>You can override an auto-populated field by clicking on an alternate value in the indicator, or by manually changing the value of the field. If the new value differs from the Field Recommender's suggestion, ChangeGear displays an exclamation point <img alt="" border="0" src="../../../assets/images/ChangeGear_Web/Incident_Creation_and_Management/Using_the_Incident_Form/icon_intelligentrecommender_override.png" style="border: none;" /> over the indicator.</p>
+  <p />
+
+</div>
+  <div data-condition="Others:Web_Help">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

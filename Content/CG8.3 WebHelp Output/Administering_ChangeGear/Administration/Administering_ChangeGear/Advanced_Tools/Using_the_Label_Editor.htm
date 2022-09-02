@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Advanced_Tools\Using_the_Label_Editor.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Using the Label Editor</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Using the Label Editor">
+        <span>Using the Label Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Using the Label Editor</span></h2>
+  <p>You can modify any label used in ChangeGear to better suit how your organization uses the product. A label is a method of describing entity attributes, displayed as a field label or column header. The Label Editor is used to modify default labels, labels
+ across modules, and labels on column headers. For example, if you use the Priority field to indicate the customer type or tier, you could change the field name to be "Customer Type." The Customize Labels utility is used to change individual
+ labels across the product.</p>
+  <p>ChangeGear includes three different methods to change labels.</p>
+  <p class="note"><span class="tipnote">Note:</span> Methods are listed in order of precedence, i.e., changes made to the model will supersede changes made via the Label Editor, which in turn takes precedence over the Form Designer. Not all editions of ChangeGear have
+ access to all of the methods.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 46.147%;" />
+      <col style="width: 17.677%;" />
+      <col style="width: 17.121%;" />
+      <col style="width: 19.055%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Scenario</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Model Editor</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Label Editor</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Form Designer</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">Are changes displayed system-wide?</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>No</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">Are the column headers changed?</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>No</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">Are field labels changed on the form?</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-weight: bold;">Can I search for labels across entities?</p>
+        </td>
+        <td>
+          <p>No</p>
+        </td>
+        <td>
+          <p>Yes</p>
+        </td>
+        <td>
+          <p>No</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>For information regarding the <span style="font-weight: bold;">Model Editor</span>, see <a href="Using_the_Entity_Editor/Customizing_the_Model/Customizing_the_Model.htm" style="font-style: italic;">Customizing the Model</a>.</p>
+  <p>For information regarding the <span style="font-weight: bold;">Form Designer</span>, see <a href="Using_the_Entity_Editor/Customizing_Forms/Customizing_Forms.htm" style="font-style: italic;">Customizing Forms</a>.</p>
+  <p>For information regarding the <span style="font-weight: bold;">Label Editor</span>, see below.</p>
+  <p class="inst">To change the labels via the Label Editor:</p>
+  <ol>
+    <li>
+      <p>In the Administration module, select <span style="font-weight: bold;">Advanced</span><span>.</span></p>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">Customize Labels</span>. The Edit Labels dialog will display.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Find what</span> field, enter the string you wish to change.</p>
+    </li>
+    <li>
+      <p>Enter the replacement text in the <span style="font-weight: bold;">Replace with</span> field.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can leave the <span style="font-weight: bold;">Replace with</span> field blank if you wish to edit the text manually.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Find Next</span> to find the text you wish to replace. The Strings tree will open to the text, while the Path field will show exactly where to view the string.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Replace</span> to replace the text, or click <span style="font-weight: bold;">Edit</span> to replace the text manually.</p>
+    </li>
+    <li>
+      <p>Continue replacing text until you have modified all the relevant strings.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span> when you are done.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

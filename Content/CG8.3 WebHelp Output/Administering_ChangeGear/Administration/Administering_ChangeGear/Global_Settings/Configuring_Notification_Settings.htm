@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Global_Settings\Configuring_Notification_Settings.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.2.0_1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Configuring Notification Settings</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Configuring Notification Settings">
+        <span>Configuring Notification Settings</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Configuring Notification Settings</span></h2>
+  <p>Configuring notifications allows ChangeGear to send updates to users via e-mail or Short Message Service (SMS). When configured, ChangeGear can immediately notify users when an action occurs such as when a ticket is created, updated, or closed.&#160;</p>
+  <h3>Configuring E-mail Notifications</h3>
+  <p>When e-mail notifications are enabled, ChangeGear uses either the Exchange Web Services (EWS) or Simple Mail Transfer Protocol (SMTP) protocols to send alerts to a user's e-mail address. The target e-mail address is determined by the <span style="font-style: italic;">E-mail</span> field in the user's profile. If the user does not have an e-mail set, then no notifications are sent.&#160;</p>
+  <p class="inst">To configure e-mail notification settings:</p>
+  <ol>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">Global Settings</span>.</p>
+    </li>
+    <li>
+      <p>Click Notification.</p>
+    </li>
+    <li>
+      <p>Click the Enable slider to enable the notifications.</p>
+      <img src="../../../../assets/images/Notification settings.png" />
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">E-mail Method</span> that you want to use. The configuration steps will vary depending on your selected method.</p>
+    </li>
+    <li>
+      <p>If you selected <span style="font-weight: bold;">SMTP</span>, perform the following actions:</p>
+      <ol>
+        <li>
+          <p>Select a <span style="font-weight: bold;">module</span> to apply your changes to. You can specify a different account for each module. If you want your settings to apply to all modules instead of one specific module, keep <span style="font-style: italic;">Default</span> selected.</p>
+        </li>
+        <li>
+          <p>Enter the address of your SMTP server in the <span style="font-weight: bold;">SMTP Server</span> field.</p>
+        </li>
+        <li>
+          <p><span>Enter the</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Server Port</span><span>. The default is 25.</span></p>
+        </li>
+        <li>
+          <p>Specify the e-mail address that will appear in the notifications in the <span style="font-weight: bold;">From E-mail Address</span> field. This lets you specify the address that appears in the <span style="font-style: italic;">From</span> field when an e-mail is sent.</p>
+          <p class="note"><span class="tipnote">Note:</span> You can only use addresses that are linked to the e-mail account specified in the Authentication section.</p>
+        </li>
+        <li>
+          <p>For security purposes, check the <span style="font-weight: bold;">Enable TLS/SSL</span> checkbox if your SMTP server uses TLS or SSL. You may need to change the <span style="font-weight: bold;">Server Port</span> if your SMTP server uses a different port for TLS or SSL.</p>
+          <p class="note"><span class="tipnote">Important:</span> SSL over port 465 is currently unsupported.</p>
+        </li>
+        <li>
+          <p>Select the <span style="font-weight: bold;">Authentication Type</span> required by your SMTP server.</p>
+        </li>
+        <li>
+          <p>Enter your <span style="font-weight: bold;">Account Name</span><![CDATA[ ]]> <![CDATA[ ]]><span>and</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Password</span><![CDATA[ ]]> <![CDATA[ ]]><span>if required.</span></p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>If you selected <span style="font-weight: bold;">Exchange Web Services</span>, perform the following actions:</p>
+      <ol>
+        <li>
+          <p>Enter the URL of the EWS service in the <span style="font-weight: bold;">Web Services URL</span>&#160;field.</p>
+        </li>
+        <li>
+          <p>Enter your <span style="font-weight: bold;">Account Name</span>, <span style="font-weight: bold;">E-mail Address</span>, and <span style="font-weight: bold;">Password</span>.</p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">Blind copy all recipients</span> if you do not want your recipients to see who else is receiving the e-mail notification. This applies to e-mails that are sent to multiple recipients.</p>
+    </li>
+    <li>
+      <p>Select an <span style="font-weight: bold;">E-mail Format</span>. HTML allows you to send formatted messages, while Text sends plain text messages.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Test Send</span> button to verify your configuration settings. A popup window will ask for an e-mail address. Enter an e-mail address to send a test message to and click <span style="font-weight: bold;">OK</span> to send the message. ChangeGear displays a dialog if the e-mail is sent successfully or if an error occurs.</p>
+      <p><img height="119" src="../../../../assets/images/Notification settings 2.png" width="234" /></p>
+      <p class="note"><span class="tipnote">Note:</span> The <span style="font-weight: bold;">Test Send</span> feature only validates that the ChangeGear Desktop Client can access the e-mail account. If you encounter problems sending e-mails from the ChangeGear server, please contact SunView Software Support at <span data-keyref="SunView_Support_E-mail">support@sunviewsoftware.com</span> or <span data-keyref="SunView_Support_Phone">(813) 632-3600</span>.</p>
+    </li>
+    <li>
+      <p>After verifying that the message was sent successfully, click <span style="font-weight: bold;">Save</span>.</p>
+    </li>
+  </ol>
+  <p />
+  <h4>Configuring a Global E-mail Notification Header</h4>
+  <p>The Global Notification E-mail Header section allows you to set a master header for all e-mail templates. Using the header template, you can apply a custom style to all e-mail templates without having to individually modify each template.</p>
+  <p>As with all templates, the header template supports the use of fields. The following fields are present in the default template:</p>
+  <ul>
+    <li>
+      <p><span style="font-weight: bold;">$(ItemID)</span> displays the ID of the e-mail's subject (for instance, the ticket ID). By default, this also provides a clickable link that opens the item in the recipient's Web browser.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">$(EmailContent)</span> displays the contents of the child template (the template that the header template is currently being applied to).</p>
+    </li>
+  </ul>
+  <p class="inst">To configure the global e-mail notification header:</p>
+  <ol>
+    <li>
+      <p>In the <span style="font-weight: bold;">Notification Settings</span><![CDATA[ ]]> <![CDATA[ ]]><span>section of the</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Global Settings</span><![CDATA[ ]]> <![CDATA[ ]]><span>screen, c</span>lick the <span style="font-weight: bold;">Edit</span> button next to <span style="font-style: italic;">Global Notification E-mail Header</span>.</p>
+    </li>
+    <li>
+      <p>If you want to use another template as the base for this template, click <span style="font-weight: bold;">Import</span><![CDATA[ ]]> <![CDATA[ ]]><span>and choose the template that you want to use.</span></p>
+    </li>
+    <li>
+      <p>Enter the contents of your template. Make sure that the body of your message contains the <span style="font-weight: bold;">$(EmailContent)</span> field.</p>
+    </li>
+    <li>
+      <p>To test your template, click the <span style="font-weight: bold;">Test Send</span>&#160;button and enter an e-mail address.</p>
+    </li>
+    <li>
+      <p><span>Click</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">OK</span><![CDATA[ ]]> <![CDATA[ ]]><span>to save the template.</span></p>
+    </li>
+  </ol>
+  <p />
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

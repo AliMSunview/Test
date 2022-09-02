@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Using_the_Announcement_Portal\Using_ChangeGear\Creating_and_Managing_Tasks\Managing_Task_Dependencies.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "7.4.0_7";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Web_Help" />
+
+
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Web_Help" />
+<meta name="condition-tags" content="Others:Web_Help" data-condition="Others:Web_Help" />
+
+<title data-condition="Others:Web_Help">Managing Task Dependencies</title>
+
+<meta name="rh-index-keywords" content="Tasks:Managing Task Dependencies" data-condition="Others:Web_Help" /></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Managing Task Dependencies">
+        <span>Managing Task Dependencies</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Web_Help">
+    <p />
+  </div>
+  <div data-condition="Others:Web_Help">
+
+<h2 style="color: #ffffff;"><span data-format="default" data-field="title">Managing Task Dependencies</span></h2>
+<p>In addition to ordering tasks, the task owner can also enforce the order 
+ in which tasks are worked on. With task dependencies, users assigned to 
+ a task cannot begin the task until all preceding tasks have been completed. 
+ Tasks can be moved into different orders, where lower numbers indicate 
+ higher priority tasks. For example, a user cannot accept a task in order 
+ 3 until the tasks in orders 1 and 2 have already been completed. Tasks 
+ that are grouped in the same order can be worked on simultaneously.</p>
+<p>For example, imagine that a ticket has been created to provision a new 
+ server. The ticket contains the following tasks:</p>
+<ul>
+	<li><p>Procure hardware</p></li>
+	<li><p>Install and configure operating system</p></li>
+	<li><p>Install application software</p></li>
+	<li><p>Set up security</p></li>
+</ul>
+<p>Installation and configuration cannot be performed until the server 
+ hardware has been procured. However, application installation and security 
+ setup can be performed simultaneously since one does not need to be completed 
+ before the other can begin. After <a href="Reordering_Tasks.htm">reordering 
+ and grouping</a> each of these tasks, the final task list may look similar 
+ to the following:</p>
+<ol style="list-style: decimal;margin-bottom: 0px;">
+	<li><p>Procure hardware</p></li>
+	<li><p>Install and configure operating system</p></li>
+	<li><p>Install application software</p></li>
+</ol>
+<ol start="3" style="list-style: decimal;margin-top: 0px;">
+	<li><p>Set up security</p></li>
+</ol>
+<p />
+<h3>Active vs. Inactive Tasks</h3>
+<p>A task will automatically toggle between <span style="font-style: italic;">active</span> 
+ and <span style="font-style: italic;">inactive</span>&#160;depending on 
+ its order in the task queue. An active task can be worked on at any time 
+ by its implementer, whereas an inactive task cannot be started until all 
+ of the active tasks before it have been closed. A task will automatically 
+ switch from inactive to active when all of its preceding tasks have been 
+ completed.</p>
+<p>Moving an active task to an inactive group sets the task as inactive. 
+ This occurs immediately and prevents the implementer from working on the 
+ task until it becomes active again. If you move an inactive task to a 
+ group of active tasks, then the task becomes active and must be completed 
+ before the next group of tasks is marked as active.</p>
+<p class="note"><span class="tipnote">Note:</span> Reopening a closed task 
+ does not affect the dependency chain. Any tasks that are currently active 
+ will remain active.</p>
+<p />
+<h3>Enabling Task Dependency</h3>
+<p>The task dependency feature is enabled on a per-module basis by a ChangeGear 
+ administrator. However, additional functionality is available to staff 
+ users through the ChangeGear Web client.</p>
+<p>Depending on your ChangeGear configuration, you may also be able to 
+ manually enable or disable the task dependency feature for individual 
+ tasks. Enabling it prevents that task from changing its current state 
+ until all preceding tasks have been completed. Disabling it means that 
+ the task can be accepted, worked on, and closed at any point in the ticket's 
+ life cycle.</p>
+<p class="inst">To manage task dependencies for individual tasks:</p>
+<ol>
+	<li><p>Open the ticket that you wish to modify.</p></li>
+	<li><p>Navigate to the Tasks (or Implementation) tab.</p></li>
+	<li><p>Open the task that you wish to manage dependencies for.</p></li>
+	<li><p>Check the <span style="font-weight: bold;">Enforce task dependency</span> 
+	 checkbox to enforce dependencies for the task</p>
+	<p>- OR -</p>
+	<p>Uncheck the <span style="font-weight: bold;">Enforce task dependency</span> 
+	 checkbox to allow the task's implementer to start the task at any 
+	 time.</p>
+	<p class="note"><span class="tipnote">Note: </span>If you do not see 
+	 the <span style="font-weight: bold;">Enforce task dependency</span>&#160;check 
+	 box, please contact your ChangeGear administrator.</p></li>
+	<li><p>Click the <span style="font-weight: bold;">Save <img src="../../../../assets/images/ChangeGear_Web/icon_save.png" alt="" style="border: none;" border="0" /></span> button to save the 
+	 task.</p></li>
+</ol>
+<p />
+
+
+
+</div>
+  <div data-condition="Others:Web_Help">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Incident_Creation_and_Management\Managing_Incidents\Leveraging_ChangeGear_Integration_Features.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "11.3.0_4";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Web_Help" />
+
+
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Web_Help" />
+<meta name="condition-tags" content="Others:Web_Help" data-condition="Others:Web_Help" />
+
+<title data-condition="Others:Web_Help">Leveraging ChangeGear Integration Features</title>
+
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Leveraging ChangeGear Integration Features">
+        <span>Leveraging ChangeGear Integration Features</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Web_Help">
+    <p />
+  </div>
+  <div data-condition="Others:Web_Help">
+
+<h2 style="color: #ffffff;"><span data-format="default" data-field="title">Leveraging ChangeGear Integration Features</span></h2>
+<p>All of ChangeGear's modules easily interact with one another to provide 
+ a full-featured ITIL service support solution. Information from the CMDB 
+ is accessed from modules to allow the correct incident, problem, or change 
+ request to be associated with the appropriate CI. Information from the 
+ ticket module is transported to problem and RFC tickets without having 
+ to retype information such as the summary, user information, etc.</p>
+<p>The main inter-operability features of ChangeGear include:</p>
+<ul>
+	<li><p>Promotion</p></li>
+	<li><p>Notification Rules</p></li>
+	<li><p>Business Policy Automations</p></li>
+	<li><p>Communication Templates</p></li>
+	<li><p>Accessible CI Information</p></li>
+	<li><p>Consistent User Information</p></li>
+</ul>
+<p />
+<h3><a id="Promotion"></a>Promotion</h3>
+<p>Work flows between tickets are also integrated with each other for consistent 
+ communication between all concerned parties. When a ticket is promoted, 
+ it enters a special life cycle state that indicates that it is waiting 
+ on the promoted ticket to be resolved. Incidents and service requests 
+ enter the <span style="font-weight: bold;">Pending Resolution</span> state, 
+ and problems enter the <span style="font-weight: bold;">Pending Change</span> 
+ state when promoted.</p>
+<p>For example, if an incident or incidents have been identified as reporting 
+ a potential problem, the incidents are promoted to a problem. The incident 
+ ticket enters the <span style="font-weight: bold;">Pending Resolution</span> 
+ state after it has been promoted to a problem via the Promotion dialog. 
+ After the problem enters the <span style="font-weight: bold;">Pending 
+ Close</span> state, the state of the incident ticket changes to <span style="font-weight: bold;">In-Progress</span> OR a service request 
+ enters the <span style="font-weight: bold;">Fulfillment</span> state. 
+ An incident or service request can be promoted directly to an RFC if the 
+ assignee has sufficient privileges. The state of the incident or service 
+ request will change similarly.</p>
+<p>A problem that requires a change to be successfully resolved undergoes 
+ similar work flow changes. After the problem has been promoted to 
+ an RFC, the ticket enters the <span style="font-weight: bold;">Pending 
+ Change</span> state. When the RFC is closed, either successfully 
+ or unsuccessfully, the ticket enters the <span style="font-weight: bold;">In-Progress</span> 
+ state. If incidents or service requests are related to a problem 
+ via promotion, when the problem enters the <span style="font-weight: bold;">Pending 
+ Close</span> state, the incident enters the <span style="font-weight: bold;">In-Progress</span> 
+ state, OR the service request enters the <span style="font-weight: bold;">Fulfillment</span> 
+ state.</p>
+<p />
+<h3>Notification Rules</h3>
+<p>ChangeGear can be configured to send notification e-mails to appropriate 
+ parties when the state of the ticket changes. For example, a notification 
+ can be sent to the original requester and the incident assignee when a 
+ promoted ticket reaches the Pending Close state. This alerts the assignee 
+ that action is required on the original ticket and reassures the original 
+ requester that progress is being made on the ticket. The content of the 
+ notification can be completely automated using communication templates. 
+ (See the Routing and Notification section in the ChangeGear Desktop 
+ help document under Administration.)</p>
+<p />
+<h3>Business Policy Automations</h3>
+<p>ChangeGear uses Business Policy Automations (BPAs) to perform actions 
+ when certain criteria are met. For example, when a ticket reaches a certain 
+ state or when a ticket has been in a state for a certain period of time, 
+ an e-mail can be sent to recipients to notify them of the state of the 
+ ticket. A ticket that has been in the Pending Close state for more than 
+ 72 hours could be automatically closed, or a ticket that has been In-Progress 
+ for more than a week could be escalated to a manager. If a ticket has 
+ not been accepted within a certain amount of time, possibly due to absence, 
+ the ticket could be reassigned to another person or role. As for Notification 
+ Rules, e-mail notifications triggered by such rules can be completely 
+ automated using communication templates. (See the Business Policy Automation 
+ section in the ChangeGear Desktop help document under Administration for 
+ more information.)</p>
+<p />
+<h3>Communication Templates</h3>
+<p>Communication Templates provide a consistent, unified, and automated 
+ method of conveying information to stakeholders. Different template types 
+ can be created for use with specific modules. Fields are used within the 
+ template to provide dynamic text based on the kind of information available 
+ to the specific type of template. For example, you can use a communication 
+ template and notification rules such that when a problem ticket enters 
+ the Pending Change state you can include ticket fields on the template 
+ for the ticket description and notes fields and provide feedback to the 
+ requester. (See the Business Policy Automation section in the ChangeGear 
+ Desktop help document under Administration for more information.)</p>
+<p />
+<h3>Accessible CI Information</h3>
+<p>Information about CIs is available in all ticket entry forms so that 
+ an assignee has relevant information about the affected resources to more 
+ efficiently resolve the ticket. Requests for change, as they deal with 
+ modifying a CI, are recorded in the CI information whenever an RFC lists 
+ a CI as an impacted resource. For example, information about an 
+ e-mail server is readily available for all ticket types. When an RFC is 
+ made against the e-mail server, the RFC information is recorded in the 
+ CI.</p>
+<p />
+<h3>Consistent User Information</h3>
+<p>ChangeGear has a single source of user data that is propagated throughout 
+ the application. Every ChangeGear module has the same user profile 
+ information regardless of the module in use. Users can view their information 
+ via a My Profile link and notify the administrator of any information 
+ which should be corrected, thus keeping the information up-to-date and 
+ reducing errors. If a user manually enters different data on a ticket, 
+ such as an incident ticket, that information is carried over if the ticket 
+ requires promotion to a problem or RFC.</p>
+<p />
+
+
+
+</div>
+  <div data-condition="Others:Web_Help">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_CMDB\Extending_the_CMDB\Overview_of_Extending_the_CMDB.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Extending the CMDB</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Extending the CMDB">
+        <span>Extending the CMDB</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2 data-condition="Others:Online"><span data-field="title" data-format="default">Extending the CMDB</span></h2>
+  <p>You can extend the basic configuration information in the CMDB by using the <span style="font-weight: bold;">Entity Editor</span> in the Administration Module &gt; Advanced section. ChangeGear allows you to edit the underlying entity model and the forms
+ associated with the entities to further match your business needs. For example, you can create CI types that ChangeGear does not provide and create new fields and forms to be used with the CI type.</p>
+  <p>In the <span style="font-weight: bold;">Entity Editor</span> (see <a href="../../Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/Using_the_Entity_Editor.htm" style="font-style: italic;">Using the Entity Editor</a> for more information),
+ the Configuration Management module is unique in that each CI type - found in the CMDB Lookup Lists section - is considered a different entity, instead of a flat list of CI types, with the ability to have different fields and forms. Each CI type inherits
+ their fields and forms from the Base CI (see <a href="What_is_the_Base_CI_.htm" style="font-style: italic;">What is the Base CI?</a> for more information). You can even use the <span style="font-weight: bold;">Entity Editor</span> to create different
+ forms to be used with sub-resource types, such as Network: Routers.</p>
+  <p>When extending your CMDB, you should have a clear idea of what you want to accomplish. For example, if you are creating a CI type, know which fields are unique to the new CI type but are not part of the Base CI so that you can add those fields to the
+ new CI.</p>
+  <p class="note"><span class="tipnote">Important:</span> Create a backup of your ChangeGear database and installation folders before modifying ChangeGear with the <span style="font-weight: bold;">Entity Editor</span>.</p>
+  <p><img alt="" border="0" height="598" src="../../../../assets/images/Administration/Using_the_CMDB/Extending_the_CMDB/cmdb_entity_editor.png" style="border: none;" width="794" /></p>
+  <p>See the following topics for more information:</p>
+  <ul>
+    <li>
+      <p><a href="What_is_the_Base_CI_.htm">What is the Base CI?</a></p>
+    </li>
+    <li>
+      <p><a href="How_Do_I_Create_a_New_CI_Entity_.htm">How Do I Create a New CI Entity?</a></p>
+    </li>
+    <li>
+      <p><a href="How_Do_I_Add_Fields_to_CI_Entities_.htm">How Do I Add Fields to CI Entities?</a></p>
+    </li>
+    <li>
+      <p><a href="How_Do_I_Create_Forms_to_Be_Used_With_Specific_Resource_Types_.htm">How Do I Create Forms to Be Used With Specific Resource Types?</a></p>
+    </li>
+    <li>
+      <p><a href="Determining_the_Active_Form.htm">Determining the Active Form</a></p>
+    </li>
+    <li>
+      <p><a href="How_Do_I_Create_Sub-Resource_Types_.htm">How Do I Create Sub-Resource Types?</a></p>
+    </li>
+  </ul>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

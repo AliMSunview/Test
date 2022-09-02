@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Business_Policy_Automation\Business_Rule_Actions\BPA_Actions\Run_Code.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../../..";
+    gCommonRootRelPath = "../../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration;Others:Internal" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration;Others:Internal" data-condition="Others:Administration;Others:Internal" />
+  
+  <title data-condition="Others:Administration;Others:Internal">Run Code</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration;Others:Internal" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Run Code">
+        <span>Run Code</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration;Others:Internal">
+    <p />
+  </div>
+  <div data-condition="Others:Administration;Others:Internal">
+  <h2><span data-field="title" data-format="default">Run Code</span></h2>
+  <div data-conref="../../../../../../assets/snippets/Enable Run Code.hts">
+  <p>Run Code allows you to execute custom C# code within ChangeGear. Run Code is not exposed by default and must be enabled in the Desktop Client configuration.</p>
+  <p class="note"><span class="Tipnote">Warning:</span> Adding a Run Code automation allows you to run unfiltered C# code on the ChangeGear server. Please verify the code on a test system first, as it may cause system instability or data loss.</p>
+  <p class="inst">To expose the Run Code automation:</p>
+  <ol>
+    <li>
+      <p>On the ChangeGear server, open the Desktop Client configuration file (defaults to <span style="font-style: italic;">C:\Program Files (x86)\SunView Software\ChangeGear\Client\CG.exe.config</span>).</p>
+    </li>
+    <li>
+      <p>Search for the <span style="font-weight: bold;">EnableRunCodeAction</span> key, which is found in the <span style="font-style: italic;">appSettings</span> section.</p>
+    </li>
+    <li>
+      <p>Change the value of the <span style="font-weight: bold;">EnableRunCodeAction</span> key from <span style="font-style: italic;">false</span> to <span style="font-style: italic;">true</span>.</p>
+      <p class="Code"><span style="color: #0000ff;">&lt;add</span><![CDATA[ ]]> <![CDATA[ ]]><span style="color: #ff0000;">key</span>=<span style="color: #800080;font-weight: bold;">"EnableRunCodeAction"</span><![CDATA[ ]]> <![CDATA[ ]]><span style="color: #ff0000;">value</span>=<span style="color: #800080;font-weight: bold;">"true"</span>/&gt;</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Save</span> and close the file.</p>
+    </li>
+    <li>
+      <p><span style="font-weight: bold;">Restart</span> the Desktop Client.</p>
+    </li>
+  </ol>
+  <p>Now when you add an automation in a BPA or workflow, Run Code will appear in the <span style="font-style: italic;">Action Type</span> drop-down.</p>
+  <p><img alt="" border="0" src="../../../../../../assets/images/Tech_Notes/run_code.png" style="border: none;" /></p>
+  <p>To learn more about creating and editing BPAs, see the <span style="font-style: italic;">Business Policy Automation</span> chapter of the ChangeGear Administrator's Guide.</p>
+
+</div>
+  <p />
+  <h3>Using Run Code</h3>
+  <p>Before you can create a Run Code action, you first need to know the exact syntax of the code you wish to run. This will vary based on the task you wish to perform, the module that the BPA is in, and several other factors. For more information, please
+ contact SunView Software Support at <span data-keyref="SunView_Support_Phone">(813) 632-3600</span> or at <span data-keyref="SunView_Support_E-mail">support@sunviewsoftware.com</span>.</p>
+  <p class="inst">To create a Run Code action:</p>
+  <ol style="list-style: decimal;">
+    <li>
+      <p>In the <span style="font-weight: bold;">Name</span> field, enter the name of the new action.</p>
+    </li>
+    <li>
+      <p>Optionally, enter a <span style="font-weight: bold;">Description</span> of the new action.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Code</span> field, enter the C# code that will execute when the action is performed. Remember that this has the potential to cause instability or data loss if the command is entered incorrectly. Please confirm
+ with a SunView Software Support specialist before executing the action.</p>
+    </li>
+    <li>
+      <p>Make sure the <span style="font-weight: bold;">Enable</span> check box is checked, then click <span style="font-weight: bold;">OK</span><span> to save the action</span>.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration;Others:Internal">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Views\Using_the_Criteria_Editor.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Using the Criteria Editor</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Using the Criteria Editor">
+        <span>Using the Criteria Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Using the Criteria Editor</span></h2>
+  <p>Use the Criteria Editor to further constrain the number of viewable items. For example, if you wish to only view items that have been closed in the last week, you can use the Criteria Editor to do so.</p>
+  <p class="note"><span class="tipnote">Tip:</span> You can create views that will only be triggered by logged in users. Select a user field and then choose "<span style="font-weight: bold;">The User</span>" or "<span style="font-weight: bold;">The User's Team</span>."</p>
+  <p style="font-weight: normal;color: #424242;">The Criteria Editor allows you to create criteria in either a basic mode where you select fields and rules with pull down menus or in and advanced mode which allows you to enter your criteria in an SQL-like format. It is recommended that you add the
+ fields you want with the basic editor and then switch to the advanced editor to fine tune your query.</p>
+  <p class="note"><span class="tipnote">Note:</span> If you switch from advanced editor back to the Basic editor you will be warned since doing so will clear out any query you had put together with the Advanced criteria editor.</p>
+  <p class="inst">To specify basic filters:</p>
+  <ol>
+    <li>
+      <p>Open the Criteria Editor. You can do so from the Reports or Views dialog by selecting <span style="font-weight: bold;">Save</span> or by clicking the link under Step 3 in the instructions.</p>
+    </li>
+    <li>
+      <p>Move to the <span style="font-weight: bold;">Filter</span> tab.</p>
+    </li>
+    <li>
+      <p>Make sure the <span style="font-weight: bold;">Basic</span> sub tab is highlighted</p>
+    </li>
+    <li>
+      <p>Choose a <span style="font-weight: bold;">field</span> to filter on.</p>
+    </li>
+    <li>
+      <p>Choose an <span style="font-weight: bold;">operator</span> (For help with list selections, see <a href="../../../../ChangeGear_Web/Getting_Started_as_a_Staff_User/Searching/Advanced_Searching.htm" id="a1">Advanced Search Operators</a>).</p>
+    </li>
+    <li>
+      <p>Choose the <span style="font-weight: bold;">value</span> that you wish to filter on.</p>
+    </li>
+    <li>
+      <p>To specify more criteria, choose <span style="font-weight: bold;">AND</span> or <span style="font-weight: bold;">OR</span> at the end of the row. You can delete conditions by clicking on the red <span style="font-weight: bold;">X</span> at the end
+ of the row.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can select multiple fields from the same aggregate category, i.e., you can select both the <span style="font-weight: bold;">Assigned To</span> and <span style="font-weight: bold;">Location</span> fields from
+ the General section.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>. If you have opened the Criteria Editor by clicking on the <span style="font-weight: bold;">Save</span> button, you will save the report or view.</p>
+    </li>
+  </ol>
+  <p />
+  <p class="inst">To specify advanced filters:</p>
+  <ol>
+    <li>
+      <p>Open the Criteria Editor. You can do so from the Reports or Views dialog by selecting <span style="font-weight: bold;">Save</span> or by clicking the link under Step 3 in the instructions.</p>
+    </li>
+    <li>
+      <p>Move to the <span style="font-weight: bold;">Filter</span> tab.</p>
+    </li>
+    <li>
+      <p>Make sure the <span style="font-weight: bold;">Advanced</span> sub tab is highlighted.</p>
+    </li>
+    <li>
+      <p>Type in the query you wish in the text field.</p>
+    </li>
+    <li>
+      <p>Validate the syntax of the query by clicking on the Validate button.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>. If you have opened the Criteria Editor by clicking on the <span style="font-weight: bold;">Save</span> button, you will save the report or view.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

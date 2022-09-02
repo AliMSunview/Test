@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Webhooks\Overview_of_Webhooks.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.8.0_1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Overview of Webhooks</title>
+  
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Overview of Webhooks">
+        <span>Overview of Webhooks</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Overview of Webhooks</span></h2>
+  <p>Webhooks tell ChangeGear to notify external (web-based) resources (third-party systems or scripts) when specific events occur in specific modules. For example, if a bug in an internal software system is reported via a ChangeGear Incident ticket, ChangeGear
+ could notify a third-party bug tracking system used by the internal software development team. Or, completed change requests could notify an external project management system.</p>
+  <p>ChangeGear has the ability to send a Webhook (an HTTP POST request) to any URL on create, update, or delete of any ticket, task, or announcement.&#160;</p>
+  <p>Webhooks send the entire ticket data structure as the webhook payload. This is the same data received when making a call to get ticket details from the ChangeGear API. For example, a webhook that fires every time a Service Request ticket is created
+ will send the entire data record for the newly created Service Request ticket. You must configure the receiving resource&#160;to receive and handle the ticket data as required.&#160;</p>
+  <p><span style="font-weight: bold;">To add a webhook:</span></p>
+  <ol class="Decimal">
+    <li>Click <span style="font-style: italic;">Web Administration&gt;Webhooks</span>. ChangeGear displays the Webhooks screen.</li>
+  </ol>
+  <p style="margin-left: 36pt;"><img height="228" src="../../../assets/images/webhooks main screen.png" width="583" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 1;" value="2">Click on the plus sign to add a new webhook. ChangeGear opens a new row in the grid.</li>
+    <li>Enter a <span style="font-weight: bold;">Name </span>for the webhook.&#160;<span style="font-weight: bold;">Tip</span>: Try to use a webhook name that describes the trigger and the target, so that it is easier to understand why the webhook was created. The
+ Callback URI often is not helpful for indicating the purpose of a webhook.</li>
+    <li>In <span style="font-weight: bold;">Callback URI</span>, enter the destination URL&#160;address (the API web address of the resource that should be notified).</li>
+    <li>In <span style="font-weight: bold;">User Name</span>, enter the user name for the resource that will be notified. &#160;</li>
+    <li>In&#160;<span style="font-weight: bold;">Password</span>, enter the password for the for the resource that will be notified.&#160;The password is encrypted inside ChangeGear when you save the webhook. For security reasons, ChangeGear displays the password in
+ the encrypted format, whenever the webhook is displayed or edited.</li>
+    <li>In <span style="font-weight: bold;">Events</span>&#160;and <span style="font-weight: bold;">Modules</span>, select the events that trigger the webhook and the monitoring modules--for example.&#160;when a new Incident ticket is created, or when a Configured Item
+ is updated in the CMDB.&#160; You can select multiple combinations.</li>
+    <li>Check the <span style="font-weight: bold;">Enabled </span>box to turn on the webhook.</li>
+    <li>Click the save icon&#160;<img src="../../../assets/images/save icon.jpg" /> to save the webhook you just defined.</li>
+    <li>After that you have finished creating&#160;the webhook, test that it works as expected. See&#160;<a href="test_a_webhook.htm">Test a Webhook.</a></li>
+  </ol>
+  <p />
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

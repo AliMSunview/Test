@@ -1,0 +1,2370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\APIs\Entity.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Entity</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Entity">
+        <span>Entity</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Entity</span></h2>
+  <p>The Entity API exposes common ChangeGear entity types including tickets, teams, departments, locations, roles, and CMDB items. Depending on your privileges, you can view items, update fields, add attachments, delete items, and perform other actions.</p>
+  <p>Responses are based on the fields and views available to the entity requested, including any custom <a href="../../Administering_ChangeGear/Advanced_Tools/Using_the_Entity_Editor/Customizing_the_Model/How_Do_I_Add_a_Field_to_an_Entity.htm">fields</a>    or <a href="../../Administering_ChangeGear/Views/Creating_and_Editing_Views.htm">views</a> created in the ChangeGear Desktop client. Responses also include links to additional resources associated with each entity. For example, Service Request items
+ return REST API links to each item's impacted resources, history records, tasks, and description records.</p>
+  <p>You can find a list of common entities in the <span style="font-style: italic;"><a href="../../Appendix/REST_API_Entities.htm">REST API Entities</a></span> section of the Appendix.</p>
+  <p class="note"><span class="tipnote">Tip:</span> The Entity API supports basic authentication. For more information, please see <span style="font-style: italic;"><a href="../Creating_a_Request.htm">Creating a Request</a> &gt; <a href="../Creating_a_Request.htm#Headers">Headers</a></span>.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 10%;" />
+      <col style="width: 20%;" />
+      <col style="width: 50%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Action</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Method</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">API</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Retrieve_Items_by_ID">Retrieve a Single Item</a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p>api/entity/{entitytype}/{id}?columns={columns[0]}<br /> &amp;columns={columns[1]}
+          </p>
+        </td>
+        <td>
+          <p>Returns the item with the specified entity type and unique ID.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Retrieve_Items">Retrieve Multiple Items</a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p>api/entity/{entitytype}?columns={columns[0]}<br /> &amp;columns={columns[1]}
+            <br /> &amp;filter={filter}
+            <br /> &amp;sort={sort}
+            <br /> &amp;pagesize={pagesize}
+            <br /> &amp;page={page}
+          </p>
+        </td>
+        <td>
+          <p>Returns a list of items of the specified type. You can specify additional parameters to further limit the results returned.</p>
+          <p class="note"><span class="tipnote">Note:</span> The items returned are based on the privileges of the ChangeGear user.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Retrieve_Items_by_View">Retrieve Items Based on a View</a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p>api/entity/{entitytype}/{viewname}?columns={columns[0]}<br /> &amp;filter={filter}
+            <br /> &amp;sort={sort}
+            <br /> &amp;pagesize={pagesize}
+            <br /> &amp;page={page}
+          </p>
+        </td>
+        <td>
+          <p>Returns items using the specified view.</p>
+          <p class="note"><span class="tipnote">Note:</span> The items returned are based on the privileges of the ChangeGear user.</p>
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Internal">
+          <p><a href="#Retrieve_Count_of_Items_in_a_View">Retrieve Count of Items in a View</a></p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>GET</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>api/entity/{entitytype}/count/{viewname}</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>Returns the number of items listed in the specified view.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Retrieve_Attachment_by_ID">Retrieve an Attachment </a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p>api/entity/{entitytype}/{parentid}/attachments/{attachmentid}</p>
+        </td>
+        <td>
+          <p>Returns the attachment data for the specified item.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Create_an_Item">Create an Item</a></p>
+        </td>
+        <td>
+          <p>POST</p>
+        </td>
+        <td>
+          <p>api/{entitytype}</p>
+        </td>
+        <td>
+          <p>Creates a new item of the specified type.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Update_an_Item">Update an Item</a></p>
+        </td>
+        <td>
+          <p>PUT</p>
+        </td>
+        <td>
+          <p>api/{entitytype}/{id}</p>
+        </td>
+        <td>
+          <p>Updates the item with the specified type and ID.</p>
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Internal">
+          <p data-condition="Others:Internal"><a data-condition="Others:Internal" href="#Update_Child_Items">Update a Child Entity</a></p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>PUT</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>api/{entitytype}/{id}</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>Updates child entities belonging to a parent entity.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Update_the_Change_Log">Update the Change Log</a></p>
+        </td>
+        <td>
+          <p>PUT</p>
+        </td>
+        <td>
+          <p>api/ichangemanagementticket/{id}</p>
+        </td>
+        <td>
+          <p>Appends an entry to the Change Log.</p>
+          <p class="note"><span class="tipnote">Note:</span> This feature is only available for change tickets and may not be enabled depending on your ChangeGear license.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Delete_an_Item">Delete an Item</a></p>
+        </td>
+        <td>
+          <p>DELETE</p>
+        </td>
+        <td>
+          <p>api/entity/{entitytype}/{id}</p>
+        </td>
+        <td>
+          <p>Deletes an item with the specified type and ID.</p>
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Internal">
+          <p><a href="#Check_Action_Availability">Check Action Availability</a></p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>PUT</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>api/{entitytype}/{id}/canperform/{action}</p>
+        </td>
+        <td data-condition="Others:Internal">
+          <p>Verifies whether the specified action can be performed.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h3><a id="Retrieve_Items_by_ID"></a>Retrieve a Single Item</h3>
+  <p>This endpoint returns the item with the specified entity type and ID. You can also specify which fields to include in the response.</p>
+  <h4>Request Information</h4>
+  <p>At a minimum, the request should contain the type of entity being retrieved and the unique ID of the entity that you wish to retrieve. You can also specify the fields that are included in the response using the <span style="font-style: italic;">columns</span><span> parameter. By default, the REST API returns all fields for that type.</span></p>
+  <h5>URL</h5>
+  <p class="Code">GET api/entity/<span style="font-weight: bold;">{entitytype}</span>/<span style="font-weight: bold;">{id}</span>?columns=<span style="font-weight: bold;">{columns[0]}</span>&amp;columns=<span style="font-weight: bold;">{columns[1]}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>id</p>
+        </td>
+        <td>
+          <p>The unique identifier assigned to the item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>columns</p>
+        </td>
+        <td>
+          <p>The data field(s) to include in the results. If the column list is empty, then the REST API returns all visible columns.</p>
+        </td>
+        <td>
+          <p>Array of Strings</p>
+        </td>
+        <td>
+          <p class="Code">columns=EmailPIT<br /> &amp;columns=DueDate
+          </p>
+        </td>
+        <td>
+          <p>You can specify multiple columns by using multiple column parameters.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">GET</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/entity/<span style="font-weight: bold;">incidentrequest</span>/<span style="font-weight: bold;">100</span>?columns=<span style="font-weight: bold;">EmailPIT</span>&amp;columns=<span style="font-weight: bold;">DueDate</span></p>
+  <p class="Code"><span style="font-weight: bold;">H</span>eader: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns a list of fields for the item matching the item ID.</p>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code" style="margin-left: 13px;">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"LastModifiedBy": 65,</p>
+    <p class="Code" style="margin-left: 93px;">"TicketID": "SR-0000013",</p>
+    <p class="Code" style="margin-left: 93px;">"Requester": 65,</p>
+    <p class="Code" style="margin-left: 93px;">"AssignedToOwnerModified": true,</p>
+    <p class="Code" style="margin-left: 93px;">"ActualDuration": "00:00:00",</p>
+    <p class="Code" style="margin-left: 93px;">"AttachmentCount": 0,</p>
+    <p class="Code" style="margin-left: 93px;">"PhonePIT": "813-555-1234",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": 3,</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestType": 3,</p>
+    <p class="Code" style="margin-left: 93px;">"Department": 7,</p>
+    <p class="Code" style="margin-left: 93px;">"Urgency": 4,</p>
+    <p class="Code" style="margin-left: 93px;">"CreatedDateTime": "2016-05-19T14:25:37.647Z",</p>
+    <p class="Code" style="margin-left: 93px;">"EditorLayout": "GeneralRequest",</p>
+    <p class="Code" style="margin-left: 93px;">"SubmitDate": "2016-05-19T14:26:13.017Z",</p>
+    <p class="Code" style="margin-left: 93px;">"DepartmentFullPathPIT": "Operation",</p>
+    <p class="Code" style="margin-left: 93px;">"LastAccessedBy": 65,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "Assigned",</p>
+    <p class="Code" style="margin-left: 93px;">"ID": 13,</p>
+    <p class="Code" style="margin-left: 93px;">"LaborCost": 0,</p>
+    <p class="Code" style="margin-left: 93px;">"DepartmentNamePIT": "Operation",</p>
+    <p class="Code" style="margin-left: 93px;">"LastModifiedDateTime": "2016-05-19T14:26:25.6Z",</p>
+    <p class="Code" style="margin-left: 93px;">"Approved": true,</p>
+    <p class="Code" style="margin-left: 93px;">"eTag": 7,</p>
+    <p class="Code" style="margin-left: 93px;">"CurrentState": "Assigned",</p>
+    <p class="Code" style="margin-left: 93px;">"LocationPIT": 1,</p>
+    <p class="Code" style="margin-left: 93px;">"ActualStartDate": "0001-01-01T00:00:00Z",</p>
+    <p class="Code" style="margin-left: 93px;">"IsDeleted": false,</p>
+    <p class="Code" style="margin-left: 93px;">"TimeLine": "New;Approval;Assigned;Fulfillment;Closed",</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestTypeRoot": 0,</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestTypeFullPathPIT": "General Request",</p>
+    <p class="Code" style="margin-left: 93px;">"ResourceCost": 0,</p>
+    <p class="Code" style="margin-left: 93px;">"Impact": 3,</p>
+    <p class="Code" style="margin-left: 93px;">"TimeLineState": "Assigned",</p>
+    <p class="Code" style="margin-left: 93px;">"ShowTemplateDropDown": true,</p>
+    <p class="Code" style="margin-left: 93px;">"EmailPIT": "fthomson@acme.com",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Testing pre-authorization",</p>
+    <p class="Code" style="margin-left: 93px;">"AssignedTo": 1,</p>
+    <p class="Code" style="margin-left: 93px;">"LocationNamePIT": "North America",</p>
+    <p class="Code" style="margin-left: 93px;">"IsInBusinessTime": true,</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2016-05-21T03:59:00Z",</p>
+    <p class="Code" style="margin-left: 93px;">"LocationFullPathPIT": "North America",</p>
+    <p class="Code" style="margin-left: 93px;">"Creator": 65,</p>
+    <p class="Code" style="margin-left: 93px;">"NextActions": {</p>
+    <p class="Code" style="margin-left: 133px;">"next": [</p>
+    <p class="Code" style="margin-left: 173px;">"Accept",</p>
+    <p class="Code" style="margin-left: 173px;">"Close"</p>
+    <p class="Code" style="margin-left: 133px;">],</p>
+    <p class="Code" style="margin-left: 133px;">"common": [</p>
+    <p class="Code" style="margin-left: 173px;">"Add",</p>
+    <p class="Code" style="margin-left: 173px;">"Copy",</p>
+    <p class="Code" style="margin-left: 173px;">"Save",</p>
+    <p class="Code" style="margin-left: 173px;">"Print",</p>
+    <p class="Code" style="margin-left: 173px;">"Email"</p>
+    <p class="Code" style="margin-left: 133px;">]</p>
+    <p class="Code" style="margin-left: 93px;">},</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestAttachmentRecords_link": "api/entity/iservicerequest/13/ServiceRequestAttachmentRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestImpactedResourceRefs_link": "api/entity/iservicerequest/13/ServiceRequestImpactedResourceRefs",</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestHistoryRecords_link": "api/entity/iservicerequest/13/ServiceRequestHistoryRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestTasks_link": "api/entity/iservicerequest/13/ServiceRequestTasks",</p>
+    <p class="Code" style="margin-left: 93px;">"ServiceRequestImpactedUserGroupRef_link": "api/entity/iservicerequest/13/ServiceRequestImpactedUserGroupRef",</p>
+    <p class="Code" style="margin-left: 93px;">"Description_link": "api/entity/iservicerequest/13/ServiceRequestHistoryRecords?filter=[Action]='Description'&amp;sort=CreatedDateTime%20Desc"</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p />
+  <h3><a id="Retrieve_Items"></a>Retrieve Multiple Items</h3>
+  <p>This endpoint retrieves a list of items of the specified entity type. You can specify the fields to include in the response, as well as the filter and sorting order of the items included in the response.</p>
+  <h4>Request Information</h4>
+  <p>At a minimum, the request should contain the type of entity being retrieved. You can also specify the fields that will be included in the response using the <span style="font-style: italic;">columns</span> parameter. By default, the REST API returns
+ all fields for that type.</p>
+  <h5>URL</h5>
+  <p class="Code">api/entity/<span style="font-weight: bold;">{entitytype}</span><span style="font-style: italic;">?columns=</span><span style="font-weight: bold;font-style: italic;">{columns[0]}</span><span style="font-style: italic;">&amp;columns=</span><span style="font-weight: bold;font-style: italic;">{columns[1]}</span><span style="font-style: italic;">&amp;filter=</span><span style="font-style: italic;font-weight: bold;">{filter}</span><span style="font-style: italic;">&amp;sort=</span><span style="font-style: italic;font-weight: bold;">{sort}</span><span style="font-style: italic;">&amp;pagesize=</span><span style="font-style: italic;font-weight: bold;">{pagesize}</span><span style="font-style: italic;">&amp;page=</span><span style="font-style: italic;font-weight: bold;">{page}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>columns</p>
+        </td>
+        <td>
+          <p>The data field(s) to include in the results. If the column list is empty, then the REST API returns all visible columns.</p>
+        </td>
+        <td>
+          <p>Array of strings</p>
+        </td>
+        <td>
+          <p class="Code">columns=EmailPIT<br /> &amp;columns=DueDate
+          </p>
+        </td>
+        <td>
+          <p>You can specify multiple columns by using multiple column parameters.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>filter</p>
+        </td>
+        <td>
+          <p>Filters the items by the criteria specified.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">filter=[Summary]+like+'%25fax%25'</p>
+        </td>
+        <td>
+          <p>Use percent-encoding when formatting filters with special characters. For more information, see <a href="../Creating_a_Request.htm#Percent-Encoding" style="font-style: italic;">Percent Encoding</a> under <a href="../Creating_a_Request.htm" style="font-style: italic;">Creating a Request</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sort</p>
+        </td>
+        <td>
+          <p>The data field(s) to sort on.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">sort=DueDate</p>
+        </td>
+        <td>
+          <p>You can specify multiple columns by using multiple sort parameters. Items are sorted in ascending order.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pagesize</p>
+        </td>
+        <td>
+          <p>The number of items to return per page.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">pagesize=15</p>
+        </td>
+        <td>
+          <p>Defaults to 10.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>page</p>
+        </td>
+        <td>
+          <p>The page number if the number of items exceeds the page size.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">page=2</p>
+        </td>
+        <td>
+          <p>Defaults to 1.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">GET</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/entity/<span style="font-weight: bold;">incidentrequest</span><span style="font-style: italic;">?columns=</span><span style="font-weight: bold;font-style: italic;">ItemID</span><span style="font-style: italic;">&amp;columns=</span><![CDATA[ ]]> 
+    <span style="font-weight: bold;font-style: italic;">Status</span><span style="font-style: italic;">&amp;filter=</span><span style="font-style: italic;font-weight: bold;">[Summary]+like+'%25fax%25'</span><span style="font-style: italic;">&amp;sort=</span><span style="font-style: italic;font-weight: bold;">DueDate</span><span style="font-style: italic;">&amp;pagesize=</span><span style="font-style: italic;font-weight: bold;">15</span><span style="font-style: italic;">&amp;page=</span><span style="font-style: italic;font-weight: bold;">2</span></p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns a list of items matching the parameters. If there are no results, the REST API returns an empty JSON object.</p>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 1,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "New",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000001",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Fix fax machine",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2016-03-09T23:59:00-06:00",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestImpactedResourceRef_link": "api/entity/iincidentrequest/1/IncidentRequestImpactedResourceRef",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestAttachmentRecords_link": "api/entity/iincidentrequest/1/IncidentRequestAttachmentRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestHistoryRecords_link": "api/entity/iincidentrequest/1/IncidentRequestHistoryRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestImpactedUserGroupRef_link": "api/entity/iincidentrequest/1/IncidentRequestImpactedUserGroupRef",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestTasks_link": "api/entity/iincidentrequest/1/IncidentRequestTasks",</p>
+    <p class="Code" style="margin-left: 93px;">"Description_link": "api/entity/iincidentrequest/1/IncidentRequestHistoryRecords?filter=[Action]='Description'&amp;sort=CreatedDateTime%20Desc"</p>
+    <p class="Code" style="margin-left: 53px;">},</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 2,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "Unsubmitted",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000002",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Fax machine not receiving messages",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2016-03-10T23:59:00-06:00",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestImpactedResourceRef_link": "api/entity/iincidentrequest/2/IncidentRequestImpactedResourceRef",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestAttachmentRecords_link": "api/entity/iincidentrequest/2/IncidentRequestAttachmentRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestHistoryRecords_link": "api/entity/iincidentrequest/2/IncidentRequestHistoryRecords",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestImpactedUserGroupRef_link": "api/entity/iincidentrequest/2/IncidentRequestImpactedUserGroupRef",</p>
+    <p class="Code" style="margin-left: 93px;">"IncidentRequestTasks_link": "api/entity/iincidentrequest/2/IncidentRequestTasks",</p>
+    <p class="Code" style="margin-left: 93px;">"Description_link": "api/entity/iincidentrequest/2/IncidentRequestHistoryRecords?filter=[Action]='Description'&amp;sort=CreatedDateTime%20Desc"</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p />
+  <h3><a id="Retrieve_Items_by_View"></a>Retrieve Items Based on a View</h3>
+  <p>This endpoint returns a list of items using the specified view. You can provide additional parameters to filter and sort the result set.</p>
+  <h4>Request Information</h4>
+  <h5>URL</h5>
+  <p class="Code">GET api/entity/{entitytype}/<span style="font-weight: bold;">{viewname}</span>?columns=<span style="font-weight: bold;">{columns[0]}</span><span>&amp;</span>filter=<span style="font-weight: bold;">{filter}</span>&amp;sort=<span style="font-weight: bold;">{sort}</span>&amp;pagesize=
+    <span style="font-weight: bold;">{pagesize}</span>&amp;page=<span style="font-weight: bold;">{page}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>viewname</p>
+        </td>
+        <td>
+          <p>The name of the view to use when creating the response.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">All%20Incidents</p>
+        </td>
+        <td>
+          <p>Required. Use percent-encoding when the view name contains special characters. For more information, see <a href="../Creating_a_Request.htm#Percent-Encoding" style="font-style: italic;">Percent Encoding</a> under <a href="../Creating_a_Request.htm" style="font-style: italic;">Creating a Request</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>columns</p>
+        </td>
+        <td>
+          <p>The data field(s) to include in the results. If the column list is empty, then the REST API returns all visible columns.</p>
+        </td>
+        <td>
+          <p>Array of strings</p>
+        </td>
+        <td>
+          <p class="Code">columns=EmailPIT<br /> &amp;columns=DueDate
+          </p>
+        </td>
+        <td>
+          <p>You can specify multiple columns by using multiple column parameters.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>filter</p>
+        </td>
+        <td>
+          <p>Filter the items by the criteria specified.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">filter=[Summary]+like+'%25fax%25'</p>
+        </td>
+        <td>
+          <p>Use percent-encoding when formatting filters with special characters. For more information, see <a href="../Creating_a_Request.htm#Percent-Encoding" style="font-style: italic;">Percent Encoding</a> under <a href="../Creating_a_Request.htm" style="font-style: italic;">Creating a Request</a>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sort</p>
+        </td>
+        <td>
+          <p>The sorting method to apply.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">sort=DueDate</p>
+        </td>
+        <td>
+          <p>You can specify multiple columns by specifying multiple sort parameters. Items are sorted in ascending order.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pagesize</p>
+        </td>
+        <td>
+          <p>The number of items to return per page</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">pagesize=15</p>
+        </td>
+        <td>
+          <p>Defaults to 10.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>page</p>
+        </td>
+        <td>
+          <p>The page number if the number of items exceeds the page size.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">page=2</p>
+        </td>
+        <td>
+          <p>Defaults to 1.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">GET</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/entity/<span style="font-weight: bold;">incidentrequest</span>/<span style="font-weight: bold;">All%20Incidents</span></p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns a list of items matching the entity type. The data returned is filtered based on the view. If there are no results, the REST API returns an empty JSON object.</p>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 1,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "New",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000001",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Fix fax machine",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2015-03-09T23:59:00-06:00"</p>
+    <p class="Code" style="margin-left: 53px;">},</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 2,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "Unsubmitted",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000002",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Fax machine not receiving messages",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2015-03-10T23:59:00-06:00"</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p />
+  <h3 data-condition="Others:Internal"><a id="Retrieve_Count_of_Items_in_a_View"></a>Retrieve Count of Items in a View</h3>
+  <p data-condition="Others:Internal">This endpoint returns a count of items listed in the specified view.</p>
+  <h4 data-condition="Others:Internal">Request Information</h4>
+  <p data-condition="Others:Internal">This endpoint requires the entity type and the name of the view.</p>
+  <h5 data-condition="Others:Internal">URL</h5>
+  <p class="Code" data-condition="Others:Internal">GET api/entity/<span style="font-weight: bold;">{entitytype}</span>/count/<span style="font-weight: bold;">{viewname}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Name</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+        <td>
+          <p>Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>viewname</p>
+        </td>
+        <td>
+          <p>The name of the view to use when creating the response.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">All%20Incidents</p>
+        </td>
+        <td>
+          <p data-condition="Others:Internal">Required. Use percent-encoding when the view name contains special characters. For more information, see <a data-condition="Others:Internal" href="../Creating_a_Request.htm#Percent-Encoding" style="font-style: italic;">Percent Encoding</a> under
+            <a data-condition="Others:Internal" href="../Creating_a_Request.htm" style="font-style: italic;">Creating a Request</a>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 data-condition="Others:Internal">Method</h5>
+  <p class="Code" data-condition="Others:Internal">GET</p>
+  <h5 data-condition="Others:Internal">Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Parameter</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+        <td>
+          <p>Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 data-condition="Others:Internal">Sample Request</h5>
+  <p class="Code" data-condition="Others:Internal">URL: https://changegear-server/cgrestapi/api/entity/<span style="font-weight: bold;">incidentrequest</span>/<span style="font-weight: bold;">All%20Incidents</span></p>
+  <p class="Code" data-condition="Others:Internal">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p data-condition="Others:Internal" />
+  <h4 data-condition="Others:Internal">Response Information</h4>
+  <p data-condition="Others:Internal">The REST API returns the number of items in the view as plain text.</p>
+  <p data-condition="Others:Internal" />
+  <h3><a id="Retrieve_Attachment_by_ID"></a>Retrieve an Attachment</h3>
+  <p>This endpoint retrieves attachment data for the specified item.</p>
+  <p class="note"><span class="tipnote">Tip: </span>To use this call, you must know the unique identifier of the attachment you want to access. You can retrieve a list of an item's attachments by replacing the attachments portion of the URL with the entity type of
+ the parent item followed by <span style="font-style: italic;">AttachmentRecords</span>. For example:<br /> Incident Request: api/entity/{entitytype}/{parentid}/<span style="font-style: italic;font-weight: bold;">IncidentRequestAttachmentRecords</span><br /> Problem Report: api/entity/{entitytype}/{parentid}/<span style="font-style: italic;font-weight: bold;">ProblemReportAttachmentRecords</span></p>
+  <p class="note" style="font-style: normal;"><span class="tipnote">Note:</span> Attachments submitted and retrieved via the REST API are encoded using Base64 encoding.</p>
+  <h4>Request Information</h4>
+  <p>The attachment endpoint requires information about both the parent entity and the attachment itself. For the parent entity, you must provide the entity type and unique ID. For the attachment, you must provide the unique attachment ID for the parent
+ entity.</p>
+  <h5>URL</h5>
+  <p class="Code">api/entity/<span style="font-weight: bold;">{entitytype}</span>/<span style="font-weight: bold;">{parentid}</span>/attachments/<span style="font-weight: bold;">{attachmentid}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>parentid</p>
+        </td>
+        <td>
+          <p>The unique identifier of the item containing the attachment.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>attachmentid</p>
+        </td>
+        <td>
+          <p>The unique identifier of the attachment itself.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">2</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">GET</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/entity/<span style="font-weight: bold;">incidentrequest</span>/<span style="font-weight: bold;">100</span>/attachments/<span style="font-weight: bold;">5</span></p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns the attachment contents encoded in Base64. If the attachment cannot be found, the REST API returns an empty JSON array.</p>
+  <p />
+  <h3><a id="Create_an_Item"></a>Create an Item</h3>
+  <p>This endpoint creates a new item of the specified type. As part of the request, you must specify initial values for at least one of the item's fields. To initialize the value of a field, pass the field name and value as a JSON object in the body
+ of the message.</p>
+  <h4>Request Information</h4>
+  <p>The request specifies the type of entity to create as well as the initial values of the item's fields. These values will populate the entity when it is created.</p>
+  <h5>URL</h5>
+  <p class="Code">api/<span style="font-weight: bold;">{entitytype}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to create.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Body Parameters</h5>
+  <p>The body contains a JSON representation of the item's fields and the initial values of those fields. To set the value of a field, specify the field name as the key. In the sample request below, we create a new incident request with the summary "Testing
+ the REST API", an urgency of "1 - Emergency", a priority of "2 - High", and an impact of "1 - Major." We also attach an image and insert an entry into the description field using the AttachmentRecords and HistoryRecords
+ fields respectively.</p>
+  <h5>Sample Request</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">URL: https://changegear-server/cgrestapi/api/incidentrequest</p>
+    <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+    <p class="Code">Body: {</p>
+    <p class="Code" style="margin-left: 53px;">"Summary": "Testing the REST API",</p>
+    <p class="Code" style="margin-left: 53px;">"Urgency": 1,</p>
+    <p class="Code" style="margin-left: 53px;">"Priority": 2,</p>
+    <p class="Code" style="margin-left: 53px;">"Impact": 1,</p>
+    <p class="Code" style="margin-left: 53px;">"HistoryRecords": [</p>
+    <p class="Code" style="margin-left: 93px;">{</p>
+    <p class="Code" style="margin-left: 133px;">"Action": "Description",</p>
+    <p class="Code" style="margin-left: 133px;">"Comment": "This description was added via the REST API."</p>
+    <p class="Code" style="margin-left: 93px;">}</p>
+    <p class="Code" style="margin-left: 53px;">],</p>
+    <p class="Code" style="margin-left: 53px;">"AttachmentRecords": [</p>
+    <p class="Code" style="margin-left: 93px;">{</p>
+    <p class="Code" style="margin-left: 133px;">"File": "sunview.jpg"</p>
+    <p class="Code" style="margin-left: 133px;">"Type": "jpg",</p>
+    <p class="Code" style="margin-left: 133px;">"FileContent": "&lt;Base64-encoded file contents&gt;"</p>
+    <p class="Code" style="margin-left: 93px;">}</p>
+    <p class="Code" style="margin-left: 53px;">]</p>
+    <p class="Code" style="margin-left: 13px;">}</p>
+  </div>
+  <p class="Code" />
+  <h4>Response Information</h4>
+  <p>If the item was created successfully, the REST API returns the ID of the new item as a JSON object. Otherwise, the REST API returns a plain text error message.</p>
+  <h5>Sample Response</h5>
+  <p class="Code">{ "ID": 100 }</p>
+  <p />
+  <h3><a id="Update_an_Item"></a>Update an Item</h3>
+  <p>This endpoint updates the item of the specified type and ID. To update the value of a field, create a JSON object and map the new value to the name of the field. You can update multiple fields simultaneously.</p>
+  <h4>Version Control (ETags)</h4>
+  <p>In order to prevent multiple users from editing the same item simultaneously, ChangeGear implements a form of version control known as ETags (or Entity Tags). ETags represent a specific version of a specific resource. When a user attempts to update
+ an item, ChangeGear checks the ETag provided by the user against the ETag stored for that specific resource. If the ETags match, then the resource is updated. If you want to update an item using the REST API, you need to present the correct ETag to
+ the server for validation.</p>
+  <p class="inst">To update an item using ETags:</p>
+  <ol>
+    <li>
+      <p><a href="#Retrieve_Items_by_ID">Retrieve the item</a> you want to update.</p>
+    </li>
+    <li>
+      <p>Extract the value of the ETag field from the resulting JSON object.</p>
+    </li>
+    <li>
+      <p>Create a new JSON object with the fields that you wish to update. Be sure to include the ETag field with the value retrieved from step 1.</p>
+    </li>
+    <li>
+      <p>Construct an update call using the instructions provided in this section.</p>
+    </li>
+    <li>
+      <p>Send the call to the REST API.</p>
+    </li>
+  </ol>
+  <h4>Request Information</h4>
+  <p>The request consists of the type of entity, the unique ID of the entity, and the new values of the fields that will be updated.</p>
+  <h5>URL</h5>
+  <p class="Code">api/<span style="font-weight: bold;">{entitytype}</span>/<span style="font-weight: bold;">{id}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to update.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>id</p>
+        </td>
+        <td>
+          <p>The unique identifier assigned to the item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">PUT</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Body Parameters</h5>
+  <p>The body contains a JSON representation of the item's fields and the new values of those fields. In the following sample request, we are changing the summary field of incident ticket 50 to "New Summary."</p>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/incidentrequest/<span style="font-weight: bold;">50</span><br /> Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p class="Code">Body: {</p>
+  <p class="Code" style="margin-left: 53px;">eTag: 97,</p>
+  <p class="Code" style="margin-left: 53px;">Summary: 'New Summary'</p>
+  <p class="Code" style="margin-left: 13px;">}</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>If the item was updated successfully, the REST API returns the ID of the updated item as a JSON object. Otherwise, the REST API returns a plain text error message.</p>
+  <h5>Sample Response</h5>
+  <p class="Code">{ "ID": 100 }</p>
+  <p />
+  <h3 data-condition="Others:Internal"><a id="Update_Child_Items" data-condition="Others:Internal"></a><span data-condition="Others:Internal">Update a Child Entity</span></h3>
+  <p data-condition="Others:Internal">Updating a child entity follows the same structure as updating a parent item, except you specify an action for the child in the body of the API call.</p>
+  <p data-condition="Others:Internal">The following example shows how to delete an attachment using this method. Other child entities–such as history records–may not have the same options or functionality available.</p>
+  <h4 data-condition="Others:Internal">Request Information</h4>
+  <p data-condition="Others:Internal">The URL, method, and header parameters are identical to updating an entity. The body, however, specifies the child entity to update and the operation to perform.</p>
+  <h5 data-condition="Others:Internal">Body Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Parameter</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+        <td>
+          <p>Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ID (Parent)</p>
+        </td>
+        <td>
+          <p>The unique ID of the parent.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">5</p>
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <p>eTag</p>
+        </td>
+        <td>
+          <p>The current revision number of the ticket.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">1</p>
+        </td>
+        <td>
+          <p>If the eTag does not match, then the update will fail.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Child Type</p>
+        </td>
+        <td>
+          <p>The entity type of the child.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">AttachmentRecords</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ID (Child)</p>
+        </td>
+        <td>
+          <p>The unique ID of the child.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">10</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ChildOperation</p>
+        </td>
+        <td>
+          <p>The operation to perform on the child entity.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Delete</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 data-condition="Others:Internal">Sample Request</h5>
+  <p class="Code" data-condition="Others:Internal">URL: https://changegear-server/cgrestapi/api/ichangemanagementticket/<span data-condition="Others:Internal" style="font-weight: bold;">100</span></p>
+  <p class="Code" data-condition="Others:Internal"><span data-condition="Others:Internal" style="font-weight: bold;">H</span>eader: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p class="Code" data-condition="Others:Internal">Body: {</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 53px;">"eTag": 3,</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 53px;">"AttachmentRecords" : [</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 93px;">{</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 133px;">"ID": 12,</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 133px;"><span data-condition="Others:Internal">"ChildOperation": "Delete"</span></p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 93px;">}</p>
+  <p class="Code" data-condition="Others:Internal" style="margin-left: 53px;">]</p>
+  <p class="Code" data-condition="Others:Internal">}</p>
+  <p />
+  <h3><a id="Update_the_Change_Log"></a>Update the Change Log</h3>
+  <p>The Change Log stores a history of changes to source code, artifacts, and operational files that are modified as part of the change request life cycle. It allows you to track revisions to files, archive copies of files, and even integrate with external
+ version control systems. This endpoint appends a new change log event to a ticket.</p>
+  <p>The Change Log can be viewed in the ChangeGear Web client by members in the Change Staff persona. However, log entries can only be added to the Change Log using the REST API. Additionally, the Change Log can only be appended to. You cannot update or
+ delete existing Change Log records without first deleting the parent ticket.</p>
+  <p class="note"><span class="tipnote">Note: </span>You may not have access to this feature depending on your ChangeGear license.<br />
+    <br /> By default, the Change Log is only visible on DevOps change request forms. You can add the Change Log to another form by adding a Custom Control to the form and specifying <span style="font-weight: bold;">~/MainUI/Changemanagement/ChangeLogControl.ascx</span>    in the <span style="font-weight: bold;">WebControlVirtualPath</span> property. For more information on using Custom Controls, see the <span style="font-style: italic;"><a href="../../Appendix/List_of_Controls.htm#Custom_Control">Custom Control</a></span>    topic in the <span style="font-style: italic;"><a href="../../Appendix/List_of_Controls.htm">List of Controls</a></span> section of the Appendix.</p>
+  <h4>Request Information</h4>
+  <p>The request consists of the unique ID of the change request to update, as well as the new change log entry to append to the request.</p>
+  <h5>URL</h5>
+  <p class="Code">api/changemanagementticket/<span style="font-weight: bold;">{id}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>id</p>
+        </td>
+        <td>
+          <p>The unique identifier assigned to the ticket.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">PUT</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Body Parameters</h5>
+  <p>The body contains a JSON representation of the new fields to submit to the ticket. In the following sample request, we are submitting a code file to be reviewed and approved. We submit the file as a Base64-encoded attachment, which ChangeGear converts
+ into a downloadable link in the ChangeGear Web client.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>eTag</p>
+        </td>
+        <td>
+          <p>The current revision number of the ticket.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">5</p>
+        </td>
+        <td>
+          <p>If the eTag does not match, then the update will fail.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>AttachmentRecords</p>
+        </td>
+        <td>
+          <p>An array of file attachments. The file itself is passed as a Base64-encoded string.</p>
+        </td>
+        <td>
+          <p>Array of JSON Objects</p>
+        </td>
+        <td>
+          <p class="Code">"AttachmentRecords" :<br /> [
+            <br /> &#160;&#160;{
+            <br /> &#160;&#160;&#160;&#160;"RFCProperty": "ChangeLog",<br /> &#160;&#160;&#160;&#160;"File": patch_1.patch",<br /> &#160;&#160;&#160;&#160;"FileContent": "&lt;Base64-encoded string&gt;"<br /> &#160;&#160;}
+            <br /> ]
+          </p>
+        </td>
+        <td>
+          <p>You can add multiple attachments by separating each JSON object with a comma.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>RFCProperty</p>
+        </td>
+        <td>
+          <p>An AttachmentRecord property that determines what ChangeGear component the attachment is associated with. In this case, the RFCProperty is set to <span style="font-style: italic;">ChangeLog</span>.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"RFCProperty": "ChangeLog"</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>File</p>
+        </td>
+        <td>
+          <p>An AttachmentRecord property that defines the name of the file.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"File": "patch_1.patch"</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>FileContent</p>
+        </td>
+        <td>
+          <p>An AttachmentRecord property containing the Base64-encoded contents of the file.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"FileContent": "&lt;Base64-encoded string&gt;"</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ChangeLogs</p>
+        </td>
+        <td>
+          <p>An array of Change Log entries.</p>
+        </td>
+        <td>
+          <p>Array of JSON Objects</p>
+        </td>
+        <td>
+          <p class="Code">"ChangeLogs": [<br /> &#160;&#160;{
+            <br /> &#160;&#160;&#160;&#160;"Description": "Patch 1",<br /> &#160;&#160;&#160;&#160;"ChangeLogFiles": [<br /> &#160;&#160;&#160;&#160;{
+            <br /> &#160;&#160;&#160;&#160;&#160;&#160;"FileName": "patch_1.patch",<br /> &#160;&#160;&#160;&#160;&#160;&#160;"FileDate": "2016-05-31T13:15:30Z",<br /> &#160;&#160;&#160;&#160;&#160;&#160;"FileSize": 38610<br /> &#160;&#160;&#160;&#160;}
+            <br /> &#160;&#160;&#160;&#160;]
+            <br /> &#160;&#160;}
+            <br /> ]
+          </p>
+        </td>
+        <td>
+          <p>You can add multiple Change Log entries (and multiple files per Change Log) by separating each JSON object with a comma.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>A ChangeLog property providing a summary of the log event.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"Description": "Patch 1 revision 4"</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ChangeLogFiles</p>
+        </td>
+        <td>
+          <p>A ChangeLog property that lists the AttachmentRecords belonging to the ChangeLog.</p>
+        </td>
+        <td>
+          <p>Array of JSON Objects</p>
+        </td>
+        <td>
+          <p class="Code">"ChangeLogFiles": [<br /> &#160;&#160;{
+            <br /> &#160;&#160;&#160;&#160;"FileName": "patch_1.patch",<br /> &#160;&#160;&#160;&#160;"FileDate": "2016-05-31T13:15:30Z",<br /> &#160;&#160;&#160;&#160;"FileSize": 38610<br /> &#160;&#160;}
+            <br /> ]
+          </p>
+        </td>
+        <td>
+          <p>You can add multiple files per Change Log by separating each JSON object with a comma.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>FileName</p>
+        </td>
+        <td>
+          <p>A ChangeLogFile property that displays the name of the file.</p>
+          <p class="note"><span class="tipnote">Note:</span> This should match the File property of the associated attachment record.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"FileName": "patch_1.patch"</p>
+        </td>
+        <td>
+          <p>To allow users to download files from the Change Log in the ChangeGear Web client, this should correspond to the <span style="font-style: italic;">File</span> field of an attachment.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>FileDate</p>
+        </td>
+        <td>
+          <p>A ChangeLogFile property defining the date that the file was created or modified.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"FileDate": "2016-05-31T13:15:30Z"</p>
+        </td>
+        <td>
+          <p>Dates are in UTC time.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>FileSize</p>
+        </td>
+        <td>
+          <p>A ChangeLogFile property defining the size of the file.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">"FileSize": 38610</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/ichangemanagementticket/<span style="font-weight: bold;">100</span></p>
+  <p class="Code"><span style="font-weight: bold;">H</span>eader: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p class="Code">Body: {</p>
+  <p class="Code" style="margin-left: 53px;">"eTag": 3,</p>
+  <p class="Code" style="margin-left: 53px;">"AttachmentRecords" : [</p>
+  <p class="Code" style="margin-left: 93px;">{</p>
+  <p class="Code" style="margin-left: 133px;">"RFCProperty": "ChangeLog",</p>
+  <p class="Code" style="margin-left: 133px;">"File": "patch843535_4.patch",</p>
+  <p class="Code" style="margin-left: 133px;">"FileContent": &lt;Base64-encoded file contents&gt;</p>
+  <p class="Code" style="margin-left: 93px;">}</p>
+  <p class="Code" style="margin-left: 53px;">],</p>
+  <p class="Code" style="margin-left: 53px;">"ChangeLogs": [</p>
+  <p class="Code" style="margin-left: 93px;">{</p>
+  <p class="Code" style="margin-left: 133px;">"Description": "Patch 843545 rev. 4",</p>
+  <p class="Code" style="margin-left: 133px;">"ChangeLogFiles": [</p>
+  <p class="Code" style="margin-left: 173px;">{</p>
+  <p class="Code" style="margin-left: 213px;">"FileName": "patch843535_4.patch",</p>
+  <p class="Code" style="margin-left: 213px;">"FileDate": "2016-05-31T13:15:30Z",</p>
+  <p class="Code" style="margin-left: 213px;">"FileSize": 38610</p>
+  <p class="Code" style="margin-left: 173px;">}</p>
+  <p class="Code" style="margin-left: 133px;">]</p>
+  <p class="Code" style="margin-left: 93px;">}</p>
+  <p class="Code" style="margin-left: 53px;">]</p>
+  <p class="Code">}</p>
+  <p />
+  <h4>Response Information</h4>
+  <p>The REST API returns a list of fields for the item matching the item ID. If the update process fails, the REST API returns an error message describing the cause of the failure.</p>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code" style="margin-left: 13px;">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"ChangeType": 45,</p>
+    <p class="Code" style="margin-left: 93px;">"TicketID": "RFC-000065",</p>
+    <p class="Code" style="margin-left: 93px;">"ID": 100,</p>
+    <p class="Code" style="margin-left: 93px;">...</p>
+    <p class="Code" style="margin-left: 93px;">"ChangeManagementTicketChangeLogs_link": "api/entity/changemanagementticket/100/ChangeManagementTicketChangeLogs"</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p />
+  <h3 class="Code"><a id="Delete_an_Item"></a>Delete an Item</h3>
+  <p>This endpoint deletes the item of the specified type and ID.</p>
+  <p class="note"><span class="tipnote">Note: </span>Deleting an item performs a logical delete, which does not fully remove the item from the system. Deleted items can still be retrieved using the GET method, although the <span style="font-style: italic;">IsDeleted</span><span> field will be set to false</span>.</p>
+  <h4>Request Information</h4>
+  <h5>URL</h5>
+  <p class="Code">api/entity/<span style="font-weight: bold;">{entitytype}</span>/<span style="font-weight: bold;">{id}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Name</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Incident Request</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>id</p>
+        </td>
+        <td>
+          <p>The unique identifier assigned to the item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">DELETE</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h4>Response Information</h4>
+  <p>If the item was deleted successfully, the REST API returns the ID of the deleted item. Otherwise, the REST API returns an error message.</p>
+  <h5>Sample Response</h5>
+  <p class="Code">{ "ID": 100 }</p>
+  <p />
+  <h3 data-condition="Others:Internal"><a id="Check_Action_Availability"></a>Check Action Availability</h3>
+  <p data-condition="Others:Internal">This endpoint validates that the specified action can be performed on the ticket. It also returns the layout of the post-action ticket and whether performing the action causes a comment popup to appear.</p>
+  <h4 data-condition="Others:Internal">Request Information</h4>
+  <p data-condition="Others:Internal">The request consists of the type of entity, the entity ID, and the action to perform. Since an action is performed on ticket update, you will also need to pass the fields that you wish to update, along with their desired new values.</p>
+  <h5 data-condition="Others:Internal">URL</h5>
+  <p class="Code" data-condition="Others:Internal">api/<span style="font-weight: bold;">{entitytype}</span>/<span style="font-weight: bold;">{id}</span>/canperform/<span style="font-weight: bold;">{action}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Name</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+        <td>
+          <p>Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to return.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IncidentRequest</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>id</p>
+        </td>
+        <td>
+          <p>The unique identifier assigned to the item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>action</p>
+        </td>
+        <td>
+          <p>The action to perform on the entity</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Submit</p>
+        </td>
+        <td>
+          <p data-condition="Others:Internal">Required. You can retrieve a list of actions using the <a data-condition="Others:Internal" href="#Retrieve_Items_by_ID">Retrieve a Single Item</a> endpoint.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 data-condition="Others:Internal">Method</h5>
+  <p class="Code" data-condition="Others:Internal">PUT</p>
+  <h5 data-condition="Others:Internal">Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Parameter</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+        <td>
+          <p>Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 data-condition="Others:Internal">Body Parameters</h5>
+  <p data-condition="Others:Internal">The body contains a JSON representation of the new fields to submit to the ticket. Please see the <a data-condition="Others:Internal" href="#Update_an_Item">Update an Item</a> endpoint for an example.</p>
+  <h5 data-condition="Others:Internal">Sample Request</h5>
+  <p class="Code" data-condition="Others:Internal">URL: https://changegear-server/cgrestapi/api/<span style="font-weight: bold;">incidentrequest</span>/<span style="font-weight: bold;">100</span>/canperform/<span style="font-weight: bold;">Submit</span></p>
+  <p class="Code" data-condition="Others:Internal"><span style="font-weight: bold;">H</span>eader: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p data-condition="Others:Internal" />
+  <h4 data-condition="Others:Internal">Response Information</h4>
+  <p data-condition="Others:Internal">The REST API returns whether the action can be performed, as well as the state of the form after the action is performed.</p>
+  <h5 data-condition="Others:Internal">Response Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" data-condition="Others:Internal" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 25%;" />
+      <col style="width: 25%;" />
+      <col style="width: 25%;" />
+      <col style="width: 25%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p>Parameter</p>
+        </td>
+        <td>
+          <p>Description</p>
+        </td>
+        <td>
+          <p>Type</p>
+        </td>
+        <td>
+          <p>Example</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ShowCommentsPopup</p>
+        </td>
+        <td>
+          <p>Whether a comment popup will be displayed when the action is performed (for example, when closing an Incident ticket).</p>
+        </td>
+        <td>
+          <p>Boolean</p>
+        </td>
+        <td>
+          <p class="Code">"ShowCommentsPopup": true</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Layout</p>
+        </td>
+        <td>
+          <p>The layout used by the form (or comment popup) after the action is performed.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">"Layout": "CloseTypeComment"</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>CanPerform</p>
+        </td>
+        <td>
+          <p>Whether the action can be performed given the fields provided and the user's privileges.</p>
+        </td>
+        <td>
+          <p>Boolean</p>
+        </td>
+        <td>
+          <p class="Code">"CanPerform": true</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p data-condition="Others:Internal" />
+  <h5 data-condition="Others:Internal">Sample Response</h5>
+  <div data-condition="Others:Internal" style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code" style="margin-left: 13px;">{</p>
+    <p class="Code" style="margin-left: 53px;">"ShowCommentsPopup": true,</p>
+    <p class="Code" style="margin-left: 53px;">"Layout": "CloseTypeComment",</p>
+    <p class="Code" style="margin-left: 53px;">"CanPerform": true</p>
+    <p class="Code" style="margin-left: 13px;">}</p>
+  </div>
+  <p data-condition="Others:Internal" />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

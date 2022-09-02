@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Additional_Administration_Tasks\Report_Management\Creating_and_Editing_Line_Charts.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.14.1.0_7";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  
+  <title>Creating and Editing Line Charts</title>
+  
+  <meta name="condition-tags" content="" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating and Editing Line Charts">
+        <span>Creating and Editing Line Charts</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Creating and Editing Line Charts</span></h2>
+  <p>In the Report Designer, you can create line charts which statistically compare data within a specific Change Gear module. The data is reported as one or more lines.&#160;You can define which module columns are represented in the line chart's X Axis and
+ plotted lines, as well as apply filtering to further refine the scope of data represented.</p>
+  <p class="inst">To create a line chart report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">New </span>icon<span style="font-weight: bold;"> <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_add.png" style="border: none;" /> </span>in the reports tool bar.</p>
+    </li>
+    <li>
+      <p>The report creation dialog displays. Select the<span style="font-weight: bold;"> line chart </span>report.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">module type</span> for the table data used to create the report, (e.g., incident, problem, CMDB, assets, etc.). For example, select the Incident module to create a report regarding Incident tickets.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">view</span> for the report, (e.g., All Incidents, Active Incidents, Closed Incidents, etc.). When a line chart is based upon a view, the report uses the filter criteria of that view.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Next. </span><span style="font-size: 11pt;">The line chart creation screen displays.</span><br />
+        <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/line_chart_screen.jpg" style="border: none;" /></p>
+    </li>
+    <li>
+      <p><span>Enter the </span><span style="font-weight: bold;">Name</span><span> of the report. </span></p>
+    </li>
+    <li>
+      <p>Optionally, you can enter a <span style="font-weight: bold;">Description </span>for the report.</p>
+    </li>
+    <li>
+      <p>Select<span style="font-weight: bold;"> Report Category</span> from the list. The Report Category determines which category within the module to save the report. The My Reports category saves the report in your own My Reports and is not visible
+ to other users.</p>
+    </li>
+  </ol>
+  <p />
+  <h3><a id="Data_Items"></a><span style="color: #808080;">Data Tab</span></h3>
+  <p>The Data Tab allows you to define data in a particular module to display on the line chart.</p>
+  <ol>
+    <li>
+      <p>The<span style="font-weight: bold;"> X Axis </span>field allows you to specify which module table column displays as the line chart's X Axis, (the horizontal line at the bottom of the line chart).</p>
+      <p>For example, suppose you want to show the total number of incident tickets per location. You would set the X Axis field to <span style="font-style: italic;">Location Name.</span> The generated line chart renders each unique location name across
+ the X Axis and each unique location has a data point plotted on the chart showing the number of incident tickets in that location. A line is drawn between the location incident numbers plotted to show the trend of incidents by location.</p>
+      <p style="text-align: center;"><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/report_incidents_by_location.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Optionally, you can specify a module table column as <span style="font-weight: bold;">Series 1</span>. When Series 1 is specified, each X Axis data point represents a unique value for Series 1 in that X Axis data point. For example, suppose you
+ want to show the total number of incident tickets per location but also further group the tickets by incident <span style="font-style: italic;">Status</span>. You would set the X Axis field to <span style="font-style: italic;">Location Name</span>        and set the Series 1 field to <span style="font-style: italic;">Status</span>. The generated line chart renders each unique location name across the X Axis and each unique location has one or more vertical dots representing the count of tickets
+ with a specific <span style="font-style: italic;">Status</span> level in that location.</p>
+      <p style="text-align: center;"><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/report_incident_status_by_location.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Optionally, you can also enable a second series to the line chart <span style="font-weight: bold;">Series 2</span>. Series 2 automatically uses the same module table column as Series 1 and is useful when you use different filtering criteria for
+ each of the series.</p>
+    </li>
+    <li>
+      <p>For example, suppose you want to show the total number of incident tickets per location and also group the tickets by New vs. In-progress status. You would set the X Axis field to<span style="font-style: italic;"><![CDATA[ ]]> </span>Location Name, set the Series
+ 1 field to Status and enable Series 2. Using the criteria filtering, (see below), you would set the Series 1 filter to only show the New tickets and Series 2 filter to show the In-progress tickets. The generated line chart renders each unique
+ location name across the X Axis and each unique location has data point lines plotted as two different colors, one for each series, (new and in-progress).</p>
+      <p style="text-align: center;"><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/report_incidents_by_location_status.png" style="border: none;" /></p>
+    </li>
+  </ol>
+  <p />
+  <h3><a id="Criteria_Filter_Tab"></a>Criteria Filter Tab</h3>
+  <p>The Criteria Filter tab allows you to add filtering criteria to the line chart.<span style="text-indent: 8px;">&#160;Please refer to the <a href="Creating_and_Editing_Table_REports.htm#Filtering_Columns_Table_Report" style="font-style: italic;">Filtering Columns Table Report</a> section in </span><![CDATA[ ]]> 
+    <span style="text-indent: 8px;">Creating and Editing Table Reports</span><span style="text-indent: 8px;font-style: italic;">.</span><span style="text-indent: 8px;"><![CDATA[ ]]> </span></p>
+  <p />
+  <h5>X Axis</h5>
+  <p>This basic filtering allows you to further refine which tickets/items to include in the line chart other than the column equal value criteria in the Data Tab. You can optionally apply filtering to the X Axis. This filtering allows you to filter which
+ values of the X Axis column are displayed on the line chart report's horizontal axis.</p>
+  <p />
+  <h5>Series 1</h5>
+  <p>You can optionally apply filtering to the Series 1 column. This filtering allows you to filter which values of the Series 1 column are used to calculate the Series 1 sum total, (i.e., the height of the Series 1 data point).</p>
+  <p />
+  <h5><span style="font-weight: bold;">Series 2</span></h5>
+  <p><span>You can optionally apply filtering to the Series 2 column. This filtering allows you to filter which values of the Series 2 column are used to calculate the Series 2 sum total, (i.e., the height of the Series 2 data point).</span>&#160;</p>
+  <p />
+  <h3 style="line-height: Normal;">Create Report</h3>
+  <p>The report is rendered after saving the report. To create the report, click <span style="font-weight: bold;">Create</span>.</p>
+  <p class="note"><span class="tipnote">Note:</span> You can create new reports from existing reports by using the <span style="font-weight: bold;">Save As</span> option.</p>
+  <p />
+  <h3>Editing a Line Chart Report</h3>
+  <p>ChangeGear allows you to edit a line chart report and modify the filter criteria and other criteria similar to creating a table report.</p>
+  <p class="inst">To edit a line chart report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Select a line chart report from the Reports Module grid.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Edit </span>icon<span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_edit.gif" style="border: none;" /><span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><![CDATA[ ]]> 
+        <span style="background-color: #ffffff;">from</span><span style="font-weight: bold;background-color: #ffffff;"><![CDATA[ ]]> </span><span style="background-color: #ffffff;">the line chart tool bar. </span></p>
+    </li>
+    <li>
+      <p>You can edit the <span style="font-weight: bold;">Description</span> as necessary. <span style="font-weight: bold;"><![CDATA[ ]]> </span></p>
+    </li>
+    <li>
+      <p>The system allows you to change any report <a href="#Data_Items" title="Data Tab">Data Tab</a> and <a href="#Criteria_Filter_Tab">Criteria Filter Tab</a> as shown above in the <span style="font-style: italic;">Create a Line Chart Report</span> section.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span>.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can create new reports from customized reports by using the <span style="font-weight: bold;">Save As</span> option.</p>
+    </li>
+  </ol>
+  <p />
+  <h3>Predictive Line Charts</h3>
+  <p>In addition to standard line charts, ChangeGear includes <span style="font-style: italic;">predictive</span> line charts. Predictive line charts analyze ticket data to predict future trends such as the number of tickets that will be opened, closed,
+ or assigned on certain days. Predictive charts cannot be created or modified through the ChangeGear Web client. For more information on how to use predictive line charts, please see <span style="font-style: italic;">Incident Creation and Management &gt; Managing Incidents &gt; <a href="../../../Incident_Creation_and_Management/Managing_Incidents/Predicting_Incident_Trends.htm">Predicting Trends</a></span>.</p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

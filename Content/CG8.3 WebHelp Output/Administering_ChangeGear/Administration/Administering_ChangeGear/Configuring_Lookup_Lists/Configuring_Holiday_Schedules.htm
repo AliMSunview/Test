@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Configuring_Lookup_Lists\Configuring_Holiday_Schedules.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Configuring Holiday Schedules</title>
+  
+  <meta name="rh-index-keywords" content="Business Hours,Holidays,Holidays:Holiday Schedules" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Configuring Holiday Schedules">
+        <span>Configuring Holiday Schedules</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Configuring Holiday Schedules</span></h2>
+  <p>Holiday Schedules are used to exclude certain days from SLA time tracking, essentially pausing the SLA clock for a pre-determined period of time. Unlike global holidays, Holiday Schedules are configured on a per-SLA basis.</p>
+  <p>Holiday Schedules are not applied directly to SLAs. Instead, you need to apply a Holiday Schedule to an Operating Calendar, then apply the Operating Calendar to the SLA. When the Operating Calendar is applied to the SLA, the Holiday Schedule overrides
+ the <a href="../Global_Settings/Business_Hour_Settings.htm">Global Business Hours</a> setting. For more information, see <a href="Configuring_Operating_Calendars.htm" style="font-style: italic;">Configuring Operating Calendars</a>.</p>
+  <p class="inst">To create a Holiday Schedule:</p>
+  <ol>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">General</span>.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Holiday Schedules</span>.</p>
+    </li>
+    <li>
+      <p>Under Common Tasks, click <span style="font-weight: bold;">New</span>. The Holiday Schedule Details dialog appears.</p>
+      <p><img alt="" border="0" src="../../../../assets/images/Administration/Administering_ChangeGear/Configuring_Lookup_Lists/lookup_list_holiday.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Name</span> field, enter a name for the new schedule.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Description</span> field, enter a description of the new schedule.</p>
+    </li>
+    <li>
+      <p>Click the drop-down next to <span style="font-weight: bold;">Select Date</span> to open the calendar.</p>
+    </li>
+    <li>
+      <p>Select a date and click <span style="font-weight: bold;">Add</span>. You can only add dates that occur after today.</p>
+      <p class="note"><span class="tipnote">Important:</span> Holidays are not recurring. ChangeGear will only treat the specified date as a holiday.</p>
+    </li>
+    <li>
+      <p>To remove a holiday, select a date in the list of dates and click <span style="font-weight: bold;">Remove</span>.</p>
+      <p class="note"><span class="tipnote">Note:</span> You may enter up to sixty-four (64) holidays per year up to two years in advance.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span> to close the Holiday Schedule Details dialog.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Webhooks\test_a_webhook.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.8.0_2";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Test a Webhook</title>
+  
+  
+  
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Test a Webhook">
+        <span>Test a Webhook</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Test a Webhook</span></h2>
+  <p>To test a webhook, you can use certain sites that capture any post responses. You can do this with Request Bin (https://requestbin.com/) or Request Catcher (https://requestcatcher.com/). The following example uses Request Bin.</p>
+  <ol class="Decimal">
+    <li>Navigate to the site and create a new bin.</li>
+  </ol>
+  <p><img height="159" src="../../../assets/images/step 1 create bin.png" style="margin-left: 40px;" width="276" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 1;" value="2">Once you have created the bin, copy the endpoint URL.</li>
+  </ol>
+  <p>&#160; &#160; &#160; &#160; &#160;<img height="54" src="../../../assets/images/endpoint url.png" width="366" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 2;" value="3">Create a new Webhook with the copied endpoint URL. Select all desirable options for actions to trigger on and modules to be run against. No username and password is necessary to use this endpoint.</li>
+  </ol>
+  <p><img height="90" src="../../../assets/images/new endpoint url.png" style="margin-left: 40px;" width="438" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 3;" value="4">Now trigger any of the events you chose (ie, creating, updating, or deleting a ticket) within one of the modules you specified.</li>
+  </ol>
+  <p>&#160; &#160; &#160; &#160; &#160; &#160;<img height="302" src="../../../assets/images/step 4 graphic.png" width="417" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 4;" value="5">Finally, check the request bin site and you will see the POST request being sent to the endpoint with all of the ticket information.</li>
+  </ol>
+  <p><img height="196929" src="../../../assets/images/POST request.png" width="242374" /></p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

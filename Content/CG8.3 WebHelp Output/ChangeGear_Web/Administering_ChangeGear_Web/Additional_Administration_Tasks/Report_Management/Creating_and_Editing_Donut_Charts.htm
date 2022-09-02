@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Additional_Administration_Tasks\Report_Management\Creating_and_Editing_Donut_Charts.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.14.1.0_5";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  
+  <title>Creating and Editing Donut Charts</title>
+  
+  <meta name="condition-tags" content="" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating and Editing Donut Charts">
+        <span>Creating and Editing Donut Charts</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Creating and Editing Donut Charts</span></h2>
+  <p>In the Report Designer, you can create donut charts which are ring-shaped diagrams split into individual sections. Each section represents a data point, and the size of each section is proportional to the number of items corresponding to that data point.
+ You can define which columns are represented in the donut chart and apply filtering to further refine the scope of the data shown.</p>
+  <p class="inst">To create a donut chart report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">New</span>&#160;icon <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_add.png" style="border: none;" /><span style="font-weight: bold;"><![CDATA[ ]]> </span>in the reports tool bar.</p>
+    </li>
+    <li>
+      <p>The Report Creation dialog appears. Select the <span style="font-weight: bold;">Donut Chart</span> report.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">module</span> to source the data from.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">view</span> that will provide the data available in the report. The report uses the same filter criteria as the view.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Next</span>. The Donut Chart Creation screen displays.</p>
+      <p><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/donut_chart_creation.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>Enter a <span style="font-weight: bold;">Name</span>&#160;for the new report.</p>
+    </li>
+    <li>
+      <p>Optionally, enter a <span style="font-weight: bold;">Description</span>&#160;of the report.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">Report Category</span> from the list. The Report Category determines which category within the module to save the report. The My Reports category is specific to your user account and is not visible to other
+ users.</p>
+    </li>
+  </ol>
+  <p />
+  <h3><a id="Data_Tab"></a>Data Tab</h3>
+  <p>The Data tab is where you define the data used to populate the donut chart. The <span style="font-weight: bold;">Column</span> field allows you to specify which column to display in the donut chart. For example, if you wanted to show the total number
+ of incidents by impact, select <span style="font-style: italic;">Incident</span><span> for the module, </span><span style="font-style: italic;">All Incidents</span><span> for the view, and set the C</span>olumn field to <span style="font-style: italic;">Impact</span>.
+ The generated donut chart displays each impact level (Major, Significant, Minor, etc.) as a separate section of the donut. Each section also displays the number of tickets with that impact.</p>
+  <p class="note"><span class="tipnote">Note:</span> Donut charts display up to five segments.&#160;If the column field has more than five unique values then the donut chart displays the five largest segments.</p>
+  <p style="text-align: center;"><br />
+    <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/Report_Management/incidents_by_impact.png" style="border: none;" /></p>
+  <h3><a id="Advanced"></a>Advanced</h3>
+  <p>The Advanced tab allows you to provide additional data filtering parameters.</p>
+  <p class="inst">To apply a filter:</p>
+  <ol>
+    <li>
+      <p>Select a matching condition using the radio buttons.</p>
+      <ul>
+        <li>
+          <p><span style="font-style: italic;">Match All Conditions</span> means the data must meet each one of the filtering options specified to appear in the view result set, (i.e., acts like an AND condition for filtering options).</p>
+        </li>
+        <li>
+          <p><span style="font-style: italic;">Match Any Condition</span> means the data can match any one of the conditions and is displayed in the view result set, (i.e., acts like an OR condition for filtering options).</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Use the field drop-down to select a field to match on.</p>
+    </li>
+    <li>
+      <p>Use the value drop-down to select or provide a value to match on. The options available in the drop-down change depending on the field selected.</p>
+    </li>
+    <li>
+      <p>Press <span style="font-weight: bold;">Add</span><![CDATA[ ]]><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_editor_add.gif" style="border: none;" /> to add more filtering criteria. Press <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_editor_remove.gif" style="border: none;" /> to delete criteria. You can add multiple filtering criteria as necessary for your report.</p>
+    </li>
+  </ol>
+  <p />
+  <h3>Create the Report</h3>
+  <p>When you are finished entering your criteria, click <span style="font-weight: bold;">Create</span> to create the report.</p>
+  <p class="note"><span class="tipnote">Note:</span> You can create a new report from an existing report by modifying the existing report and clicking <span style="font-weight: bold;">Save As</span><span> and providing a different name</span>.</p>
+  <p />
+  <h3>Editing a Donut Chart Report</h3>
+  <p>ChangeGear allows you to edit the description, data column, and filter criteria of existing donut chart reports.</p>
+  <p class="inst">To edit a donut chart report:</p>
+  <ol>
+    <li>
+      <p>Click <span style="font-weight: bold;">Reports</span> on the primary ChangeGear navigation menu.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">Donut Chart</span> report from the Reports grid.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">Edit</span> icon <img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/icon_edit.gif" style="border: none;" /> in the tool bar.</p>
+    </li>
+    <li>
+      <p>Edit the <span style="font-weight: bold;">Description</span> as necessary.</p>
+    </li>
+    <li>
+      <p>Edit the <a href="#Data_Tab" style="font-weight: bold;">Data Tab</a> and <span style="font-weight: bold;"><a href="#Advanced">Advanced</a></span> options as shown above in the <span style="font-style: italic;">Create a Report</span>&#160;section.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span>.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can create a new report from the current report by clicking <span style="font-weight: bold;">Save As</span> and providing a different name.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

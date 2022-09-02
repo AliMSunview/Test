@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Using_the_REST_API\APIs\Search.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Search</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Search">
+        <span>Search</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Search</span></h2>
+  <p>The Search API lets you search for one or more entities in ChangeGear. Additional parameters allow you to choose which fields to search, limit the number of results, or page through results.</p>
+  <p class="note"><span class="tipnote">Tip:</span> The Search API supports basic authentication. For more information, please see <span style="font-style: italic;"><a href="../Creating_a_Request.htm">Creating a Request</a> &gt; <a href="../Creating_a_Request.htm#Headers">Headers</a></span>.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 10%;" />
+      <col style="width: 10%;" />
+      <col style="width: 50%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Action</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Method</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">URL</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Search_Entities">Search Entities</a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p>api/{entitytype}/search?searchtext={searchtext}<br /> &amp;autocomplete={autocomplete}
+            <br /> &amp;pagesize={pagesize}
+            <br /> &amp;page={page}
+          </p>
+        </td>
+        <td>
+          <p>Returns the match(es) for the specified entity type and query.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a href="#Search_Entities_by_Type">Search Entities by Type</a></p>
+        </td>
+        <td>
+          <p>GET</p>
+        </td>
+        <td>
+          <p style="font-weight: normal;">api/types/search?entitytypes={entitytypes[0]}<br /> &amp;entitytypes={entitytypes[1]}
+            <br /> &amp;searchtext={searchtext}
+            <br /> &amp;autocomplete={autocomplete}
+            <br /> &amp;pagesize={pagesize}
+            <br /> &amp;page={page}
+          </p>
+        </td>
+        <td>
+          <p>Returns the match(es) for the specified entity types and query.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <h3><a id="Search_Entities"></a>Search Entities</h3>
+  <p>Searching takes plain text input and returns a list of matches.</p>
+  <h4>Request Information</h4>
+  <h5>URL</h5>
+  <p class="Code">api/<span style="font-weight: bold;">{entitytype}</span>/search?searchtext=<span style="font-weight: bold;">{searchtext}</span><span style="font-style: italic;">&amp;autocomplete=</span><span style="font-weight: bold;font-style: italic;">{autocomplete}</span><![CDATA[ ]]> 
+    <span style="font-style: italic;">&amp;pagesize=</span><span style="font-weight: bold;font-style: italic;">{pagesize}</span><span style="font-style: italic;">&amp;page=</span><span style="font-weight: bold;font-style: italic;">{page}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 18.127%;" />
+      <col style="width: 18.127%;" />
+      <col style="width: 7.87%;" />
+      <col style="width: 26.946%;" />
+      <col style="width: 26.946%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytype</p>
+        </td>
+        <td>
+          <p>The type of entity to search. Use "All" to search across all types.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">/IncidentRequest/</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>searchtext</p>
+        </td>
+        <td>
+          <p>The search query.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">searchtext=printer</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>autocomplete</p>
+        </td>
+        <td>
+          <p>If true, only the summary field will be searched.</p>
+        </td>
+        <td>
+          <p>Boolean</p>
+        </td>
+        <td>
+          <p class="Code">autocomplete=true</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">false</span>. This should only be set to true if you are processing a high volume of queries.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pagesize</p>
+        </td>
+        <td>
+          <p>The number of results to return.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">pagesize=15</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">10</span>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>page</p>
+        </td>
+        <td>
+          <p>If the total results exceeds <span style="font-style: italic;">pagesize</span>, this returns the corresponding page.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">page=4</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">1</span>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/cgrestapi/api/<span style="font-weight: bold;">incidentrequest</span>/search?searchtext=<span style="font-weight: bold;">mysearch</span>&amp;autocomplete=<span style="font-weight: bold;">true</span>&amp;pagesize=
+    <span style="font-weight: bold;">10</span>&amp;page=<span style="font-weight: bold;">2</span></p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <h5>Body Fields</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Field</p>
+        </td>
+        <td>
+          <p style="color: #ffffff;font-weight: bold;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Oid</p>
+        </td>
+        <td>
+          <p>The unique ID of the returned item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Status</p>
+        </td>
+        <td>
+          <p>The status of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">New</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>SLAStage</p>
+        </td>
+        <td>
+          <p>The stage that the ticket's SLA is currently in (if applicable).</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Meets</p>
+        </td>
+        <td>
+          <p>If not applicable, this field displays <span style="font-style: italic;">null</span>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ItemId</p>
+        </td>
+        <td>
+          <p>The reference ID of the item in ChangeGear.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IR-0000050</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Summary</p>
+        </td>
+        <td>
+          <p>The summary of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Incident ticket created with REST API.</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>TicketType</p>
+        </td>
+        <td>
+          <p>The type of ticket.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IIncidentRequest</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Priority</p>
+        </td>
+        <td>
+          <p>The priority of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">1 - Critical</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>DueDate</p>
+        </td>
+        <td>
+          <p>The item's due date</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">2016-08-30T13:30:00-06:00</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Non_Release">
+          <p>FullTextSearchString</p>
+          <div style="display: none;">
+            <p>What is this?</p>
+          </div>
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p />
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p>String</p>
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p class="Code" />
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>SearchResultDetails</p>
+        </td>
+        <td>
+          <p>JSON-encoded object representing the details of the search performed.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">[See Sample Response]</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>eTag</p>
+        </td>
+        <td>
+          <p>The version of the item. For more information, see <span style="font-style: italic;"><a href="Entity.htm#Update_an_Item">Update an Item</a></span> in the <span style="font-style: italic;"><a href="Entity.htm">Entity</a></span>&#160;API.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">5</p>
+        </td>
+        <td>
+          <p>Required for updating entities.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 50,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "New",</p>
+    <p class="Code" style="margin-left: 93px;">"SLAStage": "Meets",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000001",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Incident ticket created with REST API.",</p>
+    <p class="Code" style="margin-left: 93px;">"TicketType": "IIncidentRequest",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2015-03-09T23:59:00-06:00",</p>
+    <p class="Code" data-condition="Others:Non_Release" style="margin-left: 93px;">"FullTextSearchString": null,</p>
+    <div data-condition="Others:Non_Release" style="display: none;">
+      <p>Generate real data</p>
+    </div>
+    <p class="Code" style="margin-left: 93px;">"SearchResultDetails": "{\"MatchDetails\":[{\"ID\":50,\"Field\":\"Summary\",\"Value\":[\"&lt;em&gt;Incident&lt;/em&gt; ticket created with REST API.\"]}]}",</p>
+    <p class="Code" style="margin-left: 93px;">"eTag": 3</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p class="Code" style="margin-left: 13px;" />
+  <h3 class="Code"><a id="Search_Entities_by_Type"></a>Search Entities by Type</h3>
+  <p>Searching takes plain text input and returns a list of matches. Searching by type allows you to specify one or more modules to include in the search.</p>
+  <h4>Request Information</h4>
+  <h5>URL</h5>
+  <p class="Code">api/types/search?entitytypes=<span style="font-weight: bold;">{entitytypes[0]}</span>&amp;entitytypes=<span style="font-weight: bold;">{entitytypes[1]}</span><span>&amp;</span>searchtext=<span style="font-weight: bold;">{searchtext}</span><span style="font-style: italic;">&amp;autocomplete=</span><![CDATA[ ]]> 
+    <span style="font-weight: bold;font-style: italic;">{autocomplete}</span><span style="font-style: italic;">&amp;pagesize=</span><span style="font-weight: bold;font-style: italic;">{pagesize}</span><span style="font-style: italic;">&amp;page=</span><span style="font-weight: bold;font-style: italic;">{page}</span></p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 18.127%;" />
+      <col style="width: 18.127%;" />
+      <col style="width: 7.87%;" />
+      <col style="width: 26.946%;" />
+      <col style="width: 26.946%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>entitytypes</p>
+        </td>
+        <td>
+          <p>The entity types to include in the search.</p>
+        </td>
+        <td>
+          <p>Array of strings</p>
+        </td>
+        <td>
+          <p class="Code">entitytypes=incidentrequest<br /> &amp;entitytypes=problemreport
+          </p>
+        </td>
+        <td>
+          <p>Required. You can specify multiple types by specifying multiple parameters.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>searchtext</p>
+        </td>
+        <td>
+          <p>The search query.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">searchtext=printer</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>autocomplete</p>
+        </td>
+        <td>
+          <p>If true, only the summary field will be searched.</p>
+        </td>
+        <td>
+          <p>Boolean</p>
+        </td>
+        <td>
+          <p class="Code">autocomplete=true</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">false</span>. This should only be set to true if you are processing a high volume of queries.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>pagesize</p>
+        </td>
+        <td>
+          <p>The number of results to return.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">pagesize=15</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">10</span>.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>page</p>
+        </td>
+        <td>
+          <p>If the total results exceeds <span style="font-style: italic;">pagesize</span>, this returns the corresponding page.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">page=4</p>
+        </td>
+        <td>
+          <p>Defaults to <span style="font-weight: bold;">1</span>.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Method</h5>
+  <p class="Code">POST</p>
+  <h5>Header Parameters</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Parameter</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>sessionid</p>
+        </td>
+        <td>
+          <p>The encrypted session ID.</p>
+        </td>
+        <td>
+          <p>string</p>
+        </td>
+        <td>
+          <p class="Code">ap9pYaaBK8K5iMNZNC5DtA==</p>
+        </td>
+        <td>
+          <p>Required.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Request</h5>
+  <p class="Code">URL: https://changegear-server/CGRestAPI/api/types/search?entitytypes=<span style="font-weight: bold;">incidentrequest</span>&amp;entitytypes=<span style="font-weight: bold;">problemreport</span>&amp;searchtext=<span style="font-weight: bold;">mysearch</span></p>
+  <p class="Code">Header: sessionid: EhbNKWgPZNJnHRPWJ3PfvLrtavbL591sfEVzR3Hn/Fs7RCBceNxpWIuhw0iIn8YM</p>
+  <p />
+  <h4>Response Information</h4>
+  <h5>Body Fields</h5>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;" width="100%">
+    <colgroup>
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+      <col style="width: 20%;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Field</p>
+        </td>
+        <td>
+          <p style="color: #ffffff;font-weight: bold;">Description</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Type</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Example</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Additional Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Oid</p>
+        </td>
+        <td>
+          <p>The unique ID of the returned item.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">50</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Status</p>
+        </td>
+        <td>
+          <p>The status of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">New</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>SLAStage</p>
+        </td>
+        <td>
+          <p>The stage that the item's SLA is currently in (if applicable).</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Meets</p>
+        </td>
+        <td>
+          <p>If not applicable, this field displays <span style="font-style: italic;">null</span><span>.</span></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>ItemId</p>
+        </td>
+        <td>
+          <p>The reference ID of the item in ChangeGear.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IR-0000050</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Summary</p>
+        </td>
+        <td>
+          <p>The summary of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">Incident ticket created with REST API.</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>TicketType</p>
+        </td>
+        <td>
+          <p>The entity type of the item.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">IIncidentRequest</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Priority</p>
+        </td>
+        <td>
+          <p>The priority of the item (if applicable).</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">1 - Critical</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>DueDate</p>
+        </td>
+        <td>
+          <p>The item's due date (if applicable).</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">2016-08-30T13:30:00-06:00</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td data-condition="Others:Non_Release">
+          <p>FullTextSearchString</p>
+          <div style="display: none;">
+            <p>What is this?</p>
+          </div>
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p />
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p>String</p>
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p class="Code" />
+        </td>
+        <td data-condition="Others:Non_Release">
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>SearchResultDetails</p>
+        </td>
+        <td>
+          <p>A JSON-encoded representation of the search result, including the value matched.</p>
+        </td>
+        <td>
+          <p>String</p>
+        </td>
+        <td>
+          <p class="Code">[See Sample Response]</p>
+        </td>
+        <td>
+          <p />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>eTag</p>
+        </td>
+        <td>
+          <p>The version of the item. For more information, see <span style="font-style: italic;"><a href="Entity.htm#Update_an_Item">Update an Item</a></span> in the <span style="font-style: italic;"><a href="Entity.htm">Entity</a></span>&#160;API.</p>
+        </td>
+        <td>
+          <p>Integer</p>
+        </td>
+        <td>
+          <p class="Code">5</p>
+        </td>
+        <td>
+          <p>Required for updating entities.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Sample Response</h5>
+  <div style="background-color: #ffffff;padding: 5px;float: none;">
+    <p class="Code">[</p>
+    <p class="Code" style="margin-left: 53px;">{</p>
+    <p class="Code" style="margin-left: 93px;">"Oid": 50,</p>
+    <p class="Code" style="margin-left: 93px;">"Status": "New",</p>
+    <p class="Code" style="margin-left: 93px;">"SLAStage": "Meets",</p>
+    <p class="Code" style="margin-left: 93px;">"ItemId": "IR-0000001",</p>
+    <p class="Code" style="margin-left: 93px;">"Summary": "Incident ticket created with REST API.",</p>
+    <p class="Code" style="margin-left: 93px;">"TicketType": "IIncidentRequest",</p>
+    <p class="Code" style="margin-left: 93px;">"Priority": "1 - Critical",</p>
+    <p class="Code" style="margin-left: 93px;">"DueDate": "2015-03-09T23:59:00-06:00",</p>
+    <p class="Code" data-condition="Others:Non_Release" style="margin-left: 93px;">"FullTextSearchString": null,</p>
+    <div data-condition="Others:Non_Release" style="display: none;">
+      <p>Generate real data</p>
+    </div>
+    <p class="Code" style="margin-left: 93px;">"SearchResultDetails": "{\"MatchDetails\":[{\"ID\":50,\"Field\":\"Summary\",\"Value\":[\"&lt;em&gt;Incident&lt;/em&gt; ticket created with REST API.\"]}]}",</p>
+    <p class="Code" style="margin-left: 93px;">"eTag": 3</p>
+    <p class="Code" style="margin-left: 53px;">}</p>
+    <p class="Code" style="margin-left: 13px;">]</p>
+  </div>
+  <p class="Code" style="margin-left: 13px;" />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

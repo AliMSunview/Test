@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Using_the_Announcement_Portal\Using_ChangeGear\Creating_and_Managing_Tasks\Reordering_Tasks.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "7.4.0_6";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Web_Help" />
+
+
+<meta http-equiv="Content-Language" content="en-US" data-condition="Others:Web_Help" />
+<meta name="condition-tags" content="Others:Web_Help" data-condition="Others:Web_Help" />
+
+<title data-condition="Others:Web_Help">Reordering and Grouping Tasks</title>
+
+<meta name="rh-index-keywords" content="Tasks:Reordering and Grouping Tasks" data-condition="Others:Web_Help" /></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Reordering and Grouping Tasks">
+        <span>Reordering and Grouping Tasks</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Web_Help">
+    <p />
+  </div>
+  <div data-condition="Others:Web_Help">
+
+<h2 style="color: #ffffff;"><span data-format="default" data-field="title">Reordering and Grouping Tasks</span></h2>
+<p>After you add tasks to a ticket, you may need to change the order in 
+ which certain tasks are listed. ChangeGear allows you to define the order 
+ in which tasks must be implemented. Depending on your ChangeGear configuration, 
+ this also ensures that a task cannot be started before its preceding tasks 
+ have already been completed. Tasks that have a lower priority number appear 
+ first on the list, while tasks with a higher priority number appear further 
+ down the list.<span data-condition="Others:Non_Release"> Tasks that do 
+ not contain an order appear at the end of the task list and can be worked 
+ on at any time.</span></p>
+<p />
+<p><img src="../../../../assets/images/ChangeGear_Web/Using_ChangeGear/Creating_and_Managing_Tasks/task_toolbar.png" alt="" style="border: none;" border="0" /></p>
+<p />
+<p>When a task is either promoted (moved to a lower order number) or demoted 
+ (moved to a higher order number), it is automatically grouped with the 
+ tasks sharing the same order number. For example, moving a task from order 
+ 3 to order 2 groups the task with other tasks in order 2. If this results 
+ in an empty group, then ChangeGear automatically reduces the order of 
+ all subsequent tasks by one (1) to account for the missing group. Tasks 
+ within a group can be completed in any order.</p>
+<p class="inst">To reorder a task:</p>
+<ol>
+	<li><p>Open the ticket.</p></li>
+	<li><p>In the <span style="font-weight: bold;">Implementation</span> 
+	 or <span style="font-weight: bold;">Tasks</span> tab, select the task 
+	 that you want to reorder.</p></li>
+	<li><p>In the tab toolbar, click the <span style="font-weight: bold;">Move 
+	 Up</span> or <span style="font-weight: bold;">Move Down</span> button 
+	 to change the order of the task. The task automatically groups with 
+	 the order that it's moving in to. If the task was the last one in 
+	 its group, then all subsequent tasks will adjust their order number 
+	 down by 1 to account for the lost group.</p></li>
+	<ul>
+		<li><p>Alternatively, click the <span style="font-weight: bold;">Move 
+		 to Top</span> or <span style="font-weight: bold;">Move to Bottom</span> 
+		 buttons to move the task directly to the beginning or end of the 
+		 list.</p></li>
+	</ul>
+	<li><p>Click <span style="font-weight: bold;">Save</span>.</p></li>
+</ol>
+<p class="note"><span class="tipnote">Note:</span> If you wish to enforce 
+ that tasks are worked on in a certain order, see the topic <span style="font-style: italic;"><a href="Managing_Task_Dependencies.htm">Managing Task Dependencies</a></span>.</p>
+<p />
+
+
+
+</div>
+  <div data-condition="Others:Web_Help">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

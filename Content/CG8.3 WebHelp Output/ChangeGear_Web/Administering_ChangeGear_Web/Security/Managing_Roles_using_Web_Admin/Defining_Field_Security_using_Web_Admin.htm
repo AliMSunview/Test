@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Security\Managing_Roles_using_Web_Admin\Defining_Field_Security_using_Web_Admin.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.4.2.0_2";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Defining Field Security using Web Admin</title>
+  
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Defining Field Security using Web Admin">
+        <span>Defining Field Security using Web Admin</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Defining Field Security using Web Admin</span></h2>
+  <p>You can restrict users' access to certain fields on a form by applying field security. Requesters, or end users, already view restricted versions of staff user forms, but you can fine-tune staff user forms by setting the visibility of fields for
+ each role. You can also control which fields are read-only, meaning they can't be modified by users. Field security is available for the Change, Incident, Problem, and Service Request modules.</p>
+  <p>For example, if you do not want IT Staff users to see the Rollback Plan then you can hide the field, but if you want IT Staff users to view the Origin ID without being able to edit it then you can make that field read-only.</p>
+  <p class="note"><span class="tipnote">Important: </span>Make sure that you do not mark a required field as hidden or read-only. Users may experience errors if they try to save or submit a ticket without access to required fields.</p>
+  <p class="inst">To define field security:</p>
+  <ol>
+    <li>
+      <p style="text-align: justify;">From the Web Administration page,&#160;click <span style="font-style: italic;">Security&gt; Roles</span>. ChangeGear displays the Roles page.</p>
+    </li>
+    <li>
+      <p style="text-align: justify;">Hover over role, then click the pencil icon. ChangeGear opens the slide-out Role editor.&#160;Click the <span style="font-weight: bold;">Privileges</span> tab, then&#160;click the <span style="font-weight: bold;">Fields</span>&#160;tab.</p>
+    </li>
+  </ol>
+  <p><img height="395" src="../../../../assets/images/defining role fields.bmp" style="margin-left: 40px;" width="315" /></p>
+  <ol>
+    <li style="counter-set: item1 3;" value="4">
+      <p>Select the <span style="font-weight: bold;">Module</span> for which you would like to restrict field access.</p>
+    </li>
+    <li>
+      <p>Select the <span style="font-weight: bold;">Workflow</span> for which you would like to restrict field access.</p>
+      <p class="note"><span class="tipnote">Note:</span> You can only select enabled workflows from the drop-down. Leave this field blank to modify the default workflow.</p>
+    </li>
+    <li>
+      <p>Select the ticket <span style="font-weight: bold;">State</span> for which you would like to restrict field access. Your choices are <span style="font-weight: bold;">New</span>, <span style="font-weight: bold;">Pending Close</span>, <span style="font-weight: bold;">Unsubmitted</span>,
+        <span style="font-weight: bold;">In-Progress</span>, and <span style="font-weight: bold;">Pending Resolution</span>.</p>
+    </li>
+    <li>
+      <p>Click the <span style="font-weight: bold;">System </span>tab to see information ChangeGear collects about this role, including <span style="font-weight: bold;">OID</span>, <span style="font-weight: bold;">Created by</span>, <span style="font-weight: bold;">Modified by</span>,
+        <span style="font-weight: bold;">Modified </span>(time/date), and&#160;<span style="font-weight: bold;">Accessed by</span>.</p>
+    </li>
+    <li>
+      <p>Click Save&#160;<img src="../../../../assets/images/save icon.jpg" />&#160;to save your changes.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

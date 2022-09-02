@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Security\Configuring_Security_Settings.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Configuring Security Settings</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Configuring Security Settings">
+        <span>Configuring Security Settings</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Configuring Security Settings</span></h2>
+  <p>In the Security Settings section, you can enable the automatic registration (auto-registration) of users and select a default user role. Auto-registration automatically creates accounts for users when they attempt their first ChangeGear login.</p>
+  <p>There are two methods for auto-registration. The first, Universal, will auto-register new users to a specific role of your choosing. Universal is very straight-forward: if the user attempting to login doesn't yet exist in ChangeGear, they are added
+ automatically and assigned to the role you specify. The second method, Group-based auto-registration, is more dynamic than Universal. Group-based registration uses security groups within your Windows domain directory to dynamically assign a user to
+ a role.</p>
+  <p>By default, Group-Based auto-registration attempts to find a user in one of the network security groups. If the user is found in one of the security groups, they are auto-registered to the corresponding role. If the user is not in one of these security
+ groups, the user is not registered and is notified that he/she does not have permission to log in.</p>
+  <p>Neither methods of auto-registration have any impact on Teams as they are created exclusively within ChangeGear. Moreover, members of Security Teams must have their role within the team specifically assigned to them, which is independent of their user
+ role in ChangeGear.</p>
+  <p>Network security groups need to be created by you or your network administrator. These groups can have an explicit list of users in them directly, or can consist of existing groups you may already have. For example, you may have an existing domain security
+ group that lists your IT staff members. If you do, you can add that group to the "ChangeGear_IT Staff" group rather than adding each IT staff member directly to "ChangeGear_IT Staff."</p>
+  <p>Note that not all ChangeGear roles take part in group-based auto-registration, but the roles that typically contain the majority of users will use this feature. For example, the Change Manager role is not auto-registered; you will need to manually configure
+ a user for this role.</p>
+  <p class="inst">To configure security settings:</p>
+  <ol>
+    <li>
+      <p>Open the <span style="font-weight: bold;">Administration</span> tab.</p>
+    </li>
+    <li>
+      <p>In the Administration section, click <span style="font-weight: bold;">Global Settings</span>.</p>
+    </li>
+    <li>
+      <p>Scroll down to the <span style="font-weight: bold;">Security Settings</span> section.<br />
+        <img alt="" border="0" height="179" src="../../../../assets/images/Administration/Administering_ChangeGear/Security/Working_with_Users/SecuritySettings.gif" width="529" /></p>
+    </li>
+    <li>
+      <p>To enable auto-registration, click the <span style="font-weight: bold;">Auto-Registration Enabled</span><![CDATA[ ]]> <![CDATA[ ]]><span>checkbox to select.</span></p>
+    </li>
+    <li>
+      <p>Determine if you want to use <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP86232791" href="#"><span data-open-text="true" data-skip-index="true">Universal</span><span data-close-text="true">Universal</span></a> or <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP86395227" href="#"><span data-open-text="true" data-skip-index="true">Group-based</span><span data-close-text="true">Group-based</span></a> auto-registration and
+ click your selection.</p>
+      <div data-targetname="POPUP86395227">
+        <p><span style="font-weight: bold;">Group-based</span> auto-registration uses security groups within your Windows domain directory to dynamically assign a user to a role.</p>
+      </div>
+      <div data-targetname="POPUP86232791">
+        <p><span style="font-weight: bold;">Universal </span>will auto-register new users to a specific role of your choosing. Universal is very straight-forward: if the user attempting to login doesn't yet exist in ChangeGear, they are added automatically
+ and assigned to the role you specify.</p>
+      </div>
+    </li>
+    <li>
+      <p>If you select Universal, go to Step 7,</p>
+      <p>- OR -</p>
+      <p>If you select Group-based, go to Step 8.</p>
+    </li>
+    <li>
+      <p>Click the Role drop-down and select the default role that you want ChangeGear to assign to newly added users. Go to Step 10.</p>
+    </li>
+    <li>
+      <p>To configure Group-based auto-registration, use the domain utility to create the groups.</p>
+    </li>
+    <li>
+      <p>Using the Windows domain group administration utility, add either the users or groups of users that should be granted access for each corresponding role.</p>
+    </li>
+    <li>
+      <p>If you would like auto-registered users to consume a named license for the ChangeGear application, check the <span style="font-weight: bold;">Grant auto-registered users a named license</span> box.</p>
+      <p class="Note"><span class="tipnote">Note:</span> If your users primarily use the ChangeGear Web application in the requester role, leave this box unchecked.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">Save</span> to keep your configuration changes.</p>
+    </li>
+  </ol>
+  <p />
+  </div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

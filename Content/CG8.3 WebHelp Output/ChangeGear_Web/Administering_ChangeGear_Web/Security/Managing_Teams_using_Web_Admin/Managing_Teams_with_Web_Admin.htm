@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Security\Managing_Teams_using_Web_Admin\Managing_Teams_with_Web_Admin.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.4.3.0_4";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Managing Teams with Web Admin</title>
+  
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Managing Teams with Web Admin">
+        <span>Managing Teams with Web Admin</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Managing Teams with Web Admin</span></h2>
+  <p>ChangeGear has two types of teams: <span style="font-weight: bold;">notification team</span> and <span style="font-weight: bold;">security team</span>. When you create a team, you can designate the type of the team.</p>
+  <ul>
+    <li>
+      <p>A<span style="font-weight: bold;"> <a id="notification_team"></a>notification team</span> receives e-mail notifications or assignments to groups of users, (i.e., team), with potentially disparate ChangeGear roles.</p>
+    </li>
+    <li>
+      <p>A <span style="font-weight: bold;"><a id="security_team"></a>security team</span> provides additional security mechanisms when used in conjunction with the <span style="font-weight: bold;">Owner</span> field. A team designated as a security team
+ allows users within the same team to assume different roles.</p>
+    </li>
+  </ul>
+  <p>In ChangeGear Web Administration, you can navigate to the Team Manager page by clicking<span style="font-style: italic;"> Security&gt;Teams</span>. Here&#160;you define teams which receive communications, (such as e-mail <span style="font-style: italic;">notifications)</span>,
+ and assign roles to members of <span style="font-style: italic;">security teams. </span>In addition, you can define team owners and team e-mail addresses.</p>
+  <p>You can add/remove team members using Team Manager via ChangeGear on the web.</p>
+  <p class="note"><span class="tipnote">Note:</span> You may not have access to this ChangeGear feature depending on your permissions or ChangeGear edition.</p>
+  <p>The following example describes how a person can be part of a notification team and/or a security team and the implications.</p>
+  <p>Ted is the help desk manager with a role of <span style="font-style: italic;">Incident Manager</span>. Because Ted needs to know of upcoming changes, he is part of the <span style="font-style: italic;">IT Management </span><span style="font-weight: bold;font-style: italic;">Notification Team</span>, which notifies team members of all upcoming system changes and impact.</p>
+  <p>Ted is also monitoring the e-mail server upgrade and has been granted limited access to the <span style="font-style: italic;">System Administration Team,</span> a <span style="font-weight: bold;">security team</span>, with a role that allows him to
+ view e-mail upgrade associated tickets. Non-team members have no privileges or access to view tickets or configuration items (CIs) owned by the <span style="font-style: italic;">Systems Team</span>.</p>
+  <p>The following table highlights the differences between notification and security teams based on a scenario.</p>
+  <table cellpadding="1" cellspacing="1" class="CGTable" style="border-collapse: collapse;width: 638px;" width="100%">
+    <colgroup>
+      <col style="width: 322px;" />
+      <col style="width: 150px;" />
+      <col style="width: 123px;" />
+    </colgroup>
+    <tbody>
+      <tr class="t1st">
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Scenario</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Notification Teams</p>
+        </td>
+        <td>
+          <p style="font-weight: bold;color: #ffffff;">Security Teams</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Team members have specific team roles.</p>
+        </td>
+        <td style="text-align: center;">
+          <p>No</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Restrict non-member roles from ticket and item access.</p>
+        </td>
+        <td style="text-align: center;">
+          <p>No</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Restrict access to tickets owned by the team, (i.e., used in conjunction with the <span style="font-style: italic;">Owner</span> field).</p>
+        </td>
+        <td style="text-align: center;">
+          <p>No</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Use team in conjunction with Active Directory (AD) groups.</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+        <td style="text-align: center;">
+          <p>No</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Use a team to communicate with a large group of users.</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+        <td style="text-align: center;">
+          <p>Yes</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><span class="tipnote">Important:</span> Included with the Teams Support is the <span style="font-weight: bold;">View Teams</span> privilege, which allows team members to view tickets assigned to the team. Items owned by a team follow the privileges
+ granted the user by the Security Team. See&#160;<a href="../../../../Administering_ChangeGear/Administration/Administering_ChangeGear/Security/Working_with_Users/Determining_User_Privileges.htm">Determining User Privileges</a>&#160;for more
+ information about how privileges are determined for Security Team implementations.</p>
+  <p><img src="../../../../assets/images/teams main screen.png" /></p>
+  <p>You can manage your users from the <a href="../Managing_Users_with_Web_Administration/MAnaging_Users_Web_Admin.htm">Users</a><![CDATA[ ]]> <![CDATA[ ]]><span class="dropspot">page</span> to create and edit users.</p>
+  <p>You can manage your user roles from the <a href="../Managing_Roles_using_Web_Admin/Managing_Roles_with_Web_Admin.htm">Roles</a><![CDATA[ ]]> <![CDATA[ ]]><span class="dropspot">page</span> to create and edit roles.</p>
+  <p class="inst" data-condition="Others:Online">Click on the links below for instructions on managing <span data-condition="Others:Online">Teams:</span></p>
+  <ul>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="Notification_Teams_with_Web_Admin.htm">Notification Teams</a>&#160;&#160;</p>
+    </li>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="Security_Teams_using_Web_Admin.htm">Security Teams</a></p>
+    </li>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="Editing_Teams_using_Web_Admin.htm">Editing Teams</a></p>
+    </li>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="Modifying_Team_Membership_with_Web_Admin.htm">Modifying Team Membership</a></p>
+    </li>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="Deleting_Teams_using_Web_Admin.htm">Deleting Teams</a>&#160;&#160;&#160;</p>
+    </li>
+    <li data-condition="Others:Online">
+      <p data-condition="Others:Online"><a href="../../../../Administering_ChangeGear/Administration/Administering_ChangeGear/Security/Working_with_Users/Determining_User_Privileges.htm">Determining User Privileges</a></p>
+    </li>
+  </ul>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Security\Managing_Users_with_Web_Administration\Adding_a_User_with_Web_Administration.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.4.1.0_1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Adding a User with Web Administration</title>
+  
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Adding a User with Web Administration">
+        <span>Adding a User with Web Administration</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Adding a User with Web Administration</span></h2>
+  <p style="color: SunViewBlue;"><span>You can add a user to ChangeGear from the Users page and define user details such as the appropriate license for the user, the logon security access, the type of authentication to be used, and user profile information. To save time and increase security, some details are automatically populated from</span><![CDATA[ ]]>     <span>Windows AD.</span></p>
+  <p style="color: SunViewBlue;" />
+  <p style="font-weight: bold;"><a id="Integrating_Windows_AD"></a>Integrating Windows AD</p>
+  <p>A key feature of ChangeGear is the integration of user authentication using Microsoft Windows Active Directory (AD), or your network domain controller. Using AD, users don't have to re-enter their credentials when accessing ChangeGear. This feature
+ saves time, credentials are easier to manage because there are no separate user passwords to maintain, and if a user's Windows network account is disabled their ChangeGear account becomes disabled also.</p>
+  <p>When creating users in ChangeGear, some key details are automatically populated from the AD. For example, Windows may provide the user’s first name, last name, and e-mail address. <span style="font-weight: bold;">Note</span>: You can also select to allow
+ users to automatically register (auto-registration), but you must set this up using the desktop administration module.</p>
+  <h3>To add a User:</h3>
+  <ol>
+    <li>
+      <p>From the Web Administration page,&#160;click <span style="font-style: italic;">Security&gt; Users</span>. ChangeGear displays the Users page.</p>
+    </li>
+  </ol>
+  <p><img height="271" src="../../../../assets/images/main screen users.png" style="margin-left: 40px;" width="595" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 1;" value="2">
+      <p>To add a new user, click the plus sign in the upper right corner. ChangeGear opens the slide-out User editor.</p>
+    </li>
+  </ol>
+  <p><img height="366" src="../../../../assets/images/user editor general.png" style="margin-left: 40px;" width="327" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 2;" value="3">
+      <p>Enter the <span style="font-weight: bold;">Username</span>.&#160;If you are manually entering user names (for example, creating ChangeGear authorized users), you can use the person's e-mail address as their user name. ChangeGear allows alpha-numeric
+ characters and the following special characters to be used for user names:<br />
+        <span style="font-weight: bold;">. @ ! # $ % &amp; ' * + - / = ? ^ _ ` { | } ~</span>&#160;<br /> Additionally, user names may not be more than 256 characters long and IDs may not be more than 100 characters long.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Authentication </span>section, choose how you want the user to be authenticated.&#160;<span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">You can </span><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">choose </span><![CDATA[ ]]>         <span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;font-weight: bold;">Windows </span><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">Authentication or&#160;</span><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;font-weight: bold;">ChangeGear </span><![CDATA[ ]]>         <span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">Authentication. If you choose ChangeGear, manually enter the </span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;font-weight: bold;">User Name</span><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">&#160;(in the form of domainname\username or username@domainname.com)&#160;</span><![CDATA[ ]]> 
+        <span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;">and</span><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;"><![CDATA[ ]]> </span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-family: &quot;Segoe UI&quot;;font-size: 10pt;font-weight: bold;">Password.</span></p>
+    </li>
+    <li style="counter-set: item1 4;" value="5">
+      <p>Select the type of <span style="font-weight: bold;">License </span>assigned to this user.&#160;<span>Selecting the license type also changes the role field. The <span style="font-weight: bold;">Site </span>license type gives the user requester type roles,
+ and a default role of <span style="font-style: italic;">Change Requesters</span>. <span style="font-weight: bold;">Named </span>or <span style="font-weight: bold;">Concurrent </span>license types&#160;gives the user non-<span>requester type roles, and&#160;</span>the
+        <span style="font-style: italic;">IT Staff </span>default role. The <span style="font-weight: bold;">Service </span>license type gives the user service type roles, and the <span><span style="font-style: italic;">All Priviledges</span>&#160;</span>role as a default.</span>
+      </p>
+    </li>
+    <li style="counter-set: item1 5;" value="6">
+      <p>Check <span style="font-weight: bold;">Accessibility </span>if you want to assign the accessibility mode to this user. In compliance with Section 508, ChangeGear provides an accessibility mode for those users who interact with computers via assistive
+ technology. The accessibility mode enhances the usability of ChangeGear for screen readers, enabling users to interact with ChangeGear entirely from the keyboard. Users will be able to open tickets from the grid, navigate between tabs, and sort
+ column headers.</p>
+    </li>
+    <li style="counter-set: item1 6;" value="7">
+      <p>Check&#160;<span style="font-weight: bold;">VIP </span>to assign this user VIP (Very Important Person) status.&#160;A VIP user is a user that you wish to distinguish from other users as well as possibly provide additional privileges or services. For ChangeGear
+ staff users (not end users), ChangeGear highlights VIP users with a VIP icon next to their names as well as highlighting any tickets they request with a VIP icon. Depending on your business requirements you can also customize ChangeGear to use
+ the User VIP state and/or the ticket VIP state to provide additional VIP specific functionality.</p>
+    </li>
+    <li style="counter-set: item1 7;" value="8">
+      <p>Check <span style="font-weight: bold;">Proxy Approver</span> to assign this user as a proxy approver. This&#160;selection allows a user to approve on behalf of another user. With a proxy approver selected, either user can approve tickets until the proxy
+ is disabled. For example, if Rose Stephens is going on vacation, the ChangeGear administrator can set Tom Bryant as Rose's proxy approver so long as Tom has approval privileges in ChangeGear. When Tom is Rose's proxy approver, Tom is treated
+ as an approver on Rose's tickets, including receiving notifications and viewing Rose's pending approval tickets in Tom's Pending Approval view. After Rose gets back from vacation, the ChangeGear Administrator can disable the proxy
+ approver flag and Tom will no longer receive notifications or view approval tickets assigned to Rose.</p>
+    </li>
+  </ol>
+  <p class="note" style="margin-left: 32pt;"><span class="tipnote">Note:</span><![CDATA[ ]]> &#160;<span><span>The list of approvers on the ticket does not reflect who the proxy is, or after the fact, who acted as the proxy. Any approval actions made by Tom are listed in the history as "Approved by Proxy for: rstephens." As expected, if Tom and Rose are part of the same approval sequence that requires all users to approve, Tom must register his approval twice once as himself and a second time as proxy for Rose.</span></span><![CDATA[ ]]> 
+    <span style="font-weight: ;"></span></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 8;" value="9">The Teams tab shows what teams this user is assigned to, and the System tab shows system-level information about this team. <span style="font-weight: bold;">Note</span>: On this tab, you can only add notification teams.</li>
+  </ol>
+  <p class="Note" style="text-decoration: none;"><span class="tipnote">Note:</span> You do not have to complete every field in the <b>Users Editor</b> tab, but you must complete the <b>Role</b> field under the <span style="font-weight: bold;">Profile </span>section. ChangeGear’s assignments and privileges
+ depend on the roles of your users.</p>
+  <p style="text-decoration: none;color: #ea8423;font-weight: bold;" />
+  <p style="text-decoration: none;color: #ea8423;font-weight: bold;">Enter the User's Profile Information</p>
+  <p class="Note" style="text-decoration: none;">Next, scroll down and enter profile information for the user. Two fields are required in this section, <span style="font-weight: bold;">First Name</span> and <span style="font-weight: bold;">Last Name</span>.</p>
+  <p class="Note" style="text-decoration: none;"><img height="534" src="../../../../assets/images/user profile1.png" style="margin-left: 12px;" width="470" /></p>
+  <p class="Note" style="text-decoration: none;">In the User Profile section, complete the user detailed information fields such as&#160;<span style="font-weight: bold;">Location</span>, <span style="font-weight: bold;">Department</span>, <span style="font-weight: bold;">Role</span>, <span style="font-weight: bold;">Manager</span>,
+ and whether or not this user will <span style="font-weight: bold;">R</span><span style="font-weight: bold;">eceive text messages</span>. <span style="font-weight: bold;">Note</span>: For a list of predefined roles and their meanings, see&#160;<a href="../Managing_Roles_using_Web_Admin/Predefined_Roles_in_Web_Admin.htm">Predefined Roles in Web Admin</a>.</p>
+  <p class="Note" style="text-decoration: none;"><span style="font-weight: bold;">Note: </span>The <span style="font-weight: bold;">Department </span>and <span style="font-weight: bold;">Location </span>fields are hierarchical, and enable you to drill down to select the option you need. For example,
+ if you select <span style="font-weight: bold;">Location </span>you can then select <span style="font-weight: bold;">Europe</span>, then&#160;<span style="font-weight: bold;">United Kingdom</span>, and then&#160;<span style="font-weight: bold;">London</span>.&#160;</p>
+  <p class="Note" style="text-decoration: none;"><img height="218" src="../../../../assets/images/Europe.png" width="144" /></p>
+  <p class="Note" style="text-decoration: none;">Or, you can search within the field to help find what you need. Hover over the search icon to see the search options <span style="font-weight: bold;">Contains</span>, and&#160;<span style="font-weight: bold;">Starts With.&#160;</span>For example, in the search
+ field you can enter <span style="font-weight: bold;">L</span> to see all options starting with the letter L (such as London). (The <span style="font-weight: bold;">Reset </span>option removes whatever value you entered in the search field.)&#160;</p>
+  <p class="Note" style="text-decoration: none;"><img height="179" src="../../../../assets/images/search options.png" width="146" />&#160; &#160; &#160; &#160;&#160;<img height="156" src="../../../../assets/images/London.png" width="156" /></p>
+  <p class="Note" style="text-decoration: none;" />
+  <p class="Note" style="text-decoration: none;">ChangeGear uses the <span style="font-weight: bold;">Hourly Rate</span> to calculate the total cost of a change request. When a change request task is created, ChangeGear multiplies the number of hours needed to complete the task (as indicated by the
+    <span style="font-style: italic;">Effort</span>&#160;field) by the rate defined in the user's profile. <span style="font-weight: bold;">Main Team</span>&#160;is the name of the team associated with the user's primary function. ChangeGear automatically
+ sets&#160;<span><span style="font-weight: bold;">Main Team</span> when a team is added to the user, if the user did not have a team before. Also if a team is deleted from the user, ChangeGear sets <span style="font-weight: bold;">M</span><span><span style="font-weight: bold;">ain Team</span>    </span>to the the next team in alphabetical order. If there are not more teams then the <span><span style="font-weight: bold;">M</span><span><span style="font-weight: bold;">ain Team&#160;</span></span>
+    </span>is blank.&#160;</span>
+  </p>
+  <p class="Note" style="text-decoration: none;"><span class="tipnote" style="font-size: 10pt;font-weight: bold;font-variant: small-caps;font-family: &quot;Segoe UI&quot;;">Note:<span><![CDATA[ ]]> </span></span>In addition to the setting in&#160;the user's profile, users can set their default Change Mode themselves
+ through the User Profile window in the ChangeGear Web client.</p>
+  <p>Finally, click the save button&#160;<img src="../../../../assets/images/save icon.jpg" style="cursor: nwse-resize;" /> to save this user's settings.</p>
+  <p />
+  <p><span style="color: #ea8423;font-weight: bold;">Adding a User to a Team</span></p>
+  <p>After adding a new user and saving that user, you can then assign the user to a team.'</p>
+  <ol class="Decimal">
+    <li>Create a new user and save the settings.</li>
+    <li>On the main screen, highlight the new user and click on the&#160;<img height="18" src="../../../../assets/images/pencil icon.jpg" width="15" /> to edit that user. ChangeGear opens the user slide-out editor.</li>
+    <li>Click on the <span style="font-weight: bold;">Teams </span>tab.</li>
+  </ol>
+  <p>&#160; &#160; &#160; &#160; &#160;&#160;<img height="345" src="../../../../assets/images/assign user to team.png" width="313" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 3;" value="4">Click&#160;<img height="16" src="../../../../assets/images/plus sign.jpg" width="16" /> to add a team.</li>
+  </ol>
+  <p>&#160; &#160; &#160; &#160; &#160;&#160;<img height="354" src="../../../../assets/images/select teams for user.png" width="323" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 4;" value="5">Check the team you want to assign to this user, then click Save.</li>
+  </ol>
+  <p />
+  <p><span style="color: #ea8423;font-weight: bold;">Viewing System User Information</span></p>
+  <p>When you create a new user and save it, ChangeGear automatically assigns system information that you can view.</p>
+  <ol class="Decimal">
+    <li>Create a new user and save the settings.</li>
+    <li>On the main screen, highlight the new user and click on the&#160;<img height="18" src="../../../../assets/images/pencil icon.jpg" width="15" /> to edit that user. ChangeGear opens the user slide-out editor.</li>
+    <li>Click on the <span style="font-weight: bold;">System&#160;</span>tab.</li>
+  </ol>
+  <p>&#160; &#160; &#160; &#160; &#160;&#160;<img height="354" src="../../../../assets/images/user sys info.png" width="323" /></p>
+  <ol class="Decimal">
+    <li style="counter-set: item1 4;" value="5">On this tab you can view the <span style="font-weight: bold;">OID</span>, <span style="font-weight: bold;">Created by</span> name, <span style="font-weight: bold;">Created</span> date,<span style="font-weight: bold;"> Modified by</span> last, <span style="font-weight: bold;">Modified</span>      last date, and <span style="font-weight: bold;">Accessed&#160;by</span>.</li>
+  </ol>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

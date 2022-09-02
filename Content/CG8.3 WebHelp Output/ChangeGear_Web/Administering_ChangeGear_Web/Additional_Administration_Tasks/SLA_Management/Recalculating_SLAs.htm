@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Additional_Administration_Tasks\SLA_Management\Recalculating_SLAs.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "24.14.2.1_6";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  
+  <title>Recalculating SLAs</title>
+  
+  <meta name="rh-index-keywords" content="Service Level Agreements:Recalculating SLAs" />
+  <meta name="condition-tags" content="" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Recalculating SLAs">
+        <span>Recalculating SLAs</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2 style="color: #ffffff;"><span data-field="title" data-format="default">Recalculating SLAs</span></h2>
+  <p>By default, a ticket is evaluated against all active SLAs and is assigned an SLA when the ticket is created. Depending on your organization's workflow, it may also be necessary to repeat this process over the course of the ticket's lifetime.</p>
+  <p>For example, consider your Change team is reviewing all new Change tickets in order to prioritize and assign the tickets. The requester of the Change may have prioritized a ticket as having a Impact of <span style="font-style: italic;">Major;</span>    however, the Change team changes the ticket<span style="font-style: italic;"><![CDATA[ ]]> </span>Impact to <span style="font-style: italic;">Significant</span>. Assume there are two different SLAs: one SLA for <span style="font-style: italic;">Major</span> Impact
+ tickets and another SLA for <span style="font-style: italic;">Significant </span>Impact tickets. You could elect to <span style="font-style: italic;">Recalculate SLAs</span> after the Change team performs the <span style="font-style: italic;">Accept</span>    action for a ticket in the <span style="font-style: italic;">Assignment</span> state in order to apply the correct SLA to the ticket.</p>
+  <p>The elapsed time for the ticket is included in the SLA upon reassignment.&#160;&#160;For example, a ticket is submitted with an Impact of <span style="font-style: italic;">Major</span> and an eight (8) hour SLA applied. An hour goes by and the Impact is changed
+ to <span style="font-style: italic;">Significant,</span> which has a four (4) hour SLA.&#160;&#160;The <span style="font-style: italic;">SLA </span>time remaining is recalculated to three (3) hours.</p>
+  <p>You can view the <span style="font-style: italic;">Assigned SLA</span> as well as when the SLA was recalculated<span style="font-style: italic;"><![CDATA[ ]]> </span>in the History section.</p>
+  <p><img alt="" border="0" src="../../../../assets/images/ChangeGear_Web/Administering_ChangeGear_Web/SLA_Management/sla_tab.gif" style="border: none;" /></p>
+  <p class="inst">To trigger an SLA recalculation:</p>
+  <ol>
+    <li>
+      <p>Navigate to the <span style="font-style: italic;">Administration</span> tab in the Desktop Client and expand the appropriate module (i.e., Incident, Service Request, or Change Request).</p>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">Workflows </span>and <span style="font-weight: bold;">Edit</span> the appropriate Workflow. The <span style="font-style: italic;">Workflow Details</span> dialog displays.</p>
+    </li>
+    <li>
+      <p>Click on a Workflow Action in the diagram or click the <span style="font-style: italic;">Action</span> tab under the <span style="font-style: italic;">Properties</span> section and select an <span style="font-style: italic;">Action</span>. Click
+ the <span style="font-style: italic;">Properties</span> sub-tab to view the <span style="font-style: italic;">Recalculate SLA</span> property setting.</p>
+    </li>
+    <li>
+      <p>Change the <span style="font-weight: bold;">Recalculate SLA</span> value to <span style="font-weight: bold;">True</span>.<span><![CDATA[ ]]> </span></p>
+    </li>
+    <li>
+      <p>From the<span style="font-style: italic;"> File</span> menu, <span style="font-weight: bold;">Save</span> the workflow.</p>
+    </li>
+  </ol>
+  <p>For more information regarding Workflows editing, refer to the <span style="font-style: italic;">Modifying Workflows</span> topic<span style="font-weight: bold;"><![CDATA[ ]]> </span>in the ChangeGear Administrator's Guide, under <span style="font-style: italic;">Administering ChangeGear &gt; Workflows.</span></p>
+  <p />
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

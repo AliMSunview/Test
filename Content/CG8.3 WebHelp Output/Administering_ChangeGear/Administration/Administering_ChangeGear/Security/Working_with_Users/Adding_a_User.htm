@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Security\Working_with_Users\Adding_a_User.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Adding a User</title>
+  
+  <meta name="rh-index-keywords" content="Users:Adding" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Adding a User">
+        <span>Adding a User</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Adding a User</span></h2>
+  <p style="color: SunViewBlue;"><span>You can add a user to ChangeGear from the <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP83895716" href="#"><span data-open-text="true" data-skip-index="true">Users</span><span data-close-text="true">Users</span></a> page and define user details such as the appropriate license for the user, the logon security access, the type of authentication to be used, and user profile information. To save time and increase security, some details are automatically populated from</span><![CDATA[ ]]>     <span>Windows AD.</span></p>
+  <div data-targetname="POPUP83895716">
+    <p><img src="../../../../../assets/images/Administration/Administering_ChangeGear/Security/Working_with_Users/AdminUserspage.jpg" alt="" style="border-left-width: 1px;border-left-style: Solid;border-top-width: 1px;border-top-style: Solid;border-right-width: 1px;border-right-style: Solid;border-bottom-width: 1px;border-bottom-style: Solid;" border="1" /></p>
+  </div>
+  <p style="color: SunViewBlue;" />
+  <p style="font-weight: bold;"><a id="Integrating_Windows_AD"></a>Integrating Windows AD</p>
+  <p>A key feature of ChangeGear is the integration of user authentication using Microsoft Windows Active Directory (AD), or your network domain controller. Using AD, users don't have to re-enter their credentials when accessing ChangeGear. This feature
+ saves time, credentials are easier to manage because there are no separate user passwords to maintain, and if a user's Windows network account is disabled their ChangeGear account becomes disabled also.</p>
+  <p>When creating users in ChangeGear, some key details are automatically populated from the AD. For example, Windows may provide the user’s first name, last name, and e-mail address. You can also select to allow users to automatically register (auto-registration).</p>
+  <p>View <a href="../Configuring_Security_Settings.htm">Security Settings</a> in the <span style="font-style: italic;">Global Settings</span> section for more information about enabling auto-registration.</p>
+  <p>ChangeGear also supports LDAP integration. View <a href="../../Global_Settings/Configuring_LDAP_Authentication.htm">Configuring LDAP Authentication</a> for more information.</p>
+  <p>If you are manually entering user names (for example, creating ChangeGear authorized users), you can use the person's e-mail address as their user name. ChangeGear allows alpha-numeric characters and the following special characters to be used for
+ user names: <span style="font-weight: bold;">. @ ! # $ % &amp; ' * + - / = ? ^ _ ` { | } ~</span></p>
+  <p>Additionally, user names may not be more than 256 characters long and IDs may not be more than 100 characters long.</p>
+  <p class="inst">To add a User:</p>
+  <ol>
+    <li>
+      <p><span>Navigate to</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Administration</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">&gt; Security &gt; Users</span>.</p>
+    </li>
+    <li>
+      <p>In the Common Tasks menu, click <b>New</b>.</p>
+    </li>
+    <li>
+      <p>In the <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP84417393" href="#"><span data-open-text="true" data-skip-index="true">User Details dialog</span><span data-close-text="true">User Details dialog</span></a>, click <span style="font-weight: bold;">Search</span> by the <span style="font-weight: bold;">User Name</span> field if the user exists
+ in your Windows network. If the user does not, choose an alternative authentication type and skip to step 6.</p>
+      <div data-targetname="POPUP84417393">
+        <p><img src="../../../../../assets/images/Administration/Administering_ChangeGear/Security/Working_with_Users/user_profile.png" alt="" style="border: none;" border="0" /></p>
+      </div>
+    </li>
+    <li>
+      <p>Enter the users by:</p>
+      <ul>
+        <li>
+          <p>Selecting <span style="font-weight: bold;">User Type</span> and <span style="font-weight: bold;">Location</span></p>
+        </li>
+        <li>
+          <p>Typing the user name</p>
+        </li>
+        <li>
+          <p>Clicking the <span style="font-weight: bold;">Check Names</span> button</p>
+        </li>
+      </ul>
+      <p>- OR -</p>
+      <ul>
+        <li>
+          <p>Clicking <span style="font-weight: bold;">Advanced</span></p>
+        </li>
+        <li>
+          <p>Clicking <b>Find Now</b>.</p>
+        </li>
+        <li>
+          <p>Selecting the user from the list. If the user is not found, confirm that the location indicated in the <span style="font-weight: bold;">From</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">this location</span> field is correct</p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>.</p>
+    </li>
+    <li>
+      <p>In the Authentication section, choose how you want the user to be authenticated.</p>
+      <ul>
+        <li>
+          <p>If you choose LDAP Authentication, click <span style="font-weight: bold;">Search</span><span>. LDAP Authentication must be enabled for this selection to be active.</span></p>
+        </li>
+        <li>
+          <p>If you choose ChangeGear Authentication, manually enter the <span style="font-weight: bold;">User Name</span><![CDATA[ ]]> <![CDATA[ ]]><span>and</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Password</span><span>.</span></p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>Choose the license the user will use.</p>
+    </li>
+    <li>
+      <p>In the User Profile section, complete the user detailed information fields.</p>
+      <p class="Note" data-condition="Others:Online"><span class="tipnote">Tip:</span> Click for more details on selecting the <a data-condition="Others:Online" href="Defining_the_User_Department.htm">Department</a>, <a data-condition="Others:Online" href="Defining_the_User_s_Location.htm">Location</a>,
+        <a data-condition="Others:Online" href="Defining_the_User_s_Manager.htm">Manager</a>, <a data-condition="Others:Online" href="../Working_with_Roles/Defining_the_User_s_Role.htm">Role</a>, and <a data-condition="Others:Online" href="../../Global_Settings/Change_Management_Settings.htm">User Hourly Rate</a>.</p>
+    </li>
+    <li>
+      <p>Make sure the account is enabled.</p>
+    </li>
+    <li>
+      <p>Click <span style="font-weight: bold;">OK</span>.</p>
+    </li>
+  </ol>
+  <p>Additionally, you may <a href="Enabling_Accessibility_for_Users.htm">enable accessibility</a>, select a <a href="Proxy_Approvers_in_ChangeGear.htm">proxy approver</a>, <a href="Specifying_a_User_as_VIP.htm">specify a user as a VIP</a>, <a href="Adding_Users_to_Multiple_Teams.htm">add the user to teams</a>,
+ or <a href="Enabling_SMS_Notifications.htm">enable SMS messages</a> for the user.</p>
+  <p class="Note" style="text-decoration: none;"><span class="tipnote">Note:</span> You do not have to complete every field in the <b>Users Details</b> dialog box, but you must complete the <b>Role</b> field. ChangeGear’s assignments and privileges depend on the roles of your users.</p>
+  <p />
+  </div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

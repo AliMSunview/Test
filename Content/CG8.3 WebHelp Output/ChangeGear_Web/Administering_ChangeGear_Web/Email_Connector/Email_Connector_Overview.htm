@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\ChangeGear_Web\Administering_ChangeGear_Web\Email_Connector\Email_Connector_Overview.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "24.9.0_1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../assets/css/CGWeb.css" type="text/css" />
+  
+  
+  <title>Email Connector Overview</title>
+  
+  
+  
+  <meta http-equiv="Content-Language" content="en-US" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Email Connector Overview">
+        <span>Email Connector Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+    <p />
+  </div>
+  <div>
+  <h2><span data-field="title" data-format="default">Email Connector Overview</span></h2>
+  <p>Email Connector consists of a Email Connector service and a list of Email Connector profiles.</p>
+  <p>The Email Connector service allows users to create, modify, and respond to tickets using email. By using notification rules, templates, and variables, the Email Connector service provides core ticket management functionality without requiring ChangeGear
+ Web. It's a convenient alternative for users who are mobile, or who quickly want to respond to tickets via email.</p>
+  <p>The Email Connector service works by scanning an email account for incoming emails. When a new email arrives in an&#160;account's inbox, ChangeGear processes the email and performs one or more actions based on its contents.&#160;Once ChangeGear is finished,
+ it marks the email as read or moves the email to the account's deleted email folder, depending on the provider's settings.</p>
+  <p>To learn more about how end users and staff users can use&#160;the feature, see <span style="font-style: italic;">Managing Tickets via Email</span> in the ChangeGear User's Guide.</p>
+  <p class="note"><span class="tipnote">Warning: </span>The Email Connector may delete&#160;messages once it has finished processing them. Do not connect the Email Connector to a personal account unless you are willing to potentially lose data.</p>
+  <p class="note"><span class="tipnote">Note:</span> The Email Connector processes <span style="font-style: italic;">all</span> emails in the account's inbox, including those from unintended sources. Use caution when providing the account's address to users.</p>
+  <p>Before you can begin using the Email Connector, you must first configure the Email Connector using Web Administration. To also use email to send logs or notify end users, you must also configure notification settings and notification rules using the
+ Desktop Administration (on the General page); open the Desktop Admin Help for steps on setting this up.</p>
+  <p class="note"><span class="tipnote">Note:</span> The Email Connector identifies users by their email address. If a user is unable to submit changes via Email Connector, make sure that they have a valid email address in their user profile. See&#160;<a href="../Security/Managing_Users_with_Web_Administration/Adding_a_User_with_Web_Administration.htm">Adding a User with Web Administration</a>&#160;and
+ view the E-mail column to verify their email address is recorded correctly.</p>
+  <h3>Configuring POP3 or Exchange Web Services</h3>
+  <p>The Email Connector supports POP3 or Exchange Web Services (EWS). EWS is an API for interacting with messages, calendars, and other items hosted on a Microsoft Exchange server. ChangeGear uses EWS to process incoming emails through the Email Connector.&#160;&#160;There
+ are two options for EWS:&#160;<span style="font-weight: bold;">Basic </span>and <span style="font-weight: bold;">OAuth 2.0</span>.&#160;</p>
+  <h3>Email Aliases</h3>
+  <p>Email Connector supports the use of aliases for POP3 and Exchange Web Services (EWS). An alias is an email address that forwards incoming mail to another email address' inbox. For example, the Email Connector may have the address "changegear@mycompany.com",
+ but with aliases it can receive messages at help@mycompany.com, incidents@mycompany.com, support@mycompany.com, etc. If the email results in the creation of a new ticket, ChangeGear saves the alias used to create the ticket in the ticket's
+    <span style="font-style: italic;">InboundEmailAlias</span>&#160;field.</p>
+  <p class="note"><span class="tipnote">Tip: </span>When configuring automations such as Workflows or BPAs, the InboundEmailAlias field appears as <span style="font-style: italic;">General &gt; Email Alias</span><span>.</span></p>
+  <p>ChangeGear will also send messages using email aliases. Messages sent from an alias appear to originate from the alias, not from the actual address. However, only one alias can be used at a time when sending messages. This alias is stored in the ticket's
+    <span style="font-style: italic;">InboundEmailAlias</span><span> field.</span></p>
+  <p class="note"><span class="tipnote">Important: </span>When using aliases with EWS, always restart the Email Connector service after creating a new alias. On startup, the Email Connector queries Exchange for all aliases of the original account. If an alias is added
+ while the Email Connector is running, then ChangeGear will not detect the new alias.</p>
+  <h3>Configuring Notification Settings</h3>
+  <p>Configuring notifications allows ChangeGear to send updates to users via email or Short Message Service (SMS). When configured, ChangeGear can immediately notify users when an action occurs such as when a ticket is created, updated, or closed.</p>
+  <p>Before users can begin using the Email Connector, you must first configure the Email Connector using Web Administration.&#160;</p>
+  <p class="note"><span class="tipnote">Note:</span>&#160;To also use email to send logs or notify end users, you must also configure notification settings and notification rules using Desktop Administration (on the General page).</p>
+  <h3>Configuring Email Notifications</h3>
+  <p>When email notifications are enabled, ChangeGear uses either the Exchange Web Services (EWS) or Simple Mail Transfer Protocol (SMTP) protocols to send alerts to a user's email address. The target email address is determined by the <span style="font-style: italic;">Email</span>    field in the user's profile. If&#160;users do&#160;not have an email set, ChangeGear does not send them notifications.&#160;</p>
+  <p>For more information on configuring the behavior and appearance of notifications, see the Desktop Administration Help under <span style="font-style: italic;">Configuring Notification Rules</span>.&#160;</p>
+
+</div>
+  <div>
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

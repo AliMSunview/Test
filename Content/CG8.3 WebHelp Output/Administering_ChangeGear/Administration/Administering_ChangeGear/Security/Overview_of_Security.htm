@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Security\Overview_of_Security.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  
+  <title data-condition="Others:Administration">Security</title>
+  
+  <meta name="rh-index-keywords" content="Security" data-condition="Others:Administration" />
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Security">
+        <span>Security</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2 data-condition="Others:Online"><span data-field="title" data-format="default">Security</span></h2>
+  <p>ChangeGear uses a combination of <span style="font-weight: bold;">users</span>, <span style="font-weight: bold;">roles</span>, and <span style="font-weight: bold;">teams</span> to allow for a wide variety of administrative control options. A series
+ of selections based primarily in the roles’ privilege area controls the confidentiality, integrity, and availability of the data. Optionally, information can be either restricted or shared by utilizing teams. ChangeGear also employs multiple authentication
+ methods for users in both your organization and individuals who work closely enough with your organization to need access to your Change or Service Desk management solution. This allows you to maintain confidential information while protecting the
+ information's integrity and allowing access to those who need to know the information gathered from ChangeGear.</p>
+  <p><span style="font-weight: bold;">Users</span> are imported from Active Directory (AD) or created within ChangeGear while <span style="font-weight: bold;">Roles</span> and <span style="font-weight: bold;">Teams</span> are administrator-defined entities.
+ Each <span style="font-weight: bold;">user </span>is assigned to a specific <span style="font-weight: bold;">role</span> within ChangeGear. <span style="font-weight: bold;">Teams</span> are optional but afford a more flexible security model in which
+ users have privileges beyond, (or further restricted from), their defined role.</p>
+  <p>There are two different varieties of teams: <span style="font-weight: bold;">security teams</span> and <span style="font-weight: bold;">notification teams</span>. Security teams provide additional security mechanisms and users within the same team can
+ assume different roles. Notification teams allow notifications or assignments to groups of users with potentially disparate ChangeGear roles, similar to group e-mail addresses.</p>
+  <p />
+  <h3>Maintaining Confidentiality</h3>
+  <p>ChangeGear is capable of preventing unauthorized access to information by employing various levels of security based on user role or the sensitivity of the data involved.</p>
+  <p>Part of ensuring that information in your ChangeGear database is only shared with approved members of your organization or approved external partners is <a href="Configuring_Security_Settings.htm">user authentication</a>. Administrators can select universal
+ or group-based authentication. Universal authentication automatically registers new users to a specific role of your choosing. Group-based auto-registration uses security groups within your Windows domain directory to dynamically assign a user to
+ a role. For external users, such as trusted partners or contractors, or for those users who are not part of your internal directory, you can use ChangeGear specific authentication. You must create the user account and set up the password and user
+ name. After the initial set up, the ChangeGear authenticated user can control their password.</p>
+  <p>After users are entered into ChangeGear, the most basic aspect of security is differentiation between end users (Requesters) and staff. Users are automatically placed into roles which determine their available privileges. The Requesters (Change Requesters,
+ Incident Requesters, or Problem Requesters) use restricted versions of ticket forms and can only view certain parts of ChangeGear. Requesters can view certain fields and cannot edit other fields after the ticket has been submitted.</p>
+  <p>Staff have wider access to ChangeGear and can view or edit most forms. You can restrict both the list of modules a staff user can view and which tickets staff users have access to change. Staff users are assigned to roles within ChangeGear, and these
+ roles control the visibility and confidentiality of the information within the system by controlling the privileges assigned to roles and the field-level security on the forms.</p>
+  <p>ChangeGear also employs security teams to further restrict who views information. Security teams are generally implemented when you feel that a heightened level of security is necessary for items in ChangeGear. Users are assigned specific roles within
+ the security team that will take precedence if a work item is owned by the team. For example, assume a user has the Incident Manager role in ChangeGear, but only the Change Requester role in the security team. The user would be assigned the role of
+ "Change Requester" if the work item was assigned to or owned by the security team, and therefore can only perform those actions permitted by the role of Change Requester.</p>
+  <p />
+  <h3>Maintaining Integrity</h3>
+  <p>ChangeGear restricts how and who modifies information within the forms to preserve the integrity of the data.</p>
+  <p>Edit the role privileges to control who can view modules and who can edit the information within the modules. Privileges can also include what fields are visible and which fields can be edited by that role.</p>
+  <p>Security teams can also be employed to restrict who can modify or enter data. If a security team with a restricted guest role owns the ticket, only members of the security team can interact with the information in any meaningful manner.</p>
+  <p>In addition to controlling who can view or edit data in the system, ChangeGear employs techniques to record who made a change and when the change was made. The Description field records who entered a description and when the description was entered.
+ A description, once entered, cannot be changed; it can only be appended by another description entry. This works in conjunction with the <span style="font-weight: bold;">History</span> tab to record who made what changes to the ticket.</p>
+  <p />
+  <h3>Maintaining Availability</h3>
+  <p>Information within ChangeGear is fully available to those who need to access it or who need to be notified of upcoming changes.</p>
+  <p>Outside vendors or users without an entry in your corporate directory can access ChangeGear by being declared a ChangeGear authenticated user by the administrator. The ChangeGear administrator must create the account first and assign it to a role. The
+ role can be restricted to “view only” or the administrator can enable the user to have more access to the system.</p>
+  <p>Roles also control which fields are editable. The field-level security available in ChangeGear controls what fields are visible on a per-module and per-state basis. For example, a Requester is able to see to whom their ticket is assigned, but will not
+ be able to change that assignment.</p>
+  <p>ChangeGear can also employ notification teams, which allow the system to send notifications to members of your organization who are part of multiple roles or other organizational divisions. Notification teams can also include groups from your Active
+ Directory. Notification teams have no specific privileges or restrictions associated with them. However, one’s ability to view the information sent to the team is dependent on their role in ChangeGear.</p>
+  <p>Use the following table to help you setup your ChangeGear security.</p>
+  <p class="inst">How do I …</p>
+  <table cellpadding="1" cellspacing="1" style="vertical-align: top;" width="100%">
+    <colgroup>
+      <col style="width: 40.615%;" />
+      <col style="width: 59.385%;" />
+    </colgroup>
+    <tbody>
+      <tr style="vertical-align: top;">
+        <td style="border: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Grant access to users without entries in your corporate directory?</p>
+        </td>
+        <td style="border-top: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Create a ChangeGear authenticated user and assign the user to an appropriate role.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Control the user privileges?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Create or modify roles with appropriate users and assign the users to them.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Allow only specific users to view or edit tickets?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Use the Security Team functionality in conjunction with the Owner field.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Allow users to view tickets assigned to their team?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Create team specific views in the Administration module.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Restrict the data that users can view?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Use the field-level security in the Roles dialog to hide fields.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Remove access to a module?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Use the roles privileges to disable access to that module.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Protect the anonymity of a requester when a ticket is being reviewed?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Use field-level security to hide the information during the approval state, or those states that encompass your review process.</p>
+        </td>
+      </tr>
+      <tr style="vertical-align: top;">
+        <td style="border-left: Solid 1px #424242;border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 40.615%;padding-right: 10px;padding-left: 10px;">
+          <p style="font-weight: bold;">Consistently notify multiple members of your organization regardless of individual role?</p>
+        </td>
+        <td style="border-right: Solid 1px #424242;border-bottom: Solid 1px #424242;width: 59.385%;padding-right: 10px;padding-left: 10px;">
+          <p>Create Notification Teams, which can also include Active Directory groups.</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

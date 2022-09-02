@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Managing_Surveys\Scheduling_Surveys.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+
+
+<meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+
+<title data-condition="Others:Administration">Scheduling Surveys</title>
+
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Scheduling Surveys">
+        <span>Scheduling Surveys</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+
+
+<h2><span data-format="default" data-field="title">Scheduling Surveys</span></h2>
+<p>Surveys can be scheduled using Business Policy Automations (BPAs) to 
+ be sent automatically to customers. The BPA will determine who will receive 
+ surveys and how frequently they will be received. </p>
+<p class="note"><span class="tipnote">Note:</span> The instructions will 
+ follow a scenario to send a survey to an incident requester every tenth 
+ time an incident request is closed.</p>
+<p class="inst">To schedule ticket surveys:</p>
+<ol>
+	<li><p>In the Administration module, navigate to <span style="font-weight: bold;">Incident 
+	 Management &gt; Business Policy Automation</span>. </p>
+	<p class="note"><span class="tipnote">Note:</span> If you are scheduling 
+	 a different type of ticket survey, go to that management node and 
+	 select Business Policy Automation, i.e., if you were scheduling a 
+	 survey upon completion of a change request, you would go to <span style="font-weight: bold;">Change Management &gt; Business Policy 
+	 Automation</span>.</p></li>
+	<li><p>In the Common Tasks menu, click <span style="font-weight: bold;">New</span>. 
+	 The <a data-target="POPUP221657268" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Business 
+	 Rule Details</span><span data-close-text="true">Business 
+	 Rule Details</span></a> dialog box is displayed.</p>
+	<div data-targetname="POPUP221657268">
+		<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Automating_Announcements/business_rule_details_window.png" alt="" style="border: none;" border="0" /></p></div></li>
+	<li><p>In the <span style="font-weight: bold;">Name</span> field, type 
+	 a name for the Business Rule, such as "Service Desk Satisfaction 
+	 Survey."</p></li>
+	<li><p>In the <span style="font-weight: bold;">Description</span> field, 
+	 type a brief description of the Business Rule.</p>
+	<p class="note"><span class="tipnote">Note:</span> Ensure that the 
+	 <span style="font-weight: bold;">Enable</span> check box is selected 
+	 if you want the BPA to run.</p></li>
+	<li><p>Specify how often you want ChangeGear to check for conditions 
+	 matching your BPA.</p></li>
+	<li><p>In the <span style="font-weight: bold;">MaxOccurs</span> box, 
+	 specify how many times you want the BPA to execute per item. For example, 
+	 if the number of rules is set to one and an RFC matches the conditions 
+	 of the rule 1000 times, the BPA will only be run once.</p>
+	<p class="note"><span class="tipnote">Note:</span> Click <span style="font-weight: bold;">Execute</span> 
+	 anytime you want to run a rule instantly.</p></li>
+	<li><p>Open the <a data-target="POPUP221695630" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true"><span style="font-weight: bold;">Conditions</span> tab</span><span data-close-text="true"><span style="font-weight: bold;">Conditions</span> tab</span></a>.</p>
+	<div data-targetname="POPUP221695630">
+		<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Automating_Announcements/bpa_conditions.png" alt="" style="border: none;" border="0" /></p></div></li>
+	<li><p>Use the lists to specify conditions that, when met, will trigger 
+	 the BPA. In this case, choose <span style="font-weight: bold;">Status 
+	 equals Closed</span>, <span style="font-weight: bold;">Close Type 
+	 equals Resolved - Confirmed</span>, and <span style="font-weight: bold;">Modified 
+	 In the Past &gt; 01.00:00</span> to select only those closed tickets 
+	 which have been confirmed as resolved more than a day ago. For more 
+	 information, see <a href="../Business_Policy_Automation/Business_Rule_Conditions/Specifying_Business_Rule_Conditions.htm" style="font-style: italic;">Specifying Business 
+	 Rule Conditions</a>.</p></li>
+	<li><p>Open the <a data-target="POPUP84577945" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true"><span style="font-weight: bold;">Actions</span> tab</span><span data-close-text="true"><span style="font-weight: bold;">Actions</span> tab</span></a> 
+	 to specify the actions that execute when the Business Rule is triggered 
+	 (for more information, see <a href="../Business_Policy_Automation/Business_Rule_Actions/Specifying_Business_Rule_Actions.htm" style="font-style: italic;">Specifying 
+	 Business Rule Actions</a>).</p>
+	<div data-targetname="POPUP84577945">
+		<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Automating_Announcements/bpa_actions_announce.png" alt="" style="border: none;" border="0" /></p></div></li>
+	<li><p>Click <span style="font-weight: bold;">New</span>.</p></li>
+	<li><p>Choose <span style="font-weight: bold;">Send Survey</span>. 
+	 The <a data-target="POPUP218099261" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Survey Details 
+	 dialog</span><span data-close-text="true">Survey Details 
+	 dialog</span></a> box displays.</p>
+	<div data-targetname="POPUP218099261">
+		<p><img src="../../../../assets/images/Administration/Administering_ChangeGear/Managing_Surveys/survey_details_dialog.png" alt="" style="border: none;" border="0" /></p></div></li>
+	<li><p>Enter the <span style="font-weight: bold;">Name</span> and <span style="font-weight: bold;">Description</span> of the action.</p></li>
+	<li><p>Select a <span style="font-weight: bold;">Survey</span> from 
+	 the drop down menu. In this example, we have chosen the "Service 
+	 Desk Satisfaction Survey."</p>
+	<p class="note"><span class="tipnote">Note:</span> Only published surveys 
+	 are displayed.</p></li>
+	<li><p>Choose the <span style="font-weight: bold;">Frequency</span> 
+	 to send the survey to recipients based on when the conditions are 
+	 met. For example, if the condition were for completed incident reports, 
+	 you would have to choose if you want a survey sent every time a user 
+	 had an incident ticket closed or if you want a survey sent once out 
+	 of twenty completed incident tickets. In the scenario of sending a 
+	 survey every tenth entry, set the <span style="font-weight: bold;">Frequency</span> 
+	 to 1 out of 10 times.</p></li>
+	<li><p>Select <span style="font-weight: bold;">Edit</span> to edit 
+	 the e-mail sent to the survey recipient. You can use e-mail templates 
+	 to unify the look and feel of your communications.</p></li>
+	<li><p>Click <span style="font-weight: bold;">Add…</span> to add the 
+	 recipients of the survey. You can select individuals, roles, or dynamic 
+	 roles. In this scenario, select the role of <span style="font-weight: bold;">Requester</span>.</p></li>
+	<li><p>Ensure that the <span style="font-weight: bold;">Enable</span> 
+	 box is checked.</p></li>
+	<li><p>Click <span style="font-weight: bold;">OK</span> to finish setting 
+	 up your action.</p></li>
+	<li><p>Click <span style="font-weight: bold;">OK</span> to complete 
+	 setting up your BPA.</p>
+	<p class="note"><span class="tipnote">Note:</span> If you wish to run 
+	 the BPA immediately, click <span style="font-weight: bold;">Execute</span> 
+	 on the General tab.</p></li>
+</ol>
+<p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>

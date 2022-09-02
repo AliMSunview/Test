@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="RoboHelpStatus.Draft" MadCap:sourceDocument="C:\Users\agatling\Desktop\8.3 Projects\Output\Output\CG8.3 WebHelp Output\Administering_ChangeGear\Administration\Administering_ChangeGear\Security\Working_with_Teams\Creating_Notification_Teams.htm">
+    <head>
+
+  <script type="text/javascript" language="JavaScript"><![CDATA[
+
+ //
+
+
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //
+
+ 
+
+]]></script>
+  <style type="text/css"><![CDATA[
+/*
+*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*
+
+]]></style>
+
+  <script type="text/javascript"><![CDATA[
+
+//
+
+
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1";
+  
+//]]></script><![CDATA[ ]]> 
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script><![CDATA[ ]]> 
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script><![CDATA[ ]]> 
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Azure_Blue/topicheader.css" />
+  
+<link rel="StyleSheet" href="../../../../../assets/css/CGWeb.css" type="text/css" data-condition="Others:Administration" />
+  
+  
+  
+  <meta name="condition-tags" content="Others:Administration" data-condition="Others:Administration" />
+  <title data-condition="Others:Administration">Creating Notification Teams</title>
+  
+  <meta name="robots" content="NOODP" data-condition="Others:Administration" />
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo"></div>
+    <div class="nav">
+      <div class="title" title="Creating Notification Teams">
+        <span>Creating Notification Teams</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Others:Administration">
+    <p />
+  </div>
+  <div data-condition="Others:Administration">
+  <h2><span data-field="title" data-format="default">Creating Notification Teams</span></h2>
+  <p>ChangeGear allows you to create <a href="Managing_Teams.htm#notification_team">notification teams</a> that can include members from different roles, locations, or other organizational divisions. Notification teams are similar to a group e-mail or alias
+ in your directory as you do not need to select every user every time. For example, you can create a Troubleshooting Notification Team that includes IT members from different organizational units across your company.You can assign tickets to this team
+ and have all members of the team notified of the assignment. Members of notification teams can be members of other notification teams or be part of security teams.</p>
+  <p>You may also include Active Directory (AD) groups in your notification teams. Members of these external groups are notified along with your ChangeGear members. However, the users accounts in the groups must be enabled in AD and must have an associated
+ e-mail address to receive notifications.</p>
+  <p>Creating or using teams is not a requirement in ChangeGear, however, teams expand usability by allowing you to quickly communicate with multiple users on the same team.</p>
+  <p class="note"><span class="tipnote">Important:</span> Notification team members must have the <span style="font-weight: bold;">Team View</span> privilege enabled to view tickets assigned to the team. However, if the ticket or configuration item (CI) is owned by a
+ security team, the security team privileges apply.</p>
+  <p class="Note"><span class="tipnote">Note:</span> New or modified team members must refresh their ChangeGear client or re-login to ChangeGear to view changes to their roles within the team.</p>
+  <p class="inst">To create a Role:</p>
+  <ol>
+    <li>
+      <p>In the <b>Administration</b> explorer, navigate to <span style="font-weight: bold;">Security</span> &gt; <span style="font-weight: bold;">Teams</span>.</p>
+    </li>
+    <li>
+      <p>In the <b style="font-weight: normal;">Tasks</b> group menu, click <b>New</b>.</p>
+    </li>
+    <li>
+      <p>In the Team Details dialog, <span style="font-weight: bold;">General</span> tab, type the team name in the <span style="font-weight: bold;">Name</span> field.</p>
+      <p class="note"><span class="tipnote">Tip:</span> Include the word "Team" in the name so you can find your teams more easily in ticket forms.</p>
+      <p><img alt="" border="0" src="../../../../../assets/images/Administration/Administering_ChangeGear/Security/Working_with_Teams/teams_troubleshooting.png" style="border: none;" /></p>
+    </li>
+    <li>
+      <p>In the <b>Description</b> field, type a brief description of the team.</p>
+    </li>
+    <li>
+      <p>Select a <span style="font-weight: bold;">Owner</span> from the drop-down menu. The <span style="font-weight: bold;">Owner</span> field is not a required field.</p>
+    </li>
+    <li>
+      <p>In the <span style="font-weight: bold;">Cc E-mail</span> field, enter the e-mail address to be used to notify the team.</p>
+    </li>
+    <li>
+      <p>Select <span style="font-weight: bold;">Notification</span> from the <span style="font-weight: bold;">Type </span><span>section</span>.</p>
+    </li>
+    <li>
+      <p><span>Check</span><![CDATA[ ]]> <![CDATA[ ]]><span style="font-weight: bold;">Also notify a group defined in your corporate directory services</span><![CDATA[ ]]> <![CDATA[ ]]><span>if you wish to include a group defined in your Active Directory (AD). Enter the group name or search for the group.</span></p>
+    </li>
+    <li>
+      <p>Open the <span style="font-weight: bold;">Members</span> tab to select members for the team.</p>
+      <p class="note"><span class="tipnote">Note:</span> Teams may not be members of other teams.</p>
+    </li>
+    <li>
+      <p>Click <b>OK</b> to create the new team.</p>
+    </li>
+  </ol>
+  <p />
+
+</div>
+  <div data-condition="Others:Administration">
+    <p style="margin-right: 607px;"><a data-condition="Others:Online" href="javascript:history.go(-1)">Back</a></p>
+    <p style="margin-right: 607px;" />
+    <p style="margin-right: 607px;" />
+  </div>
+
+</body></html>
